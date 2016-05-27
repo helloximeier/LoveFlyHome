@@ -21,14 +21,14 @@
     {
     
         //    本地图片
-        NSArray *arr1=@[[UIImage imageNamed:@"banner1.jpg"],[UIImage imageNamed:@"banner2.jpg"],[UIImage imageNamed:@"banner3.jpg"],[UIImage imageNamed:@"banner4.jpg"]];
+        NSArray *arr1=@[[UIImage imageNamed:@"banner1.jpg"],[UIImage imageNamed:@"banner2.jpg"],[UIImage imageNamed:@"banner3.jpg"],[UIImage imageNamed:@"banner4.jpg"],[UIImage imageNamed:@"banner5.jpg"],[UIImage imageNamed:@"banner6.jpg"],[UIImage imageNamed:@"banner7.jpg"]];
         //     创建方式
         
         self.wheelView=[[WheelImageView alloc] initWithImageArray:arr1];
         
       
         //    设置frame
-        self.wheelView.frame=CGRectMake(0, 0, screen_width, 180);
+        self.wheelView.frame=CGRectMake(0, 0, screen_width, 150);
         
         //    设置每张图片的停留时间
         _wheelView.time=1;

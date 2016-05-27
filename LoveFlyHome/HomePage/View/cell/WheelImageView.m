@@ -126,8 +126,8 @@ typedef enum{
 - (UILabel *)describeLabel {
     if (!_describeLabel) {
         _describeLabel = [[UILabel alloc] init];
-        _describeLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-        _describeLabel.textColor = [UIColor whiteColor];
+        _describeLabel.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+        _describeLabel.textColor = [UIColor grayColor];
         _describeLabel.textAlignment = NSTextAlignmentCenter;
         _describeLabel.font = [UIFont systemFontOfSize:13];
         _describeLabel.hidden = YES;
@@ -259,8 +259,8 @@ typedef enum{
 #pragma mark 设置pageControl的图片
 - (void)setPageImage:(UIImage *)pageImage andCurrentImage:(UIImage *)currentImage {
     if (!pageImage || !currentImage) return;
-    [self.pageControl setValue:currentImage forKey:@"_currentPageImage"];
-    [self.pageControl setValue:pageImage forKey:@"_pageImage"];
+    [self.pageControl setValue:pageImage forKey:@"_currentPageImage"];
+    [self.pageControl setValue:currentImage forKey:@"_pageImage"];
 }
 
 #pragma mark 设置定时器时间

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		416B3F951CF8690D00A65F63 /* NetworkSingLenton.m in Sources */ = {isa = PBXBuildFile; fileRef = 416B3F941CF8690D00A65F63 /* NetworkSingLenton.m */; };
 		41BB4F361CF6A34B00BD6A97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB4F351CF6A34B00BD6A97 /* main.m */; };
 		41BB4F391CF6A34B00BD6A97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB4F381CF6A34B00BD6A97 /* AppDelegate.m */; };
 		41BB4F3F1CF6A34B00BD6A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BB4F3D1CF6A34B00BD6A97 /* Main.storyboard */; };
@@ -25,10 +26,18 @@
 		41DB3A541CF7E547006AD810 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A521CF7E547006AD810 /* UIBarButtonItem+Extension.m */; };
 		41DB3A5A1CF7F01B006AD810 /* wheelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A571CF7F01B006AD810 /* wheelCell.m */; };
 		41DB3A5B1CF7F01B006AD810 /* WheelImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A591CF7F01B006AD810 /* WheelImageView.m */; };
-		41DB3A631CF81CCC006AD810 /* banner4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A5F1CF81CCC006AD810 /* banner4.jpg */; };
-		41DB3A641CF81CCC006AD810 /* banner3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A601CF81CCC006AD810 /* banner3.jpg */; };
-		41DB3A651CF81CCC006AD810 /* banner2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A611CF81CCC006AD810 /* banner2.jpg */; };
-		41DB3A661CF81CCC006AD810 /* banner1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A621CF81CCC006AD810 /* banner1.jpg */; };
+		41DB3A6C1CF82832006AD810 /* RushCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A6B1CF82832006AD810 /* RushCell.m */; };
+		41DB3A741CF82C7E006AD810 /* banner7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A6D1CF82C7E006AD810 /* banner7.jpg */; };
+		41DB3A751CF82C7E006AD810 /* banner6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A6E1CF82C7E006AD810 /* banner6.jpg */; };
+		41DB3A761CF82C7E006AD810 /* banner5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A6F1CF82C7E006AD810 /* banner5.jpg */; };
+		41DB3A771CF82C7E006AD810 /* banner4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A701CF82C7E006AD810 /* banner4.jpg */; };
+		41DB3A781CF82C7E006AD810 /* banner3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A711CF82C7E006AD810 /* banner3.jpg */; };
+		41DB3A791CF82C7E006AD810 /* banner2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A721CF82C7E006AD810 /* banner2.jpg */; };
+		41DB3A7A1CF82C7E006AD810 /* banner1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A731CF82C7E006AD810 /* banner1.jpg */; };
+		41DB3A7F1CF83016006AD810 /* RushDealsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A7E1CF83016006AD810 /* RushDealsModel.m */; };
+		41DB3A811CF8353C006AD810 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A801CF8353C006AD810 /* bean.jpg */; };
+		41DB3AC31CF84980006AD810 /* BargainPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3AC21CF84980006AD810 /* BargainPriceCell.m */; };
+		9E1606D18D5FFA5CEF600F32 /* libPods-LoveFlyHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC193A19F04F6E568EF86DA /* libPods-LoveFlyHome.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DC193A19F04F6E568EF86DA /* libPods-LoveFlyHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LoveFlyHome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5C691FC2576FB1FDA10F15 /* Pods-LoveFlyHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveFlyHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveFlyHome/Pods-LoveFlyHome.release.xcconfig"; sourceTree = "<group>"; };
+		416B3F911CF863F300A65F63 /* LFHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHPrefixHeader.pch; sourceTree = "<group>"; };
+		416B3F931CF8690D00A65F63 /* NetworkSingLenton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSingLenton.h; sourceTree = "<group>"; };
+		416B3F941CF8690D00A65F63 /* NetworkSingLenton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSingLenton.m; sourceTree = "<group>"; };
 		41BB4F311CF6A34B00BD6A97 /* LoveFlyHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFlyHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BB4F351CF6A34B00BD6A97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41BB4F371CF6A34B00BD6A97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -84,10 +98,23 @@
 		41DB3A571CF7F01B006AD810 /* wheelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wheelCell.m; sourceTree = "<group>"; };
 		41DB3A581CF7F01B006AD810 /* WheelImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelImageView.h; sourceTree = "<group>"; };
 		41DB3A591CF7F01B006AD810 /* WheelImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WheelImageView.m; sourceTree = "<group>"; };
-		41DB3A5F1CF81CCC006AD810 /* banner4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner4.jpg; sourceTree = "<group>"; };
-		41DB3A601CF81CCC006AD810 /* banner3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner3.jpg; sourceTree = "<group>"; };
-		41DB3A611CF81CCC006AD810 /* banner2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner2.jpg; sourceTree = "<group>"; };
-		41DB3A621CF81CCC006AD810 /* banner1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner1.jpg; sourceTree = "<group>"; };
+		41DB3A681CF824DB006AD810 /* Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
+		41DB3A691CF824DB006AD810 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		41DB3A6A1CF82832006AD810 /* RushCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushCell.h; sourceTree = "<group>"; };
+		41DB3A6B1CF82832006AD810 /* RushCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushCell.m; sourceTree = "<group>"; };
+		41DB3A6D1CF82C7E006AD810 /* banner7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banner7.jpg; path = ../banner7.jpg; sourceTree = "<group>"; };
+		41DB3A6E1CF82C7E006AD810 /* banner6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banner6.jpg; path = ../banner6.jpg; sourceTree = "<group>"; };
+		41DB3A6F1CF82C7E006AD810 /* banner5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banner5.jpg; path = ../banner5.jpg; sourceTree = "<group>"; };
+		41DB3A701CF82C7E006AD810 /* banner4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banner4.jpg; path = ../banner4.jpg; sourceTree = "<group>"; };
+		41DB3A711CF82C7E006AD810 /* banner3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banner3.jpg; path = ../banner3.jpg; sourceTree = "<group>"; };
+		41DB3A721CF82C7E006AD810 /* banner2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banner2.jpg; path = ../banner2.jpg; sourceTree = "<group>"; };
+		41DB3A731CF82C7E006AD810 /* banner1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banner1.jpg; path = ../banner1.jpg; sourceTree = "<group>"; };
+		41DB3A7D1CF83016006AD810 /* RushDealsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushDealsModel.h; sourceTree = "<group>"; };
+		41DB3A7E1CF83016006AD810 /* RushDealsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushDealsModel.m; sourceTree = "<group>"; };
+		41DB3A801CF8353C006AD810 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bean.jpg; sourceTree = "<group>"; };
+		41DB3AC11CF84980006AD810 /* BargainPriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BargainPriceCell.h; sourceTree = "<group>"; };
+		41DB3AC21CF84980006AD810 /* BargainPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BargainPriceCell.m; sourceTree = "<group>"; };
+		57C9841A787E1431DB4AF802 /* Pods-LoveFlyHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveFlyHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveFlyHome/Pods-LoveFlyHome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1606D18D5FFA5CEF600F32 /* libPods-LoveFlyHome.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +143,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24523E11E6A11252E1624F42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DC193A19F04F6E568EF86DA /* libPods-LoveFlyHome.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		416B3F921CF868E600A65F63 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				416B3F931CF8690D00A65F63 /* NetworkSingLenton.h */,
+				416B3F941CF8690D00A65F63 /* NetworkSingLenton.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		41BB4F281CF6A34B00BD6A97 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +167,8 @@
 				41BB4F4D1CF6A34B00BD6A97 /* LoveFlyHomeTests */,
 				41BB4F581CF6A34B00BD6A97 /* LoveFlyHomeUITests */,
 				41BB4F321CF6A34B00BD6A97 /* Products */,
+				B2C4C952B909F1354DAC7100 /* Pods */,
+				24523E11E6A11252E1624F42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +185,7 @@
 		41BB4F331CF6A34B00BD6A97 /* LoveFlyHome */ = {
 			isa = PBXGroup;
 			children = (
+				416B3F921CF868E600A65F63 /* NetWork */,
 				41BB4F741CF6A5EF00BD6A97 /* Delegate */,
 				41D654F21CF6E79D00B1D268 /* Category */,
 				41BB4F881CF6DF2600BD6A97 /* Main */,
@@ -148,12 +196,10 @@
 				41D655101CF6EFCE00B1D268 /* ShopCar */,
 				41BB4F3D1CF6A34B00BD6A97 /* Main.storyboard */,
 				41BB4F401CF6A34B00BD6A97 /* Assets.xcassets */,
-				41DB3A5F1CF81CCC006AD810 /* banner4.jpg */,
-				41DB3A601CF81CCC006AD810 /* banner3.jpg */,
-				41DB3A611CF81CCC006AD810 /* banner2.jpg */,
-				41DB3A621CF81CCC006AD810 /* banner1.jpg */,
+				41DB3A7B1CF82C94006AD810 /* Datas */,
 				41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */,
 				41BB4F421CF6A34B00BD6A97 /* LaunchScreen.storyboard */,
+				416B3F911CF863F300A65F63 /* LFHPrefixHeader.pch */,
 				41BB4F451CF6A34B00BD6A97 /* Info.plist */,
 				41BB4F341CF6A34B00BD6A97 /* Supporting Files */,
 			);
@@ -198,6 +244,8 @@
 		41BB4F761CF6A5EF00BD6A97 /* PublicClass */ = {
 			isa = PBXGroup;
 			children = (
+				41DB3A681CF824DB006AD810 /* Public.h */,
+				41DB3A691CF824DB006AD810 /* Constant.h */,
 			);
 			path = PublicClass;
 			sourceTree = "<group>";
@@ -243,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				41D655441CF72CD300B1D268 /* Utils */,
-				41D6550B1CF6ED1800B1D268 /* DefineHeader */,
 				41D654F31CF6E7B500B1D268 /* Framework */,
 			);
 			path = Category;
@@ -256,13 +303,6 @@
 				41DB3A531CF7E547006AD810 /* UIBarButtonItem+Extension.h */,
 			);
 			path = Framework;
-			sourceTree = "<group>";
-		};
-		41D6550B1CF6ED1800B1D268 /* DefineHeader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DefineHeader;
 			sourceTree = "<group>";
 		};
 		41D6550D1CF6EFCE00B1D268 /* Classify */ = {
@@ -317,6 +357,8 @@
 		41D655131CF6F00300B1D268 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				41DB3A7D1CF83016006AD810 /* RushDealsModel.h */,
+				41DB3A7E1CF83016006AD810 /* RushDealsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,8 +454,36 @@
 				41DB3A571CF7F01B006AD810 /* wheelCell.m */,
 				41DB3A581CF7F01B006AD810 /* WheelImageView.h */,
 				41DB3A591CF7F01B006AD810 /* WheelImageView.m */,
+				41DB3A6A1CF82832006AD810 /* RushCell.h */,
+				41DB3A6B1CF82832006AD810 /* RushCell.m */,
+				41DB3AC11CF84980006AD810 /* BargainPriceCell.h */,
+				41DB3AC21CF84980006AD810 /* BargainPriceCell.m */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		41DB3A7B1CF82C94006AD810 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				41DB3A801CF8353C006AD810 /* bean.jpg */,
+				41DB3A6D1CF82C7E006AD810 /* banner7.jpg */,
+				41DB3A6E1CF82C7E006AD810 /* banner6.jpg */,
+				41DB3A6F1CF82C7E006AD810 /* banner5.jpg */,
+				41DB3A701CF82C7E006AD810 /* banner4.jpg */,
+				41DB3A711CF82C7E006AD810 /* banner3.jpg */,
+				41DB3A721CF82C7E006AD810 /* banner2.jpg */,
+				41DB3A731CF82C7E006AD810 /* banner1.jpg */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		B2C4C952B909F1354DAC7100 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57C9841A787E1431DB4AF802 /* Pods-LoveFlyHome.debug.xcconfig */,
+				2F5C691FC2576FB1FDA10F15 /* Pods-LoveFlyHome.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,9 +493,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41BB4F5E1CF6A34B00BD6A97 /* Build configuration list for PBXNativeTarget "LoveFlyHome" */;
 			buildPhases = (
+				A922BB7490A53070C9B4EDCA /* 📦 Check Pods Manifest.lock */,
 				41BB4F2D1CF6A34B00BD6A97 /* Sources */,
 				41BB4F2E1CF6A34B00BD6A97 /* Frameworks */,
 				41BB4F2F1CF6A34B00BD6A97 /* Resources */,
+				9C40418A91871164138C0114 /* 📦 Embed Pods Frameworks */,
+				C817B181AE42D15308FF920C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -519,13 +592,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DB3A791CF82C7E006AD810 /* banner2.jpg in Resources */,
+				41DB3A811CF8353C006AD810 /* bean.jpg in Resources */,
+				41DB3A761CF82C7E006AD810 /* banner5.jpg in Resources */,
+				41DB3A741CF82C7E006AD810 /* banner7.jpg in Resources */,
+				41DB3A7A1CF82C7E006AD810 /* banner1.jpg in Resources */,
 				41BB4F441CF6A34B00BD6A97 /* LaunchScreen.storyboard in Resources */,
-				41DB3A661CF81CCC006AD810 /* banner1.jpg in Resources */,
-				41DB3A641CF81CCC006AD810 /* banner3.jpg in Resources */,
 				41D655091CF6E9DF00B1D268 /* 日福莱-02.jpg in Resources */,
+				41DB3A781CF82C7E006AD810 /* banner3.jpg in Resources */,
+				41DB3A771CF82C7E006AD810 /* banner4.jpg in Resources */,
 				41BB4F411CF6A34B00BD6A97 /* Assets.xcassets in Resources */,
-				41DB3A631CF81CCC006AD810 /* banner4.jpg in Resources */,
-				41DB3A651CF81CCC006AD810 /* banner2.jpg in Resources */,
+				41DB3A751CF82C7E006AD810 /* banner6.jpg in Resources */,
 				41BB4F3F1CF6A34B00BD6A97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +623,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C40418A91871164138C0114 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveFlyHome/Pods-LoveFlyHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A922BB7490A53070C9B4EDCA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C817B181AE42D15308FF920C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoveFlyHome/Pods-LoveFlyHome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41BB4F2D1CF6A34B00BD6A97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -556,13 +681,17 @@
 				41BB4F391CF6A34B00BD6A97 /* AppDelegate.m in Sources */,
 				41BB4F8E1CF6DFD100BD6A97 /* XGNavgationController.m in Sources */,
 				41DB3A541CF7E547006AD810 /* UIBarButtonItem+Extension.m in Sources */,
+				41DB3A7F1CF83016006AD810 /* RushDealsModel.m in Sources */,
 				41D655291CF6F14600B1D268 /* MinePageCtrl.m in Sources */,
+				41DB3AC31CF84980006AD810 /* BargainPriceCell.m in Sources */,
 				41D6552F1CF71AE100B1D268 /* SearchBarView.m in Sources */,
+				416B3F951CF8690D00A65F63 /* NetworkSingLenton.m in Sources */,
 				41D655201CF6F0C600B1D268 /* XGTabBarController.m in Sources */,
 				41D6552C1CF6F15D00B1D268 /* ShopCarPageCtrl.m in Sources */,
 				41DB3A5A1CF7F01B006AD810 /* wheelCell.m in Sources */,
 				41DB3A5B1CF7F01B006AD810 /* WheelImageView.m in Sources */,
 				41BB4F361CF6A34B00BD6A97 /* main.m in Sources */,
+				41DB3A6C1CF82832006AD810 /* RushCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +832,7 @@
 		};
 		41BB4F5F1CF6A34B00BD6A97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57C9841A787E1431DB4AF802 /* Pods-LoveFlyHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoveFlyHome/Info.plist;
@@ -716,6 +846,7 @@
 		};
 		41BB4F601CF6A34B00BD6A97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F5C691FC2576FB1FDA10F15 /* Pods-LoveFlyHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoveFlyHome/Info.plist;

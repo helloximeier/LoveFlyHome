@@ -39,7 +39,7 @@
     self.searchButton.titleLabel.font=defaultFont;
     [self.searchButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [self.searchButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-//    [self.searchButton setTitle:@"请输入商品名称" forState:UIControlStateNormal];
+    [self.searchButton setTitle:@"请输入商品名称" forState:UIControlStateNormal];
     
     [self.searchButton addTarget:self action:@selector(pressedSearch:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.searchButton];
