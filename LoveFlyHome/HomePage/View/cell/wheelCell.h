@@ -1,10 +1,10 @@
 //
-//  wheelCell.h
-//  ljzy
+//  HomePageCtrl.m
+//  LoveFlyHome
 //
-//  Created by 皇朝 on 16/4/15.
-//  Copyright © 2016年 皇朝. All rights reserved.
-//
+//  Created by Lefeng on 16/5/26.
+//  Copyright © 2016年 Lefeng. All rights reserved.
+
 
 #import <UIKit/UIKit.h>
 #import "WheelImageView.h"

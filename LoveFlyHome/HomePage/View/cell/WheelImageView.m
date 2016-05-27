@@ -1,10 +1,10 @@
 //
-//  WheelImageView.m
-//  cn.ljzy
+//  HomePageCtrl.m
+//  LoveFlyHome
 //
-//  Created by 皇朝 on 16/4/9.
-//  Copyright © 2016年 皇朝. All rights reserved.
-//
+//  Created by Lefeng on 16/5/26.
+//  Copyright © 2016年 Lefeng. All rights reserved.
+
 
 #import "WheelImageView.h"
 #define DEFAULTTIME 5

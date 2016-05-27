@@ -25,6 +25,10 @@
 		41DB3A541CF7E547006AD810 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A521CF7E547006AD810 /* UIBarButtonItem+Extension.m */; };
 		41DB3A5A1CF7F01B006AD810 /* wheelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A571CF7F01B006AD810 /* wheelCell.m */; };
 		41DB3A5B1CF7F01B006AD810 /* WheelImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A591CF7F01B006AD810 /* WheelImageView.m */; };
+		41DB3A631CF81CCC006AD810 /* banner4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A5F1CF81CCC006AD810 /* banner4.jpg */; };
+		41DB3A641CF81CCC006AD810 /* banner3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A601CF81CCC006AD810 /* banner3.jpg */; };
+		41DB3A651CF81CCC006AD810 /* banner2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A611CF81CCC006AD810 /* banner2.jpg */; };
+		41DB3A661CF81CCC006AD810 /* banner1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A621CF81CCC006AD810 /* banner1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		41DB3A571CF7F01B006AD810 /* wheelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wheelCell.m; sourceTree = "<group>"; };
 		41DB3A581CF7F01B006AD810 /* WheelImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelImageView.h; sourceTree = "<group>"; };
 		41DB3A591CF7F01B006AD810 /* WheelImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WheelImageView.m; sourceTree = "<group>"; };
+		41DB3A5F1CF81CCC006AD810 /* banner4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner4.jpg; sourceTree = "<group>"; };
+		41DB3A601CF81CCC006AD810 /* banner3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner3.jpg; sourceTree = "<group>"; };
+		41DB3A611CF81CCC006AD810 /* banner2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner2.jpg; sourceTree = "<group>"; };
+		41DB3A621CF81CCC006AD810 /* banner1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,10 @@
 				41D655101CF6EFCE00B1D268 /* ShopCar */,
 				41BB4F3D1CF6A34B00BD6A97 /* Main.storyboard */,
 				41BB4F401CF6A34B00BD6A97 /* Assets.xcassets */,
+				41DB3A5F1CF81CCC006AD810 /* banner4.jpg */,
+				41DB3A601CF81CCC006AD810 /* banner3.jpg */,
+				41DB3A611CF81CCC006AD810 /* banner2.jpg */,
+				41DB3A621CF81CCC006AD810 /* banner1.jpg */,
 				41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */,
 				41BB4F421CF6A34B00BD6A97 /* LaunchScreen.storyboard */,
 				41BB4F451CF6A34B00BD6A97 /* Info.plist */,
@@ -508,8 +520,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				41BB4F441CF6A34B00BD6A97 /* LaunchScreen.storyboard in Resources */,
+				41DB3A661CF81CCC006AD810 /* banner1.jpg in Resources */,
+				41DB3A641CF81CCC006AD810 /* banner3.jpg in Resources */,
 				41D655091CF6E9DF00B1D268 /* 日福莱-02.jpg in Resources */,
 				41BB4F411CF6A34B00BD6A97 /* Assets.xcassets in Resources */,
+				41DB3A631CF81CCC006AD810 /* banner4.jpg in Resources */,
+				41DB3A651CF81CCC006AD810 /* banner2.jpg in Resources */,
 				41BB4F3F1CF6A34B00BD6A97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
