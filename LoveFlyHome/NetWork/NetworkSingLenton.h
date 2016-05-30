@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking.h>
+//#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 #pragma mark -请求超时
 #define TIMEOUT 30
@@ -16,5 +17,6 @@ typedef void(^SuccessBlock)(id responseBody);
 typedef void(^FailureBlock)(NSString *error);
 @interface NetworkSingLenton : NSObject
 
++ (NetworkSingLenton *)shareManager;
 
 @end

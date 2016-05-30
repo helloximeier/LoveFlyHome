@@ -96,7 +96,7 @@
         return 150.0;
     }else if (indexPath.section==1)
     {
-        return 150.0;
+        return 170.0;
     }else if (indexPath.section==2)
     {
         return 150.0;
@@ -173,6 +173,9 @@
         if(cell==nil)
         {
             cell=[[RushCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
+          
+        
+
             
         }
         
