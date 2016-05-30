@@ -79,7 +79,7 @@
 		41BB4F5B1CF6A34B00BD6A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41BB4F8C1CF6DFD100BD6A97 /* XGNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGNavgationController.h; sourceTree = "<group>"; };
 		41BB4F8D1CF6DFD100BD6A97 /* XGNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGNavgationController.m; sourceTree = "<group>"; };
-		41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "日福莱-02.jpg"; sourceTree = "<group>"; };
+		41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "日福莱-02.jpg"; path = "../日福莱-02.jpg"; sourceTree = "<group>"; };
 		41D6551E1CF6F0C600B1D268 /* XGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGTabBarController.h; sourceTree = "<group>"; };
 		41D6551F1CF6F0C600B1D268 /* XGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGTabBarController.m; sourceTree = "<group>"; };
 		41D655211CF6F10800B1D268 /* HomePageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageCtrl.h; path = ../HomePageCtrl.h; sourceTree = "<group>"; };
@@ -197,7 +197,6 @@
 				41BB4F3D1CF6A34B00BD6A97 /* Main.storyboard */,
 				41BB4F401CF6A34B00BD6A97 /* Assets.xcassets */,
 				41DB3A7B1CF82C94006AD810 /* Datas */,
-				41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */,
 				41BB4F421CF6A34B00BD6A97 /* LaunchScreen.storyboard */,
 				416B3F911CF863F300A65F63 /* LFHPrefixHeader.pch */,
 				41BB4F451CF6A34B00BD6A97 /* Info.plist */,
@@ -465,6 +464,7 @@
 		41DB3A7B1CF82C94006AD810 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */,
 				41DB3A801CF8353C006AD810 /* bean.jpg */,
 				41DB3A6D1CF82C7E006AD810 /* banner7.jpg */,
 				41DB3A6E1CF82C7E006AD810 /* banner6.jpg */,
