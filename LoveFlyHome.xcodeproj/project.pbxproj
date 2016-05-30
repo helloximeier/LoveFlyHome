@@ -37,6 +37,9 @@
 		41DB3A7F1CF83016006AD810 /* RushDealsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A7E1CF83016006AD810 /* RushDealsModel.m */; };
 		41DB3A811CF8353C006AD810 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41DB3A801CF8353C006AD810 /* bean.jpg */; };
 		41DB3AC31CF84980006AD810 /* BargainPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3AC21CF84980006AD810 /* BargainPriceCell.m */; };
+		41DC7AFA1CFBE386006B6A28 /* shengnvguo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41DC7AF91CFBE386006B6A28 /* shengnvguo.png */; };
+		41DC7AFF1CFBE449006B6A28 /* RushCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DC7AFD1CFBE449006B6A28 /* RushCollectionCell.m */; };
+		41DC7B001CFBE449006B6A28 /* RushCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41DC7AFE1CFBE449006B6A28 /* RushCollectionCell.xib */; };
 		9E1606D18D5FFA5CEF600F32 /* libPods-LoveFlyHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC193A19F04F6E568EF86DA /* libPods-LoveFlyHome.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +117,10 @@
 		41DB3A801CF8353C006AD810 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bean.jpg; sourceTree = "<group>"; };
 		41DB3AC11CF84980006AD810 /* BargainPriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BargainPriceCell.h; sourceTree = "<group>"; };
 		41DB3AC21CF84980006AD810 /* BargainPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BargainPriceCell.m; sourceTree = "<group>"; };
+		41DC7AF91CFBE386006B6A28 /* shengnvguo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shengnvguo.png; sourceTree = "<group>"; };
+		41DC7AFC1CFBE449006B6A28 /* RushCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RushCollectionCell.h; sourceTree = "<group>"; };
+		41DC7AFD1CFBE449006B6A28 /* RushCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RushCollectionCell.m; sourceTree = "<group>"; };
+		41DC7AFE1CFBE449006B6A28 /* RushCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RushCollectionCell.xib; sourceTree = "<group>"; };
 		57C9841A787E1431DB4AF802 /* Pods-LoveFlyHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveFlyHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveFlyHome/Pods-LoveFlyHome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,6 +372,7 @@
 		41D655141CF6F00300B1D268 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				41DC7AFB1CFBE41F006B6A28 /* collectionView */,
 				41DB3A551CF7F011006AD810 /* cell */,
 			);
 			path = View;
@@ -464,6 +472,7 @@
 		41DB3A7B1CF82C94006AD810 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				41DC7AF91CFBE386006B6A28 /* shengnvguo.png */,
 				41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */,
 				41DB3A801CF8353C006AD810 /* bean.jpg */,
 				41DB3A6D1CF82C7E006AD810 /* banner7.jpg */,
@@ -475,6 +484,16 @@
 				41DB3A731CF82C7E006AD810 /* banner1.jpg */,
 			);
 			path = Datas;
+			sourceTree = "<group>";
+		};
+		41DC7AFB1CFBE41F006B6A28 /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				41DC7AFC1CFBE449006B6A28 /* RushCollectionCell.h */,
+				41DC7AFD1CFBE449006B6A28 /* RushCollectionCell.m */,
+				41DC7AFE1CFBE449006B6A28 /* RushCollectionCell.xib */,
+			);
+			path = collectionView;
 			sourceTree = "<group>";
 		};
 		B2C4C952B909F1354DAC7100 /* Pods */ = {
@@ -593,11 +612,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				41DB3A791CF82C7E006AD810 /* banner2.jpg in Resources */,
+				41DC7AFA1CFBE386006B6A28 /* shengnvguo.png in Resources */,
 				41DB3A811CF8353C006AD810 /* bean.jpg in Resources */,
 				41DB3A761CF82C7E006AD810 /* banner5.jpg in Resources */,
 				41DB3A741CF82C7E006AD810 /* banner7.jpg in Resources */,
 				41DB3A7A1CF82C7E006AD810 /* banner1.jpg in Resources */,
 				41BB4F441CF6A34B00BD6A97 /* LaunchScreen.storyboard in Resources */,
+				41DC7B001CFBE449006B6A28 /* RushCollectionCell.xib in Resources */,
 				41D655091CF6E9DF00B1D268 /* 日福莱-02.jpg in Resources */,
 				41DB3A781CF82C7E006AD810 /* banner3.jpg in Resources */,
 				41DB3A771CF82C7E006AD810 /* banner4.jpg in Resources */,
@@ -689,6 +710,7 @@
 				41D655201CF6F0C600B1D268 /* XGTabBarController.m in Sources */,
 				41D6552C1CF6F15D00B1D268 /* ShopCarPageCtrl.m in Sources */,
 				41DB3A5A1CF7F01B006AD810 /* wheelCell.m in Sources */,
+				41DC7AFF1CFBE449006B6A28 /* RushCollectionCell.m in Sources */,
 				41DB3A5B1CF7F01B006AD810 /* WheelImageView.m in Sources */,
 				41BB4F361CF6A34B00BD6A97 /* main.m in Sources */,
 				41DB3A6C1CF82832006AD810 /* RushCell.m in Sources */,

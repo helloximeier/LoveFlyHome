@@ -7,6 +7,7 @@
 //
 
 #import "SearchBarView.h"
+#import <Masonry.h>
 #define kXMargin 8
 #define kYMargin 4
 #define kIconSize 20
@@ -25,8 +26,12 @@
 {
     NSUInteger boundsWidth = self.bounds.size.width;
     NSUInteger boundsHeight= self.bounds.size.height;
- 
-    self.backgroundView = [[RoundView alloc] initWithFrame:CGRectMake(0, 0, boundsWidth, boundsHeight)];
+// 
+//    self.backgroundView = [[RoundView alloc] initWithFrame:CGRectMake(0, 0, boundsWidth, boundsHeight)];
+    self.backgroundView=[[RoundView alloc] init];
+    [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+    }];
     [self addSubview:self.backgroundView];
     
     UIImageView * img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.backgroundView.frame.size.width, self.backgroundView.frame.size.height)];

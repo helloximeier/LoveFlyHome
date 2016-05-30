@@ -11,6 +11,7 @@
 #import "wheelCell.h"
 #import "RushCell.h"
 #import "RushDealsModel.h"
+#import "BargainPriceCell.h"
 #define WIDTH self.view.bounds.size.width
 @interface HomePageCtrl()<searchBarViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)UITableView *tabView;
@@ -187,10 +188,10 @@
     {
         static NSString *acell=@"acell";
         
-        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
+        BargainPriceCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
         if(cell==nil)
         {
-            cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
+            cell=[[BargainPriceCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
             
         }
         
