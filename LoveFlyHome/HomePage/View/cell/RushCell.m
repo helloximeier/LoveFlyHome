@@ -81,10 +81,7 @@
             self.secondLable.font=[UIFont systemFontOfSize:12];
 //            self.secondLable.text=@"55秒";
             [timeImageview addSubview:self.secondLable];
-            /**
-             *调用倒计时方法
-             **/
-            [self getTimes];
+          
             
         }
         
