@@ -7,12 +7,13 @@
 //
 
 #import "FLMineCenterViewController.h"
-#import <Masonry.h>
+#import "Masonry.h"
 #import "Public.h"
 #import "LFHRippleButton.h"
 #import "UIButton+Extension.h"
 #import "MasonyUtil.h"
 #import "LFHButton.h"
+#import "UserDefaultsUtils.h"
 #define CellFooterheight 80
 @interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic)UITableView *mineTabView;
@@ -25,16 +26,31 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setUpMineHead];
-//    [self setUpMineHead];
+
     [self setupTab];
     
 }
+
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    if([UserDefaultsUtils getOwnID])
+//    {
+//        self.mineTabView.tableHeaderView=[self addNoHeaderBar];
+//    
+//    }else
+//    {
+//    
+//        self.mineTabView.tableHeaderView=[self addHeaderBar];
+//    }
+//
+//}
 
 
 #pragma mark -个人中心头部
 - (void)setUpMineHead
 {
     self.navigationController.navigationBar.hidden=YES;
+    
     UIView *headView=[UIView new];
     headView.frame=CGRectMake(0, 0, screen_width, screen_height/3);
 //    [headView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -129,6 +145,7 @@
  */
 - (UIImageView *)addNoHeaderBar
 {
+    
     UIImageView *header=[[UIImageView alloc] init];
     [header mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@200);
@@ -181,11 +198,12 @@
 - (UIImageView *)addHeaderBar
 {
     UIImageView *header=[[UIImageView alloc] init];
-    [header mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@200);
-        make.left.equalTo(self.view).with.offset(0);
-        make.right.equalTo(self.view).with.offset(0);
-    }];
+//    [header mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.height.equalTo(@200);
+//        make.left.equalTo(self.view).with.offset(0);
+//        make.right.equalTo(self.view).with.offset(0);
+//    }];
+    
     /**是否允许用户交互**/
     header.userInteractionEnabled=YES;
     header.backgroundColor=RGB(64, 185, 64);
@@ -209,10 +227,10 @@
     UILabel *nameLable=[UILabel new];
     nameLable.text=@"用户名";
     [header addSubview:nameLable];
-    [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 30));
-        make.bottom.mas_equalTo(header).with.offset(50);
-    }];
+//    [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 30));
+//        make.bottom.mas_equalTo(header).with.offset(50);
+//    }];
 //    userName.text=_myInfo.userName;
     [header addSubview:nameLable];
 

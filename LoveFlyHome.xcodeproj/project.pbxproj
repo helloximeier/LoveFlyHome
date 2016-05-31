@@ -18,6 +18,8 @@
 		4105B4411CFD7B3100A0EB2A /* 图标-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 4105B43B1CFD7B3100A0EB2A /* 图标-30.png */; };
 		4105B4441CFD7C4D00A0EB2A /* LFHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4105B4431CFD7C4D00A0EB2A /* LFHButton.m */; };
 		4105B4471CFD7F7800A0EB2A /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4105B4461CFD7F7800A0EB2A /* UIImage+Extension.m */; };
+		4105B44C1CFDBD2E00A0EB2A /* UserDefaultsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4105B44B1CFDBD2E00A0EB2A /* UserDefaultsUtils.m */; };
+		4105B4511CFDC40700A0EB2A /* LFHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4105B4501CFDC40700A0EB2A /* LFHLoginViewController.m */; };
 		41BB4F361CF6A34B00BD6A97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB4F351CF6A34B00BD6A97 /* main.m */; };
 		41BB4F391CF6A34B00BD6A97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BB4F381CF6A34B00BD6A97 /* AppDelegate.m */; };
 		41BB4F3F1CF6A34B00BD6A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BB4F3D1CF6A34B00BD6A97 /* Main.storyboard */; };
@@ -91,6 +93,10 @@
 		4105B4431CFD7C4D00A0EB2A /* LFHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHButton.m; sourceTree = "<group>"; };
 		4105B4451CFD7F7800A0EB2A /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		4105B4461CFD7F7800A0EB2A /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		4105B44A1CFDBD2E00A0EB2A /* UserDefaultsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsUtils.h; sourceTree = "<group>"; };
+		4105B44B1CFDBD2E00A0EB2A /* UserDefaultsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsUtils.m; sourceTree = "<group>"; };
+		4105B44F1CFDC40700A0EB2A /* LFHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHLoginViewController.h; sourceTree = "<group>"; };
+		4105B4501CFDC40700A0EB2A /* LFHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHLoginViewController.m; sourceTree = "<group>"; };
 		416B3F911CF863F300A65F63 /* LFHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHPrefixHeader.pch; sourceTree = "<group>"; };
 		41BB4F311CF6A34B00BD6A97 /* LoveFlyHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFlyHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BB4F351CF6A34B00BD6A97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -444,6 +450,8 @@
 			children = (
 				41C4DFE61CFD2CB100ABDDE0 /* FLMineCenterViewController.h */,
 				41C4DFE71CFD2CB100ABDDE0 /* FLMineCenterViewController.m */,
+				4105B44F1CFDC40700A0EB2A /* LFHLoginViewController.h */,
+				4105B4501CFDC40700A0EB2A /* LFHLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -492,6 +500,8 @@
 		41D655441CF72CD300B1D268 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4105B44A1CFDBD2E00A0EB2A /* UserDefaultsUtils.h */,
+				4105B44B1CFDBD2E00A0EB2A /* UserDefaultsUtils.m */,
 				4105B42E1CFD780200A0EB2A /* MasonyUtil.h */,
 				4105B42F1CFD780200A0EB2A /* MasonyUtil.m */,
 			);
@@ -759,10 +769,12 @@
 				41C4DFFF1CFD63B800ABDDE0 /* LFHRippleButton.m in Sources */,
 				41DB3A7F1CF83016006AD810 /* RushDealsModel.m in Sources */,
 				41DB3AC31CF84980006AD810 /* BargainPriceCell.m in Sources */,
+				4105B4511CFDC40700A0EB2A /* LFHLoginViewController.m in Sources */,
 				41C4DFDF1CFD2C6500ABDDE0 /* FLHomeSearchBar.m in Sources */,
 				41C4DFDB1CFD2C4700ABDDE0 /* SelectedViewController.m in Sources */,
 				4105B4301CFD780200A0EB2A /* MasonyUtil.m in Sources */,
 				41C4DFE91CFD2CB100ABDDE0 /* FLMineCenterViewController.m in Sources */,
+				4105B44C1CFDBD2E00A0EB2A /* UserDefaultsUtils.m in Sources */,
 				41DB3A5A1CF7F01B006AD810 /* wheelCell.m in Sources */,
 				4105B4471CFD7F7800A0EB2A /* UIImage+Extension.m in Sources */,
 				41DB3A5B1CF7F01B006AD810 /* WheelImageView.m in Sources */,
