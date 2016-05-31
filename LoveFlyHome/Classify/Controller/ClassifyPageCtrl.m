@@ -9,5 +9,8 @@
 #import "ClassifyPageCtrl.h"
 
 @implementation ClassifyPageCtrl
-
+- (void)viewDidLoad
+{
+    self.view.backgroundColor=[UIColor whiteColor];
+}
 @end

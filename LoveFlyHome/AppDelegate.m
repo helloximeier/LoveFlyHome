@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "XGTabBarController.h"
+#import "FLTabBarController.h"
+#define FLScreenBounds [UIScreen mainScreen].bounds
 @interface AppDelegate ()
 
 @end
@@ -16,12 +17,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor=[UIColor whiteColor];
-    self.window.rootViewController = [[XGTabBarController alloc] init];
-    [self.window makeKeyAndVisible];
+    [self setAppStyle];
+    
+    [self setupRootViewController];
+    
+
     
     return YES;
+}
+
+- (void)setAppStyle
+{
+    UITabBar *tabbar = [UITabBar appearance];
+    tabbar.tintColor = [UIColor greenColor];
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    navigationBar.translucent = NO;
+}
+
+- (void)setupRootViewController
+{
+    self.window = [[UIWindow alloc] initWithFrame:FLScreenBounds];
+    [self.window makeKeyAndVisible];
+    /** 这里应该判断当前的当前的手机版本号跟运行的版本来确定到底是tabbarcontroller还是欢迎的引导页面 */
+    
+    self.window.rootViewController = [[FLTabBarController alloc] init];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

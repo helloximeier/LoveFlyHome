@@ -6,15 +6,15 @@
 //  Copyright © 2016年 Lefeng. All rights reserved.
 //
 
-#ifndef LFHPrefixHeader_pch
-#define LFHPrefixHeader_pch
+#import "UIBarButtonItem+Extension.h"
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import "Public.h"
-#import "constant.h"
-#import "UIImageView+WebCache.h"
-#import "NSString+Size.h"
+#define FLScreenBounds [UIScreen mainScreen].bounds
 
-#endif /* LFHPrefixHeader_pch */
+
+#define FLRGBA(r, g, b, a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+#define FLRGB(r, g, b) FLRGBA(r, g, b, 1.0f)
+
+/** 首页searchBar的颜色 */
+#define FLHomeNavigationBarColor FLRGB(15, 180, 82)
