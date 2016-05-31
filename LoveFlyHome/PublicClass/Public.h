@@ -19,6 +19,10 @@
 #define navigationBarColor RGB(33, 192, 174)
 #define separaterColor RGB(200, 199, 204)
 
+//是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+//是否为iOS8及以上系统
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
 
 // 3.是否为4inch
 #define fourInch ([UIScreen mainScreen].bounds.size.height == 568)

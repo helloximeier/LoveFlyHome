@@ -9,7 +9,7 @@
 #import "RushCell.h"
 #import "Public.h"
 #import "UIImageView+WebCache.h"
-#import "RushCollectionCell.h"
+
 @interface RushCell()
 {
     dispatch_source_t _timer;
@@ -27,78 +27,12 @@
     if(self)
     {
         
-        //商品抢购图
+        /**商品抢购图**/
         UIImageView *mingdian = [[UIImageView alloc] initWithFrame:CGRectMake(screen_width/2-100, 7, 200, 35)];
-        [mingdian setImage:[UIImage imageNamed:@"图标-59"]];
+        [mingdian setImage:[UIImage imageNamed:@"rush-img"]];
         [self addSubview:mingdian];
        
-        
-        
-        
-        
-        
-//        /**抢购排列  背景view**/
-//        for (int i=0; i<3; ++i) {
-//            UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(OntagGestureView:)];
-//            UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(i*screen_width/3, 40, (screen_width-3)/3, 80)];
-//            backView.tag = 100+i;
-//            [backView addGestureRecognizer:tap];
-//            [self addSubview:backView];
-//            /**产品图片**/
-//            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (screen_width-1)/3, 60)];
-//            imageView.contentMode = UIViewContentModeScaleAspectFit;
-//            imageView.tag = i+20;
-//            imageView.image=[UIImage imageNamed:@"bean.jpg"];
-//            [backView addSubview:imageView];
-//
-//            
-//            /**产品名称**/
-//            UILabel *nameLab = [[UILabel alloc] initWithFrame:CGRectMake(25, 50, backView.frame.size.width/2, 30)];
-//            nameLab.tag = 50+i;
-//            nameLab.textColor = [UIColor blackColor];
-//            nameLab.text=@"毛豆";
-//            nameLab.textAlignment = NSTextAlignmentCenter;
-//       
-//            [backView addSubview:nameLab];
-//            
-//            //商品抢购图
-//            UIImageView *mingdian = [[UIImageView alloc] initWithFrame:CGRectMake(screen_width/2-100, 7, 200, 35)];
-//            [mingdian setImage:[UIImage imageNamed:@"图标-59"]];
-//            [self addSubview:mingdian];
-//            
-//           
-//            /**倒计时**/
-//            UIImageView *timeImageview=[[UIImageView alloc] initWithFrame:CGRectMake(10, 90, backView.frame.size.width/2+55, 30)];
-//            timeImageview.tag=70+i;
-//            [timeImageview setImage:[UIImage imageNamed:@"图标-61"]];
-//            [backView addSubview:timeImageview];
-//            
-//            /**时**/
-//            self.hoursLable=[[UILabel alloc] initWithFrame:CGRectMake(20, 0, 50, 30)];
-//            self.hoursLable.textColor=[UIColor whiteColor];
-//            self.hoursLable.font=[UIFont systemFontOfSize:12];
-////            self.hoursLable.text=@"12小时";
-//            [timeImageview addSubview:self.hoursLable];
-//            
-//            /**分**/
-//            self.minuteLable=[[UILabel alloc] initWithFrame:CGRectMake(55, 0, 50, 30)];
-//            self.minuteLable.textColor=[UIColor whiteColor];
-//            self.minuteLable.font=[UIFont systemFontOfSize:12];
-////            self.minuteLable.text=@"20分钟";
-//            [timeImageview addSubview:self.minuteLable];
-//            
-//            /**秒**/
-//            self.secondLable=[[UILabel alloc] initWithFrame:CGRectMake(80, 0, 50, 30)];
-//            self.secondLable.textColor=[UIColor whiteColor];
-//            self.secondLable.font=[UIFont systemFontOfSize:12];
-////            self.secondLable.text=@"55秒";
-//            [timeImageview addSubview:self.secondLable];
-        
-//            
-//        }
-        
-    
-    
+
     }
     return self;
 
