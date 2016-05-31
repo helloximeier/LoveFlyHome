@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FLTabBarController.h"
+#import "Public.h"
 #define FLScreenBounds [UIScreen mainScreen].bounds
 @interface AppDelegate ()
 
@@ -21,15 +22,13 @@
     
     [self setupRootViewController];
     
-
-    
     return YES;
 }
 
 - (void)setAppStyle
 {
     UITabBar *tabbar = [UITabBar appearance];
-    tabbar.tintColor = [UIColor greenColor];
+    tabbar.tintColor = RGB(64, 186, 65);
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     navigationBar.translucent = NO;
 }
