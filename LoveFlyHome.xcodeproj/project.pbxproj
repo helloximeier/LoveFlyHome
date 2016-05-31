@@ -24,7 +24,7 @@
 		41C4DFE91CFD2CB100ABDDE0 /* FLMineCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C4DFE71CFD2CB100ABDDE0 /* FLMineCenterViewController.m */; };
 		41C4DFEA1CFD2CB100ABDDE0 /* FLMineCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFE81CFD2CB100ABDDE0 /* FLMineCenterViewController.xib */; };
 		41D655091CF6E9DF00B1D268 /* 日福莱-02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */; };
-		41D655261CF6F12B00B1D268 /* ClassifyPageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D655251CF6F12B00B1D268 /* ClassifyPageCtrl.m */; };
+		41D655261CF6F12B00B1D268 /* FLHClassifyPageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D655251CF6F12B00B1D268 /* FLHClassifyPageCtrl.m */; };
 		41DB3A541CF7E547006AD810 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A521CF7E547006AD810 /* UIBarButtonItem+Extension.m */; };
 		41DB3A5A1CF7F01B006AD810 /* wheelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A571CF7F01B006AD810 /* wheelCell.m */; };
 		41DB3A5B1CF7F01B006AD810 /* WheelImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A591CF7F01B006AD810 /* WheelImageView.m */; };
@@ -98,8 +98,8 @@
 		41C4DFE71CFD2CB100ABDDE0 /* FLMineCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMineCenterViewController.m; sourceTree = "<group>"; };
 		41C4DFE81CFD2CB100ABDDE0 /* FLMineCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLMineCenterViewController.xib; sourceTree = "<group>"; };
 		41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "日福莱-02.jpg"; path = "../日福莱-02.jpg"; sourceTree = "<group>"; };
-		41D655241CF6F12B00B1D268 /* ClassifyPageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyPageCtrl.h; sourceTree = "<group>"; };
-		41D655251CF6F12B00B1D268 /* ClassifyPageCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyPageCtrl.m; sourceTree = "<group>"; };
+		41D655241CF6F12B00B1D268 /* FLHClassifyPageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLHClassifyPageCtrl.h; sourceTree = "<group>"; };
+		41D655251CF6F12B00B1D268 /* FLHClassifyPageCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLHClassifyPageCtrl.m; sourceTree = "<group>"; };
 		41DB3A521CF7E547006AD810 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		41DB3A531CF7E547006AD810 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		41DB3A561CF7F01B006AD810 /* wheelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wheelCell.h; sourceTree = "<group>"; };
@@ -199,7 +199,6 @@
 				41BB4F741CF6A5EF00BD6A97 /* Delegate */,
 				41D654F21CF6E79D00B1D268 /* Category */,
 				41BB4F881CF6DF2600BD6A97 /* Main */,
-				41BB4F761CF6A5EF00BD6A97 /* PublicClass */,
 				41D6550D1CF6EFCE00B1D268 /* Classify */,
 				41D6550E1CF6EFCE00B1D268 /* HomePage */,
 				41D6550F1CF6EFCE00B1D268 /* Mine */,
@@ -256,7 +255,8 @@
 				41DB3A681CF824DB006AD810 /* Public.h */,
 				41DB3A691CF824DB006AD810 /* Constant.h */,
 			);
-			path = PublicClass;
+			name = PublicClass;
+			path = ../PublicClass;
 			sourceTree = "<group>";
 		};
 		41BB4F881CF6DF2600BD6A97 /* Main */ = {
@@ -303,6 +303,7 @@
 		41D654F21CF6E79D00B1D268 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				41BB4F761CF6A5EF00BD6A97 /* PublicClass */,
 				41D655441CF72CD300B1D268 /* Utils */,
 				41D654F31CF6E7B500B1D268 /* Framework */,
 			);
@@ -388,8 +389,8 @@
 		41D655151CF6F02600B1D268 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				41D655241CF6F12B00B1D268 /* ClassifyPageCtrl.h */,
-				41D655251CF6F12B00B1D268 /* ClassifyPageCtrl.m */,
+				41D655241CF6F12B00B1D268 /* FLHClassifyPageCtrl.h */,
+				41D655251CF6F12B00B1D268 /* FLHClassifyPageCtrl.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -707,7 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41C4DFDA1CFD2C4700ABDDE0 /* BaseViewController.m in Sources */,
-				41D655261CF6F12B00B1D268 /* ClassifyPageCtrl.m in Sources */,
+				41D655261CF6F12B00B1D268 /* FLHClassifyPageCtrl.m in Sources */,
 				41BB4F391CF6A34B00BD6A97 /* AppDelegate.m in Sources */,
 				41C4DFD91CFD2C4700ABDDE0 /* FLTabBarController.m in Sources */,
 				41DB3A541CF7E547006AD810 /* UIBarButtonItem+Extension.m in Sources */,

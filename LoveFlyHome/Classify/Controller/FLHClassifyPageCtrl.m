@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Lefeng. All rights reserved.
 //
 
-#import "ClassifyPageCtrl.h"
+#import "FLHClassifyPageCtrl.h"
 
-@implementation ClassifyPageCtrl
+@implementation FLHClassifyPageCtrl
 - (void)viewDidLoad
 {
     self.view.backgroundColor=[UIColor whiteColor];

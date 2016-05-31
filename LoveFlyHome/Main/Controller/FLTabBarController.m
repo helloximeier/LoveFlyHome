@@ -9,7 +9,7 @@
 #import "FLTabBarController.h"
 
 #import "FLHomeViewController.h"
-#import "ClassifyPageCtrl.h"
+#import "FLHClassifyPageCtrl.h"
 #import "FLMineCenterViewController.h"
 #import "FLCartViewController.h"
 
@@ -35,7 +35,7 @@
 - (void)setupViewControllers
 {
     [self addChildViewController:[[FLHomeViewController alloc] init] title:@"首页" image:@"home_normal" selectedImage:@"home_selected"];
-    [self addChildViewController:[[ClassifyPageCtrl alloc] init] title:@"分类" image:@"sort_normal" selectedImage:@"sort_selected"];
+    [self addChildViewController:[[FLHClassifyPageCtrl alloc] init] title:@"分类" image:@"sort_normal" selectedImage:@"sort_selected"];
     [self addChildViewController:[[FLCartViewController alloc] init] title:@"购物车" image:@"cart_normal" selectedImage:@"cart_selected"];
     [self addChildViewController:[[FLMineCenterViewController alloc] init] title:@"个人中心" image:@"mine_normal" selectedImage:@"mine_selected"];
 }

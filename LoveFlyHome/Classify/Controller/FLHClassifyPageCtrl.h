@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClassifyPageCtrl : UIViewController
+@interface FLHClassifyPageCtrl : UIViewController
 
 @end
