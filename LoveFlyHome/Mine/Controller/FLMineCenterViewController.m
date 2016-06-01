@@ -14,6 +14,7 @@
 #import "MasonyUtil.h"
 #import "LFHButton.h"
 #import "UserDefaultsUtils.h"
+#import "LFHLoginViewController.h"
 #define CellFooterheight 80
 @interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic)UITableView *mineTabView;
@@ -124,6 +125,9 @@
 - (void)loginClick
 {
     NSLog(@"登录");
+    LFHLoginViewController *login=[[LFHLoginViewController alloc] init];
+    [self.navigationController pushViewController:login animated:YES];
+    
 
 }
 

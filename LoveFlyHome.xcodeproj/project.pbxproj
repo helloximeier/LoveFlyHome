@@ -40,6 +40,14 @@
 		41C4DFFB1CFD599300ABDDE0 /* maodou.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFF91CFD599300ABDDE0 /* maodou.png */; };
 		41C4DFFC1CFD599300ABDDE0 /* shengnvguo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFFA1CFD599300ABDDE0 /* shengnvguo.png */; };
 		41C4DFFF1CFD63B800ABDDE0 /* LFHRippleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C4DFFE1CFD63B800ABDDE0 /* LFHRippleButton.m */; };
+		41D42FE91CFEB1FE00F535CB /* LFHSpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D42FE71CFEB1FE00F535CB /* LFHSpecialCell.m */; };
+		41D42FEA1CFEB1FE00F535CB /* LFHSpecialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D42FE81CFEB1FE00F535CB /* LFHSpecialCell.xib */; };
+		41D42FEE1CFEB92800F535CB /* LFHNewproductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D42FEC1CFEB92800F535CB /* LFHNewproductCell.m */; };
+		41D42FEF1CFEB92800F535CB /* LFHNewproductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D42FED1CFEB92800F535CB /* LFHNewproductCell.xib */; };
+		41D42FF11CFEBA9B00F535CB /* qingcai.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D42FF01CFEBA9B00F535CB /* qingcai.png */; };
+		41D4EB441CFE6A2800B5A329 /* 图标-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D4EB421CFE6A2800B5A329 /* 图标-26.png */; };
+		41D4EB451CFE6A2800B5A329 /* 图标-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D4EB431CFE6A2800B5A329 /* 图标-27.png */; };
+		41D4EB471CFE758200B5A329 /* 图标-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D4EB461CFE758200B5A329 /* 图标-20.png */; };
 		41D655091CF6E9DF00B1D268 /* 日福莱-02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */; };
 		41D655261CF6F12B00B1D268 /* FLHClassifyPageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D655251CF6F12B00B1D268 /* FLHClassifyPageCtrl.m */; };
 		41DB3A541CF7E547006AD810 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DB3A521CF7E547006AD810 /* UIBarButtonItem+Extension.m */; };
@@ -135,6 +143,16 @@
 		41C4DFFA1CFD599300ABDDE0 /* shengnvguo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shengnvguo.png; sourceTree = "<group>"; };
 		41C4DFFD1CFD63B800ABDDE0 /* LFHRippleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHRippleButton.h; sourceTree = "<group>"; };
 		41C4DFFE1CFD63B800ABDDE0 /* LFHRippleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHRippleButton.m; sourceTree = "<group>"; };
+		41D42FE61CFEB1FE00F535CB /* LFHSpecialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHSpecialCell.h; sourceTree = "<group>"; };
+		41D42FE71CFEB1FE00F535CB /* LFHSpecialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHSpecialCell.m; sourceTree = "<group>"; };
+		41D42FE81CFEB1FE00F535CB /* LFHSpecialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHSpecialCell.xib; sourceTree = "<group>"; };
+		41D42FEB1CFEB92800F535CB /* LFHNewproductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHNewproductCell.h; sourceTree = "<group>"; };
+		41D42FEC1CFEB92800F535CB /* LFHNewproductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHNewproductCell.m; sourceTree = "<group>"; };
+		41D42FED1CFEB92800F535CB /* LFHNewproductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHNewproductCell.xib; sourceTree = "<group>"; };
+		41D42FF01CFEBA9B00F535CB /* qingcai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qingcai.png; sourceTree = "<group>"; };
+		41D4EB421CFE6A2800B5A329 /* 图标-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-26.png"; sourceTree = "<group>"; };
+		41D4EB431CFE6A2800B5A329 /* 图标-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-27.png"; sourceTree = "<group>"; };
+		41D4EB461CFE758200B5A329 /* 图标-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-20.png"; sourceTree = "<group>"; };
 		41D655081CF6E9DF00B1D268 /* 日福莱-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "日福莱-02.jpg"; path = "../日福莱-02.jpg"; sourceTree = "<group>"; };
 		41D655241CF6F12B00B1D268 /* FLHClassifyPageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLHClassifyPageCtrl.h; sourceTree = "<group>"; };
 		41D655251CF6F12B00B1D268 /* FLHClassifyPageCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLHClassifyPageCtrl.m; sourceTree = "<group>"; };
@@ -522,6 +540,12 @@
 				41C4DFF41CFD58A300ABDDE0 /* LFHRushFoodCell.h */,
 				41C4DFF51CFD58A300ABDDE0 /* LFHRushFoodCell.m */,
 				41C4DFF61CFD58A300ABDDE0 /* LFHRushFoodCell.xib */,
+				41D42FE61CFEB1FE00F535CB /* LFHSpecialCell.h */,
+				41D42FE71CFEB1FE00F535CB /* LFHSpecialCell.m */,
+				41D42FE81CFEB1FE00F535CB /* LFHSpecialCell.xib */,
+				41D42FEB1CFEB92800F535CB /* LFHNewproductCell.h */,
+				41D42FEC1CFEB92800F535CB /* LFHNewproductCell.m */,
+				41D42FED1CFEB92800F535CB /* LFHNewproductCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -529,6 +553,10 @@
 		41DB3A7B1CF82C94006AD810 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				41D42FF01CFEBA9B00F535CB /* qingcai.png */,
+				41D4EB461CFE758200B5A329 /* 图标-20.png */,
+				41D4EB421CFE6A2800B5A329 /* 图标-26.png */,
+				41D4EB431CFE6A2800B5A329 /* 图标-27.png */,
 				4105B4361CFD7B3100A0EB2A /* 图标-23.png */,
 				4105B4371CFD7B3100A0EB2A /* 图标-24.png */,
 				4105B4381CFD7B3100A0EB2A /* 图标-25.png */,
@@ -674,18 +702,24 @@
 				41C4DFFC1CFD599300ABDDE0 /* shengnvguo.png in Resources */,
 				41DB3A7A1CF82C7E006AD810 /* banner1.jpg in Resources */,
 				4105B43D1CFD7B3100A0EB2A /* 图标-24.png in Resources */,
+				41D42FF11CFEBA9B00F535CB /* qingcai.png in Resources */,
+				41D4EB471CFE758200B5A329 /* 图标-20.png in Resources */,
 				41BB4F441CF6A34B00BD6A97 /* LaunchScreen.storyboard in Resources */,
+				41D42FEA1CFEB1FE00F535CB /* LFHSpecialCell.xib in Resources */,
 				41D655091CF6E9DF00B1D268 /* 日福莱-02.jpg in Resources */,
 				4105B4401CFD7B3100A0EB2A /* 图标-29.png in Resources */,
 				41DB3A781CF82C7E006AD810 /* banner3.jpg in Resources */,
 				4105B4351CFD7B1F00A0EB2A /* 图标-22.png in Resources */,
 				4105B43F1CFD7B3100A0EB2A /* 图标-28.png in Resources */,
+				41D42FEF1CFEB92800F535CB /* LFHNewproductCell.xib in Resources */,
 				41DB3A771CF82C7E006AD810 /* banner4.jpg in Resources */,
 				41BB4F411CF6A34B00BD6A97 /* Assets.xcassets in Resources */,
 				41C4DFF81CFD58A300ABDDE0 /* LFHRushFoodCell.xib in Resources */,
 				41DB3A751CF82C7E006AD810 /* banner6.jpg in Resources */,
+				41D4EB451CFE6A2800B5A329 /* 图标-27.png in Resources */,
 				41C4DFFB1CFD599300ABDDE0 /* maodou.png in Resources */,
 				41BB4F3F1CF6A34B00BD6A97 /* Main.storyboard in Resources */,
+				41D4EB441CFE6A2800B5A329 /* 图标-26.png in Resources */,
 				4105B43E1CFD7B3100A0EB2A /* 图标-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,6 +805,7 @@
 				41DB3AC31CF84980006AD810 /* BargainPriceCell.m in Sources */,
 				4105B4511CFDC40700A0EB2A /* LFHLoginViewController.m in Sources */,
 				41C4DFDF1CFD2C6500ABDDE0 /* FLHomeSearchBar.m in Sources */,
+				41D42FEE1CFEB92800F535CB /* LFHNewproductCell.m in Sources */,
 				41C4DFDB1CFD2C4700ABDDE0 /* SelectedViewController.m in Sources */,
 				4105B4301CFD780200A0EB2A /* MasonyUtil.m in Sources */,
 				41C4DFE91CFD2CB100ABDDE0 /* FLMineCenterViewController.m in Sources */,
@@ -781,6 +816,7 @@
 				4105B4441CFD7C4D00A0EB2A /* LFHButton.m in Sources */,
 				41C4DFDC1CFD2C4700ABDDE0 /* FLNavigationController.m in Sources */,
 				41BB4F361CF6A34B00BD6A97 /* main.m in Sources */,
+				41D42FE91CFEB1FE00F535CB /* LFHSpecialCell.m in Sources */,
 				41C4DFE51CFD2C9800ABDDE0 /* FLHomeViewController.m in Sources */,
 				41DB3A6C1CF82832006AD810 /* RushCell.m in Sources */,
 				41C4DFE21CFD2C8700ABDDE0 /* FLCartViewController.m in Sources */,

@@ -11,6 +11,9 @@
 #import "Public.h"
 #import "RushCell.h"
 #import "wheelCell.h"
+#import "LFHSpecialCell.h"
+#import "LFHNewproductCell.h"
+
 @interface FLHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(strong,nonatomic)UITableView *LHFtabView;
@@ -52,11 +55,19 @@
 #pragma mark -实现表格协议
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    
 
     return 5;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if(section==1)
+    {
+        return 2;
+    }else if (section==2)
+    {
+        return 2;
+    }
     return 1;
 
 }
@@ -69,16 +80,24 @@
     {
         if(indexPath.row==0)
         {
-            return 45.0;
+            return 45;
         }else
         {
-            return 120.0;
+            return 160;
         }
         
     }else if (indexPath.section==2)
     
     {
-        return 180.0;
+        if(indexPath.row==0)
+        {
+            return 45;
+        }else
+        {
+            return 160;
+        }
+
+        
     }else if (indexPath.section==3)
     {
         return 200.0;
@@ -156,28 +175,91 @@
     {
         if(indexPath.row==0)
         {
-            static NSString *acell=@"rushcell";
-            RushCell *rushcell=[tableView dequeueReusableCellWithIdentifier:acell];
-            if(rushcell==nil)
+            
+            static NSString *acell=@"acell";
+            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
+            if(cell==nil)
             {
-                rushcell=[[RushCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
+                cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
                 
             }
-            return rushcell;
-        
+            
+            UIImageView *rushImg=[[UIImageView alloc] init];
+            rushImg.frame=CGRectMake(screen_width/2-100, 7, 200, 35);
+            rushImg.image=[UIImage imageNamed:@"rush-img"];
+            [cell addSubview:rushImg];
+ 
+            return cell;
         }else
         {
-            static NSString *rushcollectioncell=@"rushCell";
-            LFHRushFoodCell *cell=[self.LHFtabView dequeueReusableCellWithIdentifier:rushcollectioncell];
-            
-          
-            return cell;
+            /**立即抢购**/
+            static NSString *rushCell=@"rushCELL";
+            LFHRushFoodCell *RUSHCELL=[tableView dequeueReusableCellWithIdentifier:rushCell];
+            if(!RUSHCELL)
+            {
+                RUSHCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHRushFoodCell" owner:self options:nil] lastObject];
+            }
+            RUSHCELL.selectionStyle=UITableViewCellEditingStyleNone;
+            return RUSHCELL;
+        
         
         
         }
         
+    }else if (indexPath.section==2)
+    {
+        if(indexPath.row==0)
+        {
+            static NSString *acell=@"Specialcell";
+            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
+            if(cell==nil)
+            {
+                cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
+                
+            }
+            
+            UIImageView *rushImg=[[UIImageView alloc] init];
+            rushImg.frame=CGRectMake(screen_width/2-100, 7, 200, 35);
+            rushImg.image=[UIImage imageNamed:@"special"];
+            [cell addSubview:rushImg];
+            
+            return cell;
+
+        
+        
+        }else
+        {
+            /**
+             *特价商品
+             **/
+            static NSString *specialCell=@"SpecialCELL";
+            LFHSpecialCell *SpecialCELL=[tableView dequeueReusableCellWithIdentifier:specialCell];
+            if(!SpecialCELL)
+            {
+                SpecialCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHSpecialCell" owner:self options:nil] lastObject];
+            
+            
+            }
+            
+            SpecialCELL.selectionStyle=UITableViewCellEditingStyleNone;
+            return SpecialCELL;
+        }
     
-    }else
+    
+    }else if (indexPath.section==3)
+    {
+        static NSString *NewProductCell=@"newProductCell";
+        LFHNewproductCell  *newProductCELL=[tableView dequeueReusableCellWithIdentifier:NewProductCell];
+        if(!newProductCELL)
+        {
+            newProductCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHNewproductCell" owner:self options:nil] lastObject];
+        
+        }
+        newProductCELL.selectionStyle=UITableViewCellEditingStyleNone;
+        return newProductCELL;
+
+    }
+    else
     {
     
         static NSString *acell=@"cell";
