@@ -171,6 +171,9 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="RushClick" destination="rBI-jX-vo0" id="zNx-nA-NwF"/>
+            </connections>
             <point key="canvasLocation" x="172" y="329.5"/>
         </tableViewCell>
     </objects>

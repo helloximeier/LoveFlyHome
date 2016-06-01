@@ -1,14 +1,14 @@
 //
-//  LFHRushFoodCell.m
+//  LFHOrderCell.m
 //  LoveFlyHome
 //
-//  Created by Lefeng on 16/5/31.
+//  Created by Lefeng on 16/6/1.
 //  Copyright © 2016年 Lefeng. All rights reserved.
 //
 
-#import "LFHRushFoodCell.h"
+#import "LFHOrderCell.h"
 
-@implementation LFHRushFoodCell
+@implementation LFHOrderCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -20,6 +20,5 @@
 
     // Configure the view for the selected state
 }
-
 
 @end

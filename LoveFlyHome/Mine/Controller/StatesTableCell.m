@@ -1,14 +1,14 @@
 //
-//  LFHRushFoodCell.m
+//  StatesTableCell.m
 //  LoveFlyHome
 //
-//  Created by Lefeng on 16/5/31.
+//  Created by gpf on 16/6/1.
 //  Copyright © 2016年 Lefeng. All rights reserved.
 //
 
-#import "LFHRushFoodCell.h"
+#import "StatesTableCell.h"
 
-@implementation LFHRushFoodCell
+@implementation StatesTableCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -20,6 +20,5 @@
 
     // Configure the view for the selected state
 }
-
 
 @end

@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LFHRushFoodCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *LFHfoodImg;
+@property (weak, nonatomic) IBOutlet UIView *RushClick;
 
-@property (weak, nonatomic) IBOutlet UILabel *LFHfoodName;
 
-@property (weak, nonatomic) IBOutlet UIButton *LFHRudhTime;
-
-+ (instancetype)cellWithTableView:(UITableView *)tableview;
 @end

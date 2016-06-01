@@ -118,7 +118,15 @@
     if(section==1)
     {
         return 0.5;
-    }else
+    }else if (section==3)
+    {
+        return 30.0;
+    }else if (section==4)
+    {
+        return 30.0;
+    
+    }
+    else
     {
         return 5;
     }
@@ -138,15 +146,38 @@
 #pragma mark -头部视图大小 颜色
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 0.1)];
-    headView.backgroundColor=RGB(239, 239, 244);
-    return headView;
+    if(section==3)
+    {
+        UIView *headView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 30)];
+        headView.backgroundColor=RGB(239, 239, 244);
+        UILabel *headLab=[[UILabel alloc] init];
+        headLab.frame=CGRectMake(10, 0, 100, 30);
+        headLab.text=@"新品上市";
+        [headView addSubview:headLab];
+        return headView;
+        
+    }else if (section==4)
+    {
+        UIView *headView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 30)];
+        headView.backgroundColor=RGB(239, 239, 244);
+        UILabel *headLab=[[UILabel alloc] init];
+        headLab.frame=CGRectMake(10, 0, 100, 30);
+        headLab.text=@"热卖产品";
+        [headView addSubview:headLab];
+        return headView;
+
+    }
+    
+        UIView *headView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 0.1)];
+        headView.backgroundColor=RGB(239, 239, 244);
+        return headView;
     
 }
 
 #pragma mark -脚部视图大小 颜色
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
+  
     UIView *footView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 0)];
     
     footView.backgroundColor=RGB(239, 239, 244);
@@ -262,14 +293,15 @@
     else
     {
     
-        static NSString *acell=@"cell";
-        UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
-        if(cell==nil)
+        static NSString *NewProductCell=@"newProductCell";
+        LFHNewproductCell  *newProductCELL=[tableView dequeueReusableCellWithIdentifier:NewProductCell];
+        if(!newProductCELL)
         {
-            cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
-        
+            newProductCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHNewproductCell" owner:self options:nil] lastObject];
+            
         }
-        return cell;
+        newProductCELL.selectionStyle=UITableViewCellEditingStyleNone;
+        return newProductCELL;
     
     }
     

@@ -9,16 +9,17 @@
 #import "FLMineCenterViewController.h"
 #import "Masonry.h"
 #import "Public.h"
-#import "LFHRippleButton.h"
 #import "UIButton+Extension.h"
 #import "MasonyUtil.h"
 #import "LFHButton.h"
 #import "UserDefaultsUtils.h"
 #import "LFHLoginViewController.h"
+#import "LFHOrderViewController.h"
 #define CellFooterheight 80
 @interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic)UITableView *mineTabView;
 @property(strong,nonatomic)UIButton *registeredBtn;
+@property(strong,nonatomic)UIView *headView;
 @end
 
 @implementation FLMineCenterViewController
@@ -26,41 +27,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self setUpMineHead];
+    self.navigationController.navigationBar.hidden=YES;
+    
+    self.headView=[UIView new];
+    [self.view addSubview:self.headView];
+    self.headView.frame=CGRectMake(0, 0, screen_width, screen_height/3);
+    self.headView.backgroundColor=RGB(64, 186, 64);
+    
+    
 
     [self setupTab];
     
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    if([UserDefaultsUtils getOwnID])
-//    {
-//        self.mineTabView.tableHeaderView=[self addNoHeaderBar];
-//    
-//    }else
-//    {
-//    
-//        self.mineTabView.tableHeaderView=[self addHeaderBar];
-//    }
-//
-//}
-
-
-#pragma mark -个人中心头部
-- (void)setUpMineHead
+- (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.hidden=YES;
-    
-    UIView *headView=[UIView new];
-    headView.frame=CGRectMake(0, 0, screen_width, screen_height/3);
-//    [headView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.height.equalTo(self.view).with.offset(0.3f);
-//
-//        make.width.equalTo(self.view.mas_width);
-//    }];
-    headView.backgroundColor=RGB(64, 186, 64);
-    [self.view addSubview:headView];
+//    [self setUpNOMineHead];
+    [self addHeader];
+
+}
+
+
+#pragma mark -个人没有登录时的状态中心头部
+- (void)setUpNOMineHead
+{
     
     /**
      *登录
@@ -73,23 +63,17 @@
     loginBtn.backgroundColor=RGB(141, 201, 0);
     [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.headView addSubview:loginBtn];
     /**位置**/
-    /**设置间距为10***/
-//    int padding=135;
-//    int padding1=10;
-    loginBtn.frame=CGRectMake(screen_width/2-110, screen_height/10+20, screen_width/4+10, screen_height/14);
-//    [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.mas_equalTo(headView.mas_centerY);
-//        make.left.equalTo(headView.mas_left).with.offset(padding);
-//        make.height.mas_equalTo(@35);
-//        make.right.equalTo(self.registeredBtn.mas_left).with.offset(-padding1);
-//        make.width.equalTo(self.registeredBtn);
-//        
-//    }];
+
+    [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.headView).with.offset(screen_width/2-100);
+        make.height.equalTo(@35);
+        make.width.equalTo(@100);
+        make.top.mas_equalTo(self.headView).with.offset(self.headView.frame.size.height/2);
+        
+    }];
     
-    
-    
-    [headView addSubview:loginBtn];
     /**
      *登录事件
      **/
@@ -105,22 +89,65 @@
     [self.registeredBtn setTitle:@"注册" forState:UIControlStateNormal];
     self.registeredBtn.backgroundColor=[UIColor whiteColor];
     [self.registeredBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    self.registeredBtn.frame=CGRectMake(screen_width/2, screen_height/10+20, screen_width/4+10, screen_height/14);
+    [self.headView addSubview:self.registeredBtn];
+    /**注册的点击事件**/
+    [self.registeredBtn addTarget:self action:@selector(registeredClick) forControlEvents:UIControlEventTouchUpInside];
+
     /**位置**/
-//    [self.registeredBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-////        make.centerY.mas_equalTo(headView.mas_centerY);
-////        make.left.equalTo(loginBtn.mas_right).with.offset(padding1);
-////        make.right.equalTo(headView.mas_right).with.offset(-padding);
-//        make.height.mas_equalTo(@35);
-//        make.width.equalTo(loginBtn);
-//    }];
-    [headView addSubview:self.registeredBtn];
-    
+    [self.registeredBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.headView).with.offset(-50);
+        make.height.equalTo(@35);
+        make.width.equalTo(@100);
+        make.top.mas_equalTo(self.headView).with.offset(self.headView.frame.size.height/2);
+ 
+    }];
     
 
+}
+
+#pragma mark --登录后的状态
+- (void)addHeader
+{
+    UIButton *headerImgBtn=[UIButton new];
+    headerImgBtn.layer.cornerRadius=75.0;
+    [headerImgBtn setImage:[UIImage imageNamed:@"unlogin_head_h"] forState:UIControlStateNormal];
+    [self.headView addSubview:headerImgBtn];
+    /**点击事件**/
+    [headerImgBtn addTarget:self action:@selector(userDetailClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    [headerImgBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.headView).with.offset(-120);
+        make.height.equalTo(@150);
+        make.width.equalTo(@150);
+        make.top.mas_equalTo(self.headView).with.offset(self.headView.frame.size.height/2-50);
+    }];
+    
+    UILabel *creditlab=[UILabel new];
+    creditlab.text=@"😊";
+    [self.headView addSubview:creditlab];
+    
+    [creditlab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(headerImgBtn).with.offset(10);
+        make.bottom.mas_equalTo(self.headView).with.offset(20);
+        make.height.equalTo(@30);
+        make.right.mas_equalTo(self.headView).with.offset(-120);
+    }];
+    
+    UILabel *nameLab=[UILabel new];
+    nameLab.text=@"小明";
+    nameLab.textColor=[UIColor whiteColor];
+    [self.headView addSubview:nameLab];
+    [nameLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(headerImgBtn).with.offset(90);
+        make.bottom.mas_equalTo(self.headView).with.offset(-10);
+        make.height.equalTo(@30);
+        make.left.mas_equalTo(self.headView).with.offset(screen_width/2-25);
+    }];
 
 
 }
+
+
 #pragma mark -登录事件
 - (void)loginClick
 {
@@ -128,6 +155,23 @@
     LFHLoginViewController *login=[[LFHLoginViewController alloc] init];
     [self.navigationController pushViewController:login animated:YES];
     
+
+}
+
+#pragma mark -注册
+- (void)registeredClick
+{
+    NSLog(@"注册");
+    LFHLoginViewController *login=[[LFHLoginViewController alloc] init];
+    [self.navigationController pushViewController:login animated:YES];
+
+}
+
+#pragma mark --点击头像详情
+- (void)userDetailClick
+{
+    NSLog(@"你点击了头像");
+
 
 }
 
@@ -144,104 +188,6 @@
 
 }
 
-/**
- *无登录时状态
- */
-- (UIImageView *)addNoHeaderBar
-{
-    
-    UIImageView *header=[[UIImageView alloc] init];
-    [header mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@200);
-        make.left.equalTo(self.view).with.offset(0);
-        make.right.equalTo(self.view).with.offset(0);
-    }];
-    /**是否允许用户交互**/
-    header.userInteractionEnabled=YES;
-    header.backgroundColor=RGB(64, 185, 64);
-    
-    /**
-     *未登录按钮光圈
-     **/
-    LFHRippleButton *unLoginBtnBg = [[LFHRippleButton alloc]
-                                     initWithImage:[UIImage imageNamed:@"unlogin_head_n"]
-                                     andFrame:CGRectMake(screen_width/2-90/2, 20, 90, 90)
-                                     onCompletion:^(BOOL success) {
-                                         
-//                                         [self showLoginView];
-                                         
-                                     }];
-    [unLoginBtnBg setRippleEffectEnabled:NO];
-    [header addSubview:unLoginBtnBg];
-    //头部卡片
-    UIImageView *bgView = [UIImageView new];
-    bgView.image=[UIImage imageNamed:@"head_extra_bg"];
-    [header addSubview:bgView];
-    
-    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 50));
-        make.bottom.mas_equalTo(header.mas_bottom);
-    }];
-    
-    /**
-     *账户名
-     */
-    UILabel *nameLable=[UILabel new];
-    nameLable.text=@"用户名";
-    [header addSubview:nameLable];
-    [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 30));
-        make.bottom.mas_equalTo(header).with.offset(50);
-    }];
-    
-    return header;
-
-}
-
-#pragma mark -登录状态
-- (UIImageView *)addHeaderBar
-{
-    UIImageView *header=[[UIImageView alloc] init];
-//    [header mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.height.equalTo(@200);
-//        make.left.equalTo(self.view).with.offset(0);
-//        make.right.equalTo(self.view).with.offset(0);
-//    }];
-    
-    /**是否允许用户交互**/
-    header.userInteractionEnabled=YES;
-    header.backgroundColor=RGB(64, 185, 64);
-    
-    /**
-     *未登录按钮光圈
-     **/
-    LFHRippleButton *LoginBtnBg = [[LFHRippleButton alloc]
-                                     initWithImage:[UIImage imageNamed:@"unlogin_head_n"]
-                                     andFrame:CGRectMake(screen_width/2-90/2, 20, 90, 90)
-                                     onCompletion:^(BOOL success) {
-                                         
-                                         //                                         [self showLoginView];
-                                         
-                                     }];
-    [LoginBtnBg setRippleEffectEnabled:NO];
-    [header addSubview:LoginBtnBg];
-    /**
-     *账户名
-     */
-    UILabel *nameLable=[UILabel new];
-    nameLable.text=@"用户名";
-    [header addSubview:nameLable];
-//    [nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 30));
-//        make.bottom.mas_equalTo(header).with.offset(50);
-//    }];
-//    userName.text=_myInfo.userName;
-    [header addSubview:nameLable];
-
-    return header;
-
-
-}
 #pragma mark 设置分组标题内容高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
@@ -318,6 +264,16 @@
 
 }
 
+#pragma mark -cell点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"====我的订单");
+    LFHOrderViewController *order=[[LFHOrderViewController alloc] init];
+    [self.navigationController pushViewController:order animated:YES];
+    
+
+
+}
 #pragma mark 返回table头
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(section==0)
@@ -377,6 +333,8 @@
         
         LFHButton *btn22=[LFHButton new];
         [btn22 LFHButtonontentWithImage:@"图标-29.png" Title:@"充值中心" width: screen_width/4 height:CellFooterheight];
+        /**充值中心事件**/
+        [btn22 addTarget:self action:@selector(TopupcenterClick) forControlEvents:UIControlEventTouchUpInside];
         
         [footer addSubview:btn22];
         
@@ -397,6 +355,14 @@
         return footer;
     }
     return nil;
+}
+
+#pragma mark -点击进入充值中心界面
+- (void)TopupcenterClick
+{
+
+
+
 }
 
 - (void)OnClick:(UIButton *)sender
