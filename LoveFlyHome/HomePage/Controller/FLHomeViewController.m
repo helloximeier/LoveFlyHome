@@ -13,10 +13,14 @@
 #import "wheelCell.h"
 #import "LFHSpecialCell.h"
 #import "LFHNewproductCell.h"
+#import "LFHRushGoodsListItem.h"
+#import "LFHNewproductCell.h"
+#import "LFHRushBuyControl.h"
 
-@interface FLHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FLHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
-@property(strong,nonatomic)UITableView *LHFtabView;
+@property(strong,nonatomic)UICollectionView *LHFCollectionView;
+@property (nonatomic, retain) UICollectionViewFlowLayout * layout;
 @end
 
 @implementation FLHomeViewController
@@ -24,289 +28,256 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    /**
-     *调用创建表格方法
-     **/
-    [self setUpTabView];
+    self.layout=[[UICollectionViewFlowLayout alloc] init];
+    self.LHFCollectionView=[[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height) collectionViewLayout:self.layout];
+    self.LHFCollectionView.delegate=self;
+    self.LHFCollectionView.dataSource=self;
+    self.LHFCollectionView.backgroundColor=[UIColor whiteColor];
+    [self.view addSubview:self.LHFCollectionView];
+    /**注册collectionviewcell**/
+    [self.LHFCollectionView registerClass:[LFHRushGoodsListItem class] forCellWithReuseIdentifier:@"LFHRushGoodsListItem"];
+    [self.LHFCollectionView registerClass:[LFHNewProductCell class] forCellWithReuseIdentifier:@"LFHNewProductCell"];
+    
+    [self.LHFCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"acell"];
+    
+    
+    /**注册区头**/
+    [self.LHFCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeadViewID"];
+    /**注册区尾**/
+    [self.LHFCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterViewID"];
 }
 
-/**
- *创建表格
- **/
-- (void)setUpTabView
+#pragma mark --设置区头视图
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    self.LHFtabView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height-64-49) style:UITableViewStyleGrouped];
-    self.LHFtabView.dataSource=self;
-    self.LHFtabView.delegate=self;
-    
-    
-    /**设置分割线颜色**/
-    [self.LHFtabView setSeparatorColor:RGB(230, 230, 230)];
-    
-    /**添加表格到视图上**/
-    [self.view addSubview:self.LHFtabView];
-    /**
-     *注册单元格
-     **/
-    [self.LHFtabView registerNib:[UINib nibWithNibName:@"LFHRushFoodCell" bundle:nil] forCellReuseIdentifier:@"rushCell"];
-
-}
-
-#pragma mark -实现表格协议
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    
-
-    return 5;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if(section==1)
+    if(section==0)
     {
-        return 2;
-    }else if (section==2)
+        return CGSizeMake(0, 10);
+    }else if(section==1)
     {
-        return 2;
+        return CGSizeMake(0, 40);
+    }else if(section==2)
+    {
+        return CGSizeMake(0, 40);
+    }else
+    {
+        return CGSizeMake(0, 10);
     }
-    return 1;
+
 
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+
+#pragma mark --区尾
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    if(section==0)
+    {
+        return CGSizeMake(0, 10);
+    }else if(section==1)
+    {
+        return CGSizeMake(0, 10);
+    }else if(section==2)
+    {
+        return CGSizeMake(0, 30);
+    }
+    else if(section==3)
+    {
+        return CGSizeMake(0, 30);
+    
+    }
+    else
+    {
+        return CGSizeMake(0, 0);
+    }
+}
+
+#pragma mark --设置区头视图
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+           if([kind isEqual:UICollectionElementKindSectionHeader])
+        {
+            UICollectionReusableView *headerView=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeadViewID" forIndexPath:indexPath];
+            if (headerView == nil) {
+                headerView = [[UICollectionReusableView alloc] init];
+            }
+            
+            if(indexPath.section==1)
+            {
+                UIImageView *rushimg=[[UIImageView alloc] initWithFrame:CGRectMake(screen_width/2-100, 0, screen_width/2, 40)];
+                rushimg.image=[UIImage imageNamed:@"rush-img"];
+                [headerView addSubview:rushimg];
+                
+            }else if(indexPath.section==2)
+            {
+                UIImageView *rushimg=[[UIImageView alloc] initWithFrame:CGRectMake(screen_width/2-100, 0, screen_width/2, 40)];
+                rushimg.image=[UIImage imageNamed:@"special"];
+                [headerView addSubview:rushimg];
+            }
+            
+            return headerView;
+            
+            
+            
+        }
+    
+        if ([kind isEqual:UICollectionElementKindSectionFooter])
+        {
+            UICollectionReusableView *footerView=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"FooterViewID" forIndexPath:indexPath];
+            if (footerView == nil) {
+                footerView = [[UICollectionReusableView alloc] init];
+            }
+            
+            footerView.backgroundColor=RGB(235, 235, 235);
+            
+            if(indexPath.section==2)
+            {
+                UILabel *newLable=[[UILabel alloc] initWithFrame:CGRectMake(10, 5, screen_width, 20)];
+                newLable.text=@"新品上市";
+                [footerView addSubview:newLable];
+                
+            }else if(indexPath.section==3)
+            {
+//                UILabel *hotLable=[[UILabel alloc] initWithFrame:CGRectMake(10, 5, screen_width, 20)];
+//                hotLable.text=@"热卖产品";
+//                [footerView addSubview:hotLable];
+                
+                
+            }
+            
+            return footerView;
+            
+            
+        }
+    return nil;
+
+
+}
+
+
+
+
+#pragma mark --设置item大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section==0)
     {
-        return 150.0;
+        
+      return CGSizeMake(100, 150);
+    
     }else if (indexPath.section==1)
     {
-        if(indexPath.row==0)
-        {
-            return 45;
-        }else
-        {
-            return 160;
-        }
-        
-    }else if (indexPath.section==2)
+      
+        return CGSizeMake(screen_width/3-20, 155);
     
+    }else if (indexPath.section==2)
     {
-        if(indexPath.row==0)
-        {
-            return 45;
-        }else
-        {
-            return 160;
-        }
-
-        
-    }else if (indexPath.section==3)
+        return CGSizeMake(screen_width/3-20, 155);
+    
+    }
+    else
     {
-        return 200.0;
-    }else if(indexPath.section==4)
-    {
-        return 200.0;
-    }else
-    {
-        return 0;
+        return CGSizeMake(screen_width/2-50, 200);
+    
     }
     
 
-
 }
-#pragma mark -头部
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+
+#pragma mark --设置横向间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    if(section==1)
+
+    return 5.0f;
+}
+
+#pragma mark --通过调整inset使单元格顶部和底部都有间距（inset次序：上，左，下，右）
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+
+    return UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f);
+}
+
+#pragma mark --实现UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+
+    return 5;
+}
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if(section==0)
     {
-        return 0.5;
-    }else if (section==3)
+        return 1;
+    }else if(section==1)
     {
-        return 30.0;
-    }else if (section==4)
+        return 3;
+    }else if (section==2)
     {
-        return 30.0;
-    
+        return 3;
     }
     else
     {
         return 5;
     }
-}
-
-#pragma mark -脚部
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    
-    if(section==1)
-    {
-        return 0.5;
-    }
-    return 5;
-    
-}
-#pragma mark -头部视图大小 颜色
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    if(section==3)
-    {
-        UIView *headView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 30)];
-        headView.backgroundColor=RGB(239, 239, 244);
-        UILabel *headLab=[[UILabel alloc] init];
-        headLab.frame=CGRectMake(10, 0, 100, 30);
-        headLab.text=@"新品上市";
-        [headView addSubview:headLab];
-        return headView;
-        
-    }else if (section==4)
-    {
-        UIView *headView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 30)];
-        headView.backgroundColor=RGB(239, 239, 244);
-        UILabel *headLab=[[UILabel alloc] init];
-        headLab.frame=CGRectMake(10, 0, 100, 30);
-        headLab.text=@"热卖产品";
-        [headView addSubview:headLab];
-        return headView;
-
-    }
-    
-        UIView *headView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 0.1)];
-        headView.backgroundColor=RGB(239, 239, 244);
-        return headView;
     
 }
 
-#pragma mark -脚部视图大小 颜色
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-  
-    UIView *footView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 0)];
-    
-    footView.backgroundColor=RGB(239, 239, 244);
-    return footView;
-}
-
-
-#pragma mark-表格重用机制
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section==0)
     {
-        /**滚动视图**/
-        static NSString *acell=@"wheelcell";
-        wheelCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
-        if(cell==nil)
+        static NSString *acells=@"acell";
+        UICollectionViewCell *cells=[collectionView dequeueReusableCellWithReuseIdentifier:acells forIndexPath:indexPath];
+        if(cells==nil)
         {
+            cells=[[UICollectionViewCell alloc] init];
             
-            cell=[[wheelCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
         }
-        cell.selectionStyle=UITableViewCellSelectionStyleNone;
-        return cell;
-
-    
-    }else if (indexPath.section==1)
+        UIImageView *img=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 150)];
+        img.image=[UIImage imageNamed:@"banner6.jpg"];
+        [cells addSubview:img];
+        return cells;
+    }
+    if(indexPath.section==1)
     {
-        if(indexPath.row==0)
-        {
-            
-            static NSString *acell=@"acell";
-            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
-            if(cell==nil)
-            {
-                cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
-                
-            }
-            
-            UIImageView *rushImg=[[UIImageView alloc] init];
-            rushImg.frame=CGRectMake(screen_width/2-100, 7, 200, 35);
-            rushImg.image=[UIImage imageNamed:@"rush-img"];
-            [cell addSubview:rushImg];
- 
-            return cell;
-        }else
-        {
-            /**立即抢购**/
-            static NSString *rushCell=@"rushCELL";
-            LFHRushFoodCell *RUSHCELL=[tableView dequeueReusableCellWithIdentifier:rushCell];
-            if(!RUSHCELL)
-            {
-                RUSHCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHRushFoodCell" owner:self options:nil] lastObject];
-            }
-            RUSHCELL.selectionStyle=UITableViewCellEditingStyleNone;
-            return RUSHCELL;
         
+         LFHRushGoodsListItem *goodsItemCell=[LFHRushGoodsListItem RushGoodsCollectionItem:collectionView withIndex:indexPath];
         
-        
-        }
-        
+        return goodsItemCell;
+    
     }else if (indexPath.section==2)
-    {
-        if(indexPath.row==0)
-        {
-            static NSString *acell=@"Specialcell";
-            UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:acell];
-            if(cell==nil)
-            {
-                cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:acell];
-                
-            }
-            
-            UIImageView *rushImg=[[UIImageView alloc] init];
-            rushImg.frame=CGRectMake(screen_width/2-100, 7, 200, 35);
-            rushImg.image=[UIImage imageNamed:@"special"];
-            [cell addSubview:rushImg];
-            
-            return cell;
-
         
-        
-        }else
-        {
-            /**
-             *特价商品
-             **/
-            static NSString *specialCell=@"SpecialCELL";
-            LFHSpecialCell *SpecialCELL=[tableView dequeueReusableCellWithIdentifier:specialCell];
-            if(!SpecialCELL)
-            {
-                SpecialCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHSpecialCell" owner:self options:nil] lastObject];
-            
-            
-            }
-            
-            SpecialCELL.selectionStyle=UITableViewCellEditingStyleNone;
-            return SpecialCELL;
-        }
-    
-    
-    }else if (indexPath.section==3)
     {
-        static NSString *NewProductCell=@"newProductCell";
-        LFHNewproductCell  *newProductCELL=[tableView dequeueReusableCellWithIdentifier:NewProductCell];
-        if(!newProductCELL)
-        {
-            newProductCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHNewproductCell" owner:self options:nil] lastObject];
         
-        }
-        newProductCELL.selectionStyle=UITableViewCellEditingStyleNone;
-        return newProductCELL;
-
-    }
-    else
-    {
-    
-        static NSString *NewProductCell=@"newProductCell";
-        LFHNewproductCell  *newProductCELL=[tableView dequeueReusableCellWithIdentifier:NewProductCell];
-        if(!newProductCELL)
-        {
-            newProductCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHNewproductCell" owner:self options:nil] lastObject];
-            
-        }
-        newProductCELL.selectionStyle=UITableViewCellEditingStyleNone;
-        return newProductCELL;
+         LFHRushGoodsListItem *goodsItemCell=[LFHRushGoodsListItem RushGoodsCollectionItem:collectionView withIndex:indexPath];
+        
+        return goodsItemCell;
     
     }
+    else if(indexPath.section==3)
+    {
+        LFHNewProductCell *newProduct=[LFHNewProductCell NewProductGoodsCollectionItem:collectionView withIndex:indexPath];
+        return newProduct;
     
     
+    }else if(indexPath.section==4)
+    {
+        LFHNewProductCell *newProduct=[LFHNewProductCell NewProductGoodsCollectionItem:collectionView withIndex:indexPath];
+        return newProduct;
     
+    
+    }
+    return nil;
+
+}
+
+#pragma mark -点击事件
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    LFHRushGoodsListItem *cell=(LFHRushGoodsListItem *)[collectionView cellForItemAtIndexPath:indexPath];
+    LFHRushBuyControl *rushBuy=[[LFHRushBuyControl alloc] init];
+    [self.navigationController pushViewController:rushBuy animated:YES];
+    NSLog(@"你点击了 %ld, %ld",indexPath.section, indexPath.row);
 
 }
 - (void)didReceiveMemoryWarning {

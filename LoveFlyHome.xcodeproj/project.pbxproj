@@ -39,6 +39,13 @@
 		41C4DFF81CFD58A300ABDDE0 /* LFHRushFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFF61CFD58A300ABDDE0 /* LFHRushFoodCell.xib */; };
 		41C4DFFB1CFD599300ABDDE0 /* maodou.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFF91CFD599300ABDDE0 /* maodou.png */; };
 		41C4DFFC1CFD599300ABDDE0 /* shengnvguo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFFA1CFD599300ABDDE0 /* shengnvguo.png */; };
+		41D375C61CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D375C51CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m */; };
+		41D375C91CFFDB110036A6B2 /* LFHNewProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D375C81CFFDB110036A6B2 /* LFHNewProductCell.m */; };
+		41D375D31D002D320036A6B2 /* LFHRushBuyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D375D21D002D320036A6B2 /* LFHRushBuyControl.m */; };
+		41D375D71D0051340036A6B2 /* ms-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D375D41D0051340036A6B2 /* ms-01.png */; };
+		41D375D81D0051340036A6B2 /* ms-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D375D51D0051340036A6B2 /* ms-02.png */; };
+		41D375D91D0051340036A6B2 /* ms-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D375D61D0051340036A6B2 /* ms-03.png */; };
+		41D375DB1D005DC60036A6B2 /* 图标-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D375DA1D005DC60036A6B2 /* 图标-19.png */; };
 		41D42FE91CFEB1FE00F535CB /* LFHSpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D42FE71CFEB1FE00F535CB /* LFHSpecialCell.m */; };
 		41D42FEA1CFEB1FE00F535CB /* LFHSpecialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D42FE81CFEB1FE00F535CB /* LFHSpecialCell.xib */; };
 		41D42FEE1CFEB92800F535CB /* LFHNewproductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D42FEC1CFEB92800F535CB /* LFHNewproductCell.m */; };
@@ -117,7 +124,6 @@
 		4105B44B1CFDBD2E00A0EB2A /* UserDefaultsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsUtils.m; sourceTree = "<group>"; };
 		4105B44F1CFDC40700A0EB2A /* LFHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHLoginViewController.h; sourceTree = "<group>"; };
 		4105B4501CFDC40700A0EB2A /* LFHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHLoginViewController.m; sourceTree = "<group>"; };
-		416B3F911CF863F300A65F63 /* LFHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHPrefixHeader.pch; sourceTree = "<group>"; };
 		41BB4F311CF6A34B00BD6A97 /* LoveFlyHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFlyHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BB4F351CF6A34B00BD6A97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41BB4F371CF6A34B00BD6A97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +159,17 @@
 		41C4DFF61CFD58A300ABDDE0 /* LFHRushFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHRushFoodCell.xib; sourceTree = "<group>"; };
 		41C4DFF91CFD599300ABDDE0 /* maodou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maodou.png; sourceTree = "<group>"; };
 		41C4DFFA1CFD599300ABDDE0 /* shengnvguo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shengnvguo.png; sourceTree = "<group>"; };
+		41D375BF1CFFBBA50036A6B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		41D375C41CFFBF1E0036A6B2 /* LFHRushGoodsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHRushGoodsListItem.h; sourceTree = "<group>"; };
+		41D375C51CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHRushGoodsListItem.m; sourceTree = "<group>"; };
+		41D375C71CFFDB110036A6B2 /* LFHNewProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHNewProductCell.h; sourceTree = "<group>"; };
+		41D375C81CFFDB110036A6B2 /* LFHNewProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHNewProductCell.m; sourceTree = "<group>"; };
+		41D375D11D002D320036A6B2 /* LFHRushBuyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFHRushBuyControl.h; path = ../../Mine/Controller/RushBuyPage/LFHRushBuyControl.h; sourceTree = "<group>"; };
+		41D375D21D002D320036A6B2 /* LFHRushBuyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFHRushBuyControl.m; path = ../../Mine/Controller/RushBuyPage/LFHRushBuyControl.m; sourceTree = "<group>"; };
+		41D375D41D0051340036A6B2 /* ms-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ms-01.png"; sourceTree = "<group>"; };
+		41D375D51D0051340036A6B2 /* ms-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ms-02.png"; sourceTree = "<group>"; };
+		41D375D61D0051340036A6B2 /* ms-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ms-03.png"; sourceTree = "<group>"; };
+		41D375DA1D005DC60036A6B2 /* 图标-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-19.png"; sourceTree = "<group>"; };
 		41D42FE61CFEB1FE00F535CB /* LFHSpecialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHSpecialCell.h; sourceTree = "<group>"; };
 		41D42FE71CFEB1FE00F535CB /* LFHSpecialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHSpecialCell.m; sourceTree = "<group>"; };
 		41D42FE81CFEB1FE00F535CB /* LFHSpecialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHSpecialCell.xib; sourceTree = "<group>"; };
@@ -290,7 +307,6 @@
 				41BB4F401CF6A34B00BD6A97 /* Assets.xcassets */,
 				41DB3A7B1CF82C94006AD810 /* Datas */,
 				41BB4F421CF6A34B00BD6A97 /* LaunchScreen.storyboard */,
-				416B3F911CF863F300A65F63 /* LFHPrefixHeader.pch */,
 				41BB4F451CF6A34B00BD6A97 /* Info.plist */,
 				41BB4F341CF6A34B00BD6A97 /* Supporting Files */,
 			);
@@ -301,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				41BB4F351CF6A34B00BD6A97 /* main.m */,
+				41D375BF1CFFBBA50036A6B2 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -383,6 +400,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		41D375C01CFFBE780036A6B2 /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				41D375C41CFFBF1E0036A6B2 /* LFHRushGoodsListItem.h */,
+				41D375C51CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m */,
+				41D375C71CFFDB110036A6B2 /* LFHNewProductCell.h */,
+				41D375C81CFFDB110036A6B2 /* LFHNewProductCell.m */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
 		41D654F21CF6E79D00B1D268 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +477,8 @@
 		41D655121CF6F00300B1D268 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				41D375D11D002D320036A6B2 /* LFHRushBuyControl.h */,
+				41D375D21D002D320036A6B2 /* LFHRushBuyControl.m */,
 				41C4DFE31CFD2C9800ABDDE0 /* FLHomeViewController.h */,
 				41C4DFE41CFD2C9800ABDDE0 /* FLHomeViewController.m */,
 			);
@@ -467,6 +497,7 @@
 		41D655141CF6F00300B1D268 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				41D375C01CFFBE780036A6B2 /* collectionView */,
 				41DB3A551CF7F011006AD810 /* cell */,
 			);
 			path = View;
@@ -603,6 +634,10 @@
 		41DB3A7B1CF82C94006AD810 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				41D375DA1D005DC60036A6B2 /* 图标-19.png */,
+				41D375D41D0051340036A6B2 /* ms-01.png */,
+				41D375D51D0051340036A6B2 /* ms-02.png */,
+				41D375D61D0051340036A6B2 /* ms-03.png */,
 				41D430101CFF1C6400F535CB /* headimg.png */,
 				41D430001CFEF9F400F535CB /* xihongshi.png */,
 				41D42FF01CFEBA9B00F535CB /* qingcai.png */,
@@ -748,6 +783,8 @@
 			files = (
 				41DB3A791CF82C7E006AD810 /* banner2.jpg in Resources */,
 				41DB3A761CF82C7E006AD810 /* banner5.jpg in Resources */,
+				41D375D91D0051340036A6B2 /* ms-03.png in Resources */,
+				41D375D81D0051340036A6B2 /* ms-02.png in Resources */,
 				4105B4411CFD7B3100A0EB2A /* 图标-30.png in Resources */,
 				41DB3A741CF82C7E006AD810 /* banner7.jpg in Resources */,
 				4105B43C1CFD7B3100A0EB2A /* 图标-23.png in Resources */,
@@ -756,6 +793,7 @@
 				41D42FFF1CFEF99900F535CB /* LFHOrderCell.xib in Resources */,
 				4105B43D1CFD7B3100A0EB2A /* 图标-24.png in Resources */,
 				41D42FF11CFEBA9B00F535CB /* qingcai.png in Resources */,
+				41D375D71D0051340036A6B2 /* ms-01.png in Resources */,
 				41D4EB471CFE758200B5A329 /* 图标-20.png in Resources */,
 				41D430111CFF1C6400F535CB /* headimg.png in Resources */,
 				41BB4F441CF6A34B00BD6A97 /* LaunchScreen.storyboard in Resources */,
@@ -772,6 +810,7 @@
 				41BB4F411CF6A34B00BD6A97 /* Assets.xcassets in Resources */,
 				41C4DFF81CFD58A300ABDDE0 /* LFHRushFoodCell.xib in Resources */,
 				41DB3A751CF82C7E006AD810 /* banner6.jpg in Resources */,
+				41D375DB1D005DC60036A6B2 /* 图标-19.png in Resources */,
 				41D4EB451CFE6A2800B5A329 /* 图标-27.png in Resources */,
 				41C4DFFB1CFD599300ABDDE0 /* maodou.png in Resources */,
 				41BB4F3F1CF6A34B00BD6A97 /* Main.storyboard in Resources */,
@@ -850,6 +889,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D42FF71CFED48A00F535CB /* LFHOrderViewController.m in Sources */,
+				41D375C91CFFDB110036A6B2 /* LFHNewProductCell.m in Sources */,
 				41C4DFF71CFD58A300ABDDE0 /* LFHRushFoodCell.m in Sources */,
 				41C4DFDA1CFD2C4700ABDDE0 /* BaseViewController.m in Sources */,
 				41D655261CF6F12B00B1D268 /* FLHClassifyPageCtrl.m in Sources */,
@@ -859,12 +899,14 @@
 				4105B42D1CFD779400A0EB2A /* UIButton+Extension.m in Sources */,
 				41D42FFA1CFED64C00F535CB /* LFHSegmentedControl.m in Sources */,
 				41DB3A541CF7E547006AD810 /* UIBarButtonItem+Extension.m in Sources */,
+				41D375D31D002D320036A6B2 /* LFHRushBuyControl.m in Sources */,
 				41D4300B1CFF066000F535CB /* StatesTableCell.m in Sources */,
 				41DB3A7F1CF83016006AD810 /* RushDealsModel.m in Sources */,
 				41D42FFE1CFEF99900F535CB /* LFHOrderCell.m in Sources */,
 				41DB3AC31CF84980006AD810 /* BargainPriceCell.m in Sources */,
 				4105B4511CFDC40700A0EB2A /* LFHLoginViewController.m in Sources */,
 				41C4DFDF1CFD2C6500ABDDE0 /* FLHomeSearchBar.m in Sources */,
+				41D375C61CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m in Sources */,
 				41D42FEE1CFEB92800F535CB /* LFHNewproductCell.m in Sources */,
 				41C4DFDB1CFD2C4700ABDDE0 /* SelectedViewController.m in Sources */,
 				4105B4301CFD780200A0EB2A /* MasonyUtil.m in Sources */,
@@ -1032,7 +1074,7 @@
 				INFOPLIST_FILE = LoveFlyHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHome;
+				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHomes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1049,7 +1091,7 @@
 				INFOPLIST_FILE = LoveFlyHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHome;
+				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHomes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
