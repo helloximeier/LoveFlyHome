@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="DetailFootView" id="iN0-l3-epB" customClass="DetailFootView">
+            <rect key="frame" x="0.0" y="0.0" width="674" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥15.00Kg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VN4-w6-nwu">
+                    <rect key="frame" x="15" y="53" width="90" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="apM-N6-XsK"/>
+                        <constraint firstAttribute="width" constant="90" id="mXv-XT-832"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菜场价:￥17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E35-EJ-71w">
+                    <rect key="frame" x="110" y="57" width="80" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="1qx-rL-8mA"/>
+                        <constraint firstAttribute="height" constant="21" id="92S-R2-kwe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月销:100件" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq2-qY-crs">
+                    <rect key="frame" x="524" y="57" width="70" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="BfU-8n-bC4"/>
+                        <constraint firstAttribute="height" constant="21" id="MC3-ZP-NQQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快递:5元" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfD-jm-IeT">
+                    <rect key="frame" x="599" y="57" width="60" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="PjX-Oq-fsX"/>
+                        <constraint firstAttribute="height" constant="21" id="euK-47-ZMQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地瓜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q05-iV-HWv">
+                    <rect key="frame" x="15" y="3" width="100" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Ovb-eV-qcF"/>
+                        <constraint firstAttribute="width" constant="100" id="g3C-ov-kFi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VfD-jm-IeT" secondAttribute="trailing" constant="15" id="3zQ-Ed-mXe"/>
+                <constraint firstItem="VfD-jm-IeT" firstAttribute="leading" secondItem="Jq2-qY-crs" secondAttribute="trailing" constant="5" id="7aV-FM-T7X"/>
+                <constraint firstAttribute="bottom" secondItem="VN4-w6-nwu" secondAttribute="bottom" constant="4" id="AxM-fP-fiQ"/>
+                <constraint firstItem="E35-EJ-71w" firstAttribute="leading" secondItem="VN4-w6-nwu" secondAttribute="trailing" constant="5" id="Iuv-mO-pfa"/>
+                <constraint firstItem="q05-iV-HWv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Jj4-2y-p8H"/>
+                <constraint firstAttribute="bottom" secondItem="VfD-jm-IeT" secondAttribute="bottom" constant="4" id="T65-84-iDJ"/>
+                <constraint firstAttribute="bottom" secondItem="Jq2-qY-crs" secondAttribute="bottom" constant="4" id="WLF-TG-xkC"/>
+                <constraint firstItem="VN4-w6-nwu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="WTX-4e-MYt"/>
+                <constraint firstAttribute="bottom" secondItem="E35-EJ-71w" secondAttribute="bottom" constant="4" id="WbS-NE-o20"/>
+                <constraint firstItem="q05-iV-HWv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="fPV-vs-cni"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="priceLabel" destination="VN4-w6-nwu" id="w7l-2o-uwi"/>
+                <outlet property="salesLabel" destination="Jq2-qY-crs" id="oBL-Pw-Z35"/>
+                <outlet property="sendMoneyLabel" destination="VfD-jm-IeT" id="8BG-gG-SrE"/>
+                <outlet property="shichangPriceLabel" destination="E35-EJ-71w" id="YAH-Wl-k2P"/>
+                <outlet property="titleLabel" destination="q05-iV-HWv" id="0hg-vd-Gfz"/>
+            </connections>
+            <point key="canvasLocation" x="531" y="49"/>
+        </view>
+    </objects>
+</document>

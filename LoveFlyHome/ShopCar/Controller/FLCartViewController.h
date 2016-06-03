@@ -1,13 +1,13 @@
 //
-//  FLCartViewController.h
+//  ShopCarPageCtrl.h
 //  LoveFlyHome
 //
-//  Created by eclectic on 16/5/30.
-//  Copyright © 2016年 ispoc. All rights reserved.
+//  Created by Lefeng on 16/5/26.
+//  Copyright © 2016年 Lefeng. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface FLCartViewController : BaseViewController
+@interface FLCartViewController : UIViewController
 
 @end
