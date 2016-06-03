@@ -15,6 +15,7 @@
 #import "UserDefaultsUtils.h"
 #import "LFHLoginViewController.h"
 #import "LFHOrderViewController.h"
+#import "LFHAccountTableViewController.h"
 #define CellFooterheight 80
 @interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic)UITableView *mineTabView;
@@ -171,6 +172,8 @@
 - (void)userDetailClick
 {
     NSLog(@"你点击了头像");
+    LFHAccountTableViewController *account=[[LFHAccountTableViewController alloc] init];
+    [self.navigationController pushViewController:account animated:YES];
 
 
 }
@@ -251,7 +254,7 @@
             /**右侧标识图*/
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator
             ;
-            cell.tintColor=[UIColor blackColor];
+        
             break;
             
         default:

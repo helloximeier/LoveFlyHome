@@ -137,9 +137,9 @@
                 
             }else if(indexPath.section==3)
             {
-//                UILabel *hotLable=[[UILabel alloc] initWithFrame:CGRectMake(10, 5, screen_width, 20)];
-//                hotLable.text=@"热卖产品";
-//                [footerView addSubview:hotLable];
+                UILabel *hotLable=[[UILabel alloc] initWithFrame:CGRectMake(10, 5, screen_width, 20)];
+                hotLable.text=@"热卖产品";
+                [footerView addSubview:hotLable];
                 
                 
             }

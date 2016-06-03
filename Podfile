@@ -12,4 +12,5 @@ pod 'UMengAnalytics', '~> 3.6.6'
 pod 'AFNetworking', '~> 3.0.4'
 pod 'Masonry', '~> 0.6.4'
 pod 'SSKeychain', '~> 1.3.1'
+pod 'FMDB', '~> 2.6'
 end

@@ -39,6 +39,14 @@
 		41C4DFF81CFD58A300ABDDE0 /* LFHRushFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFF61CFD58A300ABDDE0 /* LFHRushFoodCell.xib */; };
 		41C4DFFB1CFD599300ABDDE0 /* maodou.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFF91CFD599300ABDDE0 /* maodou.png */; };
 		41C4DFFC1CFD599300ABDDE0 /* shengnvguo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41C4DFFA1CFD599300ABDDE0 /* shengnvguo.png */; };
+		41D102851D0124A500EF6704 /* LFHBottomBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D102841D0124A500EF6704 /* LFHBottomBtnView.m */; };
+		41D102881D01273C00EF6704 /* redRush.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D102861D01273C00EF6704 /* redRush.png */; };
+		41D102891D01273C00EF6704 /* shopCare.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D102871D01273C00EF6704 /* shopCare.png */; };
+		41D1028F1D015E0300EF6704 /* LFHAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D1028E1D015E0300EF6704 /* LFHAccountTableViewController.m */; };
+		41D102911D016ADC00EF6704 /* 图标-38.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D102901D016ADC00EF6704 /* 图标-38.png */; };
+		41D102941D016AE700EF6704 /* 图标-39.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D102921D016AE700EF6704 /* 图标-39.png */; };
+		41D102951D016AE700EF6704 /* 图标-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D102931D016AE700EF6704 /* 图标-40.png */; };
+		41D1029B1D01AD8200EF6704 /* CuiPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D1029A1D01AD8200EF6704 /* CuiPickerView.m */; };
 		41D375C61CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D375C51CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m */; };
 		41D375C91CFFDB110036A6B2 /* LFHNewProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D375C81CFFDB110036A6B2 /* LFHNewProductCell.m */; };
 		41D375D31D002D320036A6B2 /* LFHRushBuyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D375D21D002D320036A6B2 /* LFHRushBuyControl.m */; };
@@ -63,7 +71,6 @@
 		41D4300C1CFF066000F535CB /* StatesTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D4300A1CFF066000F535CB /* StatesTableCell.xib */; };
 		41D4300F1CFF0F0800F535CB /* LFHUserInfoMation.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D4300E1CFF0F0800F535CB /* LFHUserInfoMation.m */; };
 		41D430111CFF1C6400F535CB /* headimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D430101CFF1C6400F535CB /* headimg.png */; };
-		41D430141CFF220000F535CB /* LFHAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D430131CFF220000F535CB /* LFHAccount.m */; };
 		41D4EB441CFE6A2800B5A329 /* 图标-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D4EB421CFE6A2800B5A329 /* 图标-26.png */; };
 		41D4EB451CFE6A2800B5A329 /* 图标-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D4EB431CFE6A2800B5A329 /* 图标-27.png */; };
 		41D4EB471CFE758200B5A329 /* 图标-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 41D4EB461CFE758200B5A329 /* 图标-20.png */; };
@@ -159,6 +166,17 @@
 		41C4DFF61CFD58A300ABDDE0 /* LFHRushFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHRushFoodCell.xib; sourceTree = "<group>"; };
 		41C4DFF91CFD599300ABDDE0 /* maodou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maodou.png; sourceTree = "<group>"; };
 		41C4DFFA1CFD599300ABDDE0 /* shengnvguo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shengnvguo.png; sourceTree = "<group>"; };
+		41D102831D0124A500EF6704 /* LFHBottomBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFHBottomBtnView.h; path = collectionView/LFHBottomBtnView.h; sourceTree = "<group>"; };
+		41D102841D0124A500EF6704 /* LFHBottomBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFHBottomBtnView.m; path = collectionView/LFHBottomBtnView.m; sourceTree = "<group>"; };
+		41D102861D01273C00EF6704 /* redRush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redRush.png; sourceTree = "<group>"; };
+		41D102871D01273C00EF6704 /* shopCare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopCare.png; sourceTree = "<group>"; };
+		41D1028D1D015E0300EF6704 /* LFHAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHAccountTableViewController.h; sourceTree = "<group>"; };
+		41D1028E1D015E0300EF6704 /* LFHAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHAccountTableViewController.m; sourceTree = "<group>"; };
+		41D102901D016ADC00EF6704 /* 图标-38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-38.png"; sourceTree = "<group>"; };
+		41D102921D016AE700EF6704 /* 图标-39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-39.png"; sourceTree = "<group>"; };
+		41D102931D016AE700EF6704 /* 图标-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-40.png"; sourceTree = "<group>"; };
+		41D102991D01AD8200EF6704 /* CuiPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuiPickerView.h; sourceTree = "<group>"; };
+		41D1029A1D01AD8200EF6704 /* CuiPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuiPickerView.m; sourceTree = "<group>"; };
 		41D375BF1CFFBBA50036A6B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		41D375C41CFFBF1E0036A6B2 /* LFHRushGoodsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHRushGoodsListItem.h; sourceTree = "<group>"; };
 		41D375C51CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHRushGoodsListItem.m; sourceTree = "<group>"; };
@@ -197,8 +215,6 @@
 		41D4300D1CFF0F0800F535CB /* LFHUserInfoMation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHUserInfoMation.h; sourceTree = "<group>"; };
 		41D4300E1CFF0F0800F535CB /* LFHUserInfoMation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHUserInfoMation.m; sourceTree = "<group>"; };
 		41D430101CFF1C6400F535CB /* headimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headimg.png; sourceTree = "<group>"; };
-		41D430121CFF220000F535CB /* LFHAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHAccount.h; sourceTree = "<group>"; };
-		41D430131CFF220000F535CB /* LFHAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHAccount.m; sourceTree = "<group>"; };
 		41D4EB421CFE6A2800B5A329 /* 图标-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-26.png"; sourceTree = "<group>"; };
 		41D4EB431CFE6A2800B5A329 /* 图标-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-27.png"; sourceTree = "<group>"; };
 		41D4EB461CFE758200B5A329 /* 图标-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标-20.png"; sourceTree = "<group>"; };
@@ -497,6 +513,8 @@
 		41D655141CF6F00300B1D268 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				41D102831D0124A500EF6704 /* LFHBottomBtnView.h */,
+				41D102841D0124A500EF6704 /* LFHBottomBtnView.m */,
 				41D375C01CFFBE780036A6B2 /* collectionView */,
 				41DB3A551CF7F011006AD810 /* cell */,
 			);
@@ -544,8 +562,8 @@
 				41D42FF31CFED0A300F535CB /* LFHTopCenterViewController.m */,
 				41D42FF51CFED48A00F535CB /* LFHOrderViewController.h */,
 				41D42FF61CFED48A00F535CB /* LFHOrderViewController.m */,
-				41D430121CFF220000F535CB /* LFHAccount.h */,
-				41D430131CFF220000F535CB /* LFHAccount.m */,
+				41D1028D1D015E0300EF6704 /* LFHAccountTableViewController.h */,
+				41D1028E1D015E0300EF6704 /* LFHAccountTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -569,6 +587,8 @@
 				41D42FFB1CFEF99900F535CB /* LFHOrderCell.h */,
 				41D42FFC1CFEF99900F535CB /* LFHOrderCell.m */,
 				41D42FFD1CFEF99900F535CB /* LFHOrderCell.xib */,
+				41D102991D01AD8200EF6704 /* CuiPickerView.h */,
+				41D1029A1D01AD8200EF6704 /* CuiPickerView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -634,6 +654,11 @@
 		41DB3A7B1CF82C94006AD810 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				41D102921D016AE700EF6704 /* 图标-39.png */,
+				41D102931D016AE700EF6704 /* 图标-40.png */,
+				41D102901D016ADC00EF6704 /* 图标-38.png */,
+				41D102861D01273C00EF6704 /* redRush.png */,
+				41D102871D01273C00EF6704 /* shopCare.png */,
 				41D375DA1D005DC60036A6B2 /* 图标-19.png */,
 				41D375D41D0051340036A6B2 /* ms-01.png */,
 				41D375D51D0051340036A6B2 /* ms-02.png */,
@@ -744,7 +769,6 @@
 				TargetAttributes = {
 					41BB4F301CF6A34B00BD6A97 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = R36RFR5274;
 					};
 					41BB4F491CF6A34B00BD6A97 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -783,6 +807,8 @@
 			files = (
 				41DB3A791CF82C7E006AD810 /* banner2.jpg in Resources */,
 				41DB3A761CF82C7E006AD810 /* banner5.jpg in Resources */,
+				41D102951D016AE700EF6704 /* 图标-40.png in Resources */,
+				41D102941D016AE700EF6704 /* 图标-39.png in Resources */,
 				41D375D91D0051340036A6B2 /* ms-03.png in Resources */,
 				41D375D81D0051340036A6B2 /* ms-02.png in Resources */,
 				4105B4411CFD7B3100A0EB2A /* 图标-30.png in Resources */,
@@ -792,6 +818,7 @@
 				41DB3A7A1CF82C7E006AD810 /* banner1.jpg in Resources */,
 				41D42FFF1CFEF99900F535CB /* LFHOrderCell.xib in Resources */,
 				4105B43D1CFD7B3100A0EB2A /* 图标-24.png in Resources */,
+				41D102911D016ADC00EF6704 /* 图标-38.png in Resources */,
 				41D42FF11CFEBA9B00F535CB /* qingcai.png in Resources */,
 				41D375D71D0051340036A6B2 /* ms-01.png in Resources */,
 				41D4EB471CFE758200B5A329 /* 图标-20.png in Resources */,
@@ -800,6 +827,7 @@
 				41D42FEA1CFEB1FE00F535CB /* LFHSpecialCell.xib in Resources */,
 				41D655091CF6E9DF00B1D268 /* 日福莱-02.jpg in Resources */,
 				4105B4401CFD7B3100A0EB2A /* 图标-29.png in Resources */,
+				41D102881D01273C00EF6704 /* redRush.png in Resources */,
 				41DB3A781CF82C7E006AD810 /* banner3.jpg in Resources */,
 				4105B4351CFD7B1F00A0EB2A /* 图标-22.png in Resources */,
 				4105B43F1CFD7B3100A0EB2A /* 图标-28.png in Resources */,
@@ -814,6 +842,7 @@
 				41D4EB451CFE6A2800B5A329 /* 图标-27.png in Resources */,
 				41C4DFFB1CFD599300ABDDE0 /* maodou.png in Resources */,
 				41BB4F3F1CF6A34B00BD6A97 /* Main.storyboard in Resources */,
+				41D102891D01273C00EF6704 /* shopCare.png in Resources */,
 				41D4EB441CFE6A2800B5A329 /* 图标-26.png in Resources */,
 				4105B43E1CFD7B3100A0EB2A /* 图标-25.png in Resources */,
 			);
@@ -895,6 +924,7 @@
 				41D655261CF6F12B00B1D268 /* FLHClassifyPageCtrl.m in Sources */,
 				41BB4F391CF6A34B00BD6A97 /* AppDelegate.m in Sources */,
 				41D430061CFF063F00F535CB /* StatesHeaderView.m in Sources */,
+				41D102851D0124A500EF6704 /* LFHBottomBtnView.m in Sources */,
 				41C4DFD91CFD2C4700ABDDE0 /* FLTabBarController.m in Sources */,
 				4105B42D1CFD779400A0EB2A /* UIButton+Extension.m in Sources */,
 				41D42FFA1CFED64C00F535CB /* LFHSegmentedControl.m in Sources */,
@@ -907,12 +937,13 @@
 				4105B4511CFDC40700A0EB2A /* LFHLoginViewController.m in Sources */,
 				41C4DFDF1CFD2C6500ABDDE0 /* FLHomeSearchBar.m in Sources */,
 				41D375C61CFFBF1E0036A6B2 /* LFHRushGoodsListItem.m in Sources */,
+				41D1029B1D01AD8200EF6704 /* CuiPickerView.m in Sources */,
 				41D42FEE1CFEB92800F535CB /* LFHNewproductCell.m in Sources */,
 				41C4DFDB1CFD2C4700ABDDE0 /* SelectedViewController.m in Sources */,
 				4105B4301CFD780200A0EB2A /* MasonyUtil.m in Sources */,
 				41C4DFE91CFD2CB100ABDDE0 /* FLMineCenterViewController.m in Sources */,
 				4105B44C1CFDBD2E00A0EB2A /* UserDefaultsUtils.m in Sources */,
-				41D430141CFF220000F535CB /* LFHAccount.m in Sources */,
+				41D1028F1D015E0300EF6704 /* LFHAccountTableViewController.m in Sources */,
 				41D4300F1CFF0F0800F535CB /* LFHUserInfoMation.m in Sources */,
 				41D430071CFF063F00F535CB /* StatusTableController.m in Sources */,
 				41DB3A5A1CF7F01B006AD810 /* wheelCell.m in Sources */,
@@ -1074,7 +1105,7 @@
 				INFOPLIST_FILE = LoveFlyHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHomes;
+				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1091,7 +1122,7 @@
 				INFOPLIST_FILE = LoveFlyHome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHomes;
+				PRODUCT_BUNDLE_IDENTIFIER = wangxi.LoveFlyHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
