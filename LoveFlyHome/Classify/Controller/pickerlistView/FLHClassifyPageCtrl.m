@@ -18,7 +18,7 @@
     [self addChildViewController:self.rightVC];
     [self.view addSubview:self.leftVC.view];
     [self.view addSubview:self.rightVC.collectionView];
-    self.view.backgroundColor = [UIColor redColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor buyGoodsBackColor];//修改navigationBar颜色
     
     //获取通知中心单例对象
 //    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
@@ -40,7 +40,7 @@
 {
     if (_rightVC == nil) {
         self.rightVC = [[ClassDetailCollectionController alloc] init];
-         self.rightVC.collectionView.frame = CGRectMake(100, 64, self.view.frame.size.width - 100, self.view.frame.size.height);
+         self.rightVC.collectionView.frame = CGRectMake(100, 0, self.view.frame.size.width - 100, self.view.frame.size.height);
     }
     return _rightVC;
 }

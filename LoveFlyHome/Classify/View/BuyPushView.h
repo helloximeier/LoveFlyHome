@@ -23,6 +23,8 @@
 @property (nonatomic, strong) UIButton * sureButton;
 @property (nonatomic, strong) UIView * backGroundView;
 @property (nonatomic, assign) int goodsNum;
+@property (nonatomic, assign) int goodsID;
+@property (nonatomic,strong)UILabel *goodsName;
 
 + (instancetype)getPushBuyViewWithView:(UIView *)view;
 

@@ -16,11 +16,18 @@
 #import "LFHRushGoodsListItem.h"
 #import "LFHNewproductCell.h"
 #import "LFHRushBuyControl.h"
+#import "LFHSpecialCell.h"
+#import "GoodDetailViewController.h"
+#import "LFHSpecialViewController.h"
+#import "GoodDetailViewController.h"
+
 
 @interface FLHomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property(strong,nonatomic)UICollectionView *LHFCollectionView;
 @property (nonatomic, retain) UICollectionViewFlowLayout * layout;
+@property(strong,nonatomic)LFHSpecialCell *special;
+@property(strong,nonatomic)LFHSpecialViewController *specialViewCtrl;
 @end
 
 @implementation FLHomeViewController
@@ -37,6 +44,8 @@
     /**注册collectionviewcell**/
     [self.LHFCollectionView registerClass:[LFHRushGoodsListItem class] forCellWithReuseIdentifier:@"LFHRushGoodsListItem"];
     [self.LHFCollectionView registerClass:[LFHNewProductCell class] forCellWithReuseIdentifier:@"LFHNewProductCell"];
+    [self.LHFCollectionView registerClass:[LFHSpecialCell class] forCellWithReuseIdentifier:@"LFHSpecialCell"];
+    
     
     [self.LHFCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"acell"];
     
@@ -91,41 +100,40 @@
     }
 }
 
-#pragma mark --设置区头视图
+#pragma mark --设置区头区尾视图
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
            if([kind isEqual:UICollectionElementKindSectionHeader])
         {
             UICollectionReusableView *headerView=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeadViewID" forIndexPath:indexPath];
-            if (headerView == nil) {
-                headerView = [[UICollectionReusableView alloc] init];
-            }
-            
+//            if (headerView == nil) {
+//                headerView = [[UICollectionReusableView alloc] init];
+//            }
+//            
             if(indexPath.section==1)
             {
                 UIImageView *rushimg=[[UIImageView alloc] initWithFrame:CGRectMake(screen_width/2-100, 0, screen_width/2, 40)];
                 rushimg.image=[UIImage imageNamed:@"rush-img"];
                 [headerView addSubview:rushimg];
+            
                 
             }else if(indexPath.section==2)
             {
                 UIImageView *rushimg=[[UIImageView alloc] initWithFrame:CGRectMake(screen_width/2-100, 0, screen_width/2, 40)];
                 rushimg.image=[UIImage imageNamed:@"special"];
                 [headerView addSubview:rushimg];
+                
             }
-            
             return headerView;
-            
-            
-            
+      
         }
     
         if ([kind isEqual:UICollectionElementKindSectionFooter])
         {
             UICollectionReusableView *footerView=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"FooterViewID" forIndexPath:indexPath];
-            if (footerView == nil) {
-                footerView = [[UICollectionReusableView alloc] init];
-            }
+//            if (footerView == nil) {
+//                footerView = [[UICollectionReusableView alloc] init];
+//            }
             
             footerView.backgroundColor=RGB(235, 235, 235);
             
@@ -134,6 +142,7 @@
                 UILabel *newLable=[[UILabel alloc] initWithFrame:CGRectMake(10, 5, screen_width, 20)];
                 newLable.text=@"新品上市";
                 [footerView addSubview:newLable];
+              
                 
             }else if(indexPath.section==3)
             {
@@ -142,8 +151,8 @@
                 [footerView addSubview:hotLable];
                 
                 
+                
             }
-            
             return footerView;
             
             
@@ -249,8 +258,9 @@
         
     {
         
-         LFHRushGoodsListItem *goodsItemCell=[LFHRushGoodsListItem RushGoodsCollectionItem:collectionView withIndex:indexPath];
-        
+         LFHSpecialCell *goodsItemCell=[LFHSpecialCell SpecialGoodsCollectionItem:collectionView withIndex:indexPath];
+//        self.specialViewCtrl.priceLabelText=self.special.specialLable.text;
+//        NSLog(@"-=-=-=-%@",self.special.specialLable.text);
         return goodsItemCell;
     
     }
@@ -275,9 +285,27 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
 //    LFHRushGoodsListItem *cell=(LFHRushGoodsListItem *)[collectionView cellForItemAtIndexPath:indexPath];
-    LFHRushBuyControl *rushBuy=[[LFHRushBuyControl alloc] init];
-    [self.navigationController pushViewController:rushBuy animated:YES];
-    NSLog(@"你点击了 %ld, %ld",indexPath.section, indexPath.row);
+    if(indexPath.section==1)
+    {
+        LFHRushBuyControl *rushBuy=[[LFHRushBuyControl alloc] init];
+        [self.navigationController pushViewController:rushBuy animated:YES];
+
+    
+    }else if (indexPath.section==2)
+    {
+        self.specialViewCtrl=[[LFHSpecialViewController alloc] init];
+////        specialViewCtrl.priceLabelText=@"¥15.00";
+//        specialViewCtrl.priceLabelText=self.special.specialLable.text;
+//        NSLog(@"====%@=====%@",self.special.specialLable.text,specialViewCtrl.priceLabelText);
+////        specialViewCtrl.priceLabelText=self.special.specialLable.text;
+        [self.navigationController pushViewController:self.specialViewCtrl animated:YES];
+    
+    }else
+    {
+        GoodDetailViewController *goodDetail=[[GoodDetailViewController alloc] init];
+        [self.navigationController pushViewController:goodDetail animated:YES];
+    
+    }
 
 }
 - (void)didReceiveMemoryWarning {

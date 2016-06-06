@@ -57,7 +57,8 @@
     
     for (int i = 0; i < num; i++) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 26 + i * 200 + _labelHeight, view.frame.size.width - 30, 200)];
-        _imageView.backgroundColor = [UIColor redColor];
+//        _imageView.backgroundColor = [UIColor redColor];
+        _imageView.image=[UIImage imageNamed:@"tupianxiangqing.jpg"];
         [self addSubview:_imageView];
     }
 }

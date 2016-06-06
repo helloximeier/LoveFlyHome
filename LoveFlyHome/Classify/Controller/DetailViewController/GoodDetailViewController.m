@@ -13,9 +13,9 @@
 #import "DetailFootView.h"
 #import "BuyPushView.h"
 #import "TextView.h"
+#import "Public.h"
 
-
-@interface GoodDetailViewController ()<UITableViewDelegate, UITableViewDataSource,ZImageBrowserDelegate,UINavigationBarDelegate,UITabBarDelegate,UITextFieldDelegate>
+@interface GoodDetailViewController ()<UITableViewDelegate, UITableViewDataSource,ZImageBrowserDelegate,UINavigationControllerDelegate,UITabBarDelegate,UITextFieldDelegate,SDCycleScrollViewDelegate>
 {
     UINavigationBar *bar;
 }
@@ -37,16 +37,15 @@
     _goodsNum = 1;
     _XQListHeight = 500;
     [self setUpControl];
-    [self addBuyButton];
+   
     self.navigationController.delegate =self;
-    
-//    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+     [self addBuyButton];
+
 }
 
 
 - (void)setUpControl{
-    _baseTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGwidth, CGHeight) style:UITableViewStyleGrouped];
+    _baseTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGwidth, CGHeight - 108) style:UITableViewStyleGrouped];
     [self.view addSubview:_baseTableView];
     [_baseTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     _baseTableView.dataSource = self;
@@ -67,7 +66,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
-//    self.navigationController.navigationBar.barTintColor = [UIColor buyGoodsBackColor];//修改navigationBar颜色
+    self.navigationController.navigationBar.barTintColor = [UIColor buyGoodsBackColor];//修改navigationBar颜色
 }
 
 
@@ -75,7 +74,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 200;
+        return screen_height/2+30;
     }
     return 30;
 }
@@ -137,7 +136,7 @@
                       @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
                       ];
     
-    SDCycleScrollView *cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGwidth, 200) imageURLStringsGroup:_scrollImages]; // 模拟网络延时情景
+    SDCycleScrollView *cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width,screen_height/2+30 ) imageURLStringsGroup:_scrollImages]; // 模拟网络延时情景
     cycleScrollView2.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     cycleScrollView2.delegate = self;
     
@@ -212,10 +211,10 @@
 //添加购买按键
 - (void)addBuyButton
 {
-    _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, CGHeight - 44, CGwidth, 44)];
+    _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, CGHeight - 108, CGwidth, 44)];
     _footerView.backgroundColor = [UIColor colorWithRed:124 green:124 blue:124 alpha:0.5];
-    
-    UIButton * addManButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, CGwidth/ 2, 44)];
+    _footerView.backgroundColor = [UIColor redColor];
+    UIButton * addManButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, CGwidth/ 2, 50)];
     [addManButton addTarget:self action:@selector(pushToBuyView) forControlEvents:UIControlEventTouchUpInside];
     [addManButton setTitle:@"加入购物车" forState:UIControlStateNormal];
     UIButton * addGroupButton = [[UIButton alloc] initWithFrame:CGRectMake(CGwidth / 2 , 0, CGwidth  / 2, 44)];
@@ -224,7 +223,7 @@
     [addManButton setBackgroundColor:[UIColor addGoodsBackColor]];
     [addGroupButton setBackgroundColor:[UIColor buyGoodsBackColor]];
     
-    UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(CGwidth / 2 - 1, 0, 1, 44)];
+    UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(CGwidth / 2 - 1, 0, 1, 50)];
     lineView.backgroundColor = [UIColor grayColor];
     lineView.alpha = 0.5;
     [_footerView addSubview:lineView];

@@ -12,6 +12,7 @@
 @property(strong,nonatomic)UIImageView *rushGoodsImage;
 @property(strong,nonatomic)UILabel *rushGoodsName;
 @property(strong,nonatomic)UIButton *imageBtn;
+@property(strong,nonatomic)UILabel *timeLable;
 
 + (instancetype)RushGoodsCollectionItem:(UICollectionView *)collection withIndex:(NSIndexPath *)index;
 @end

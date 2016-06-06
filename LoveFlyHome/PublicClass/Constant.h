@@ -12,5 +12,4 @@
 //友盟Appkey
 #define UMAPPKEY @"55a37e7f67e58e1aac00211f"
 
-
 #endif

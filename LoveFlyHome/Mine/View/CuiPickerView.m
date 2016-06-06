@@ -33,14 +33,13 @@
 @property (nonatomic, copy) NSArray *selectedArray;
 @property (nonatomic, strong) UIPickerView *pickerView;
 @property (nonatomic,strong) NSString *string;
+
 @end
 
 @implementation CuiPickerView
 
 - (id)init {
     if (self = [super init]) {
-       // self.bounds = CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 200);
-       // self.pickerView=[[UIPickerView alloc]initWithFrame:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 180)];
         self.pickerView = [[UIPickerView alloc]initWithFrame:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 200)];
         self.pickerView.backgroundColor = [UIColor clearColor]
         ;
@@ -60,17 +59,15 @@
         [cancelButton addTarget:self action:@selector(hiddenPickerView) forControlEvents:UIControlEventTouchUpInside];
         [upVeiw addSubview:cancelButton];
         
-        //右边的确定按钮
+        //右边的完成按钮
         chooseButton = [UIButton buttonWithType:UIButtonTypeCustom];
         chooseButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 50, 0, 40, 40);
-        [chooseButton setTitle:@"确定" forState:UIControlStateNormal];
+        [chooseButton setTitle:@"完成" forState:UIControlStateNormal];
         chooseButton.backgroundColor = [UIColor clearColor];
         [chooseButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [chooseButton addTarget:self action:@selector(hiddenPickerViewRight) forControlEvents:UIControlEventTouchUpInside];
         [upVeiw addSubview:chooseButton];
 
-        
-        
         
         NSCalendar *calendar0 = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         NSDateComponents *comps = [[NSDateComponents alloc] init];

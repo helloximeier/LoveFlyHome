@@ -10,6 +10,8 @@
 #import "Public.h"
 #import "Masonry.h"
 #import "CuiPickerView.h"
+#import "LFHAdddressController.h"
+
 @interface LFHAccountTableViewController ()<UITableViewDataSource,UITableViewDelegate,CuiPickViewDelegate,UITextFieldDelegate>
 @property(strong,nonatomic)CuiPickerView *lfhpickerView;
 @property(strong,nonatomic)NSString *dataString;
@@ -17,6 +19,7 @@
 @property(strong,nonatomic)UITableView *accountTabView;
 
 @property(strong,nonatomic)UITextField *textFiled;
+
 
 @end
 
@@ -219,14 +222,7 @@
             make.width.equalTo(@40);
             
         }];
-        if(switchBtn.isOn)
-        {
-            NSLog(@"开关开启");
-        }else
-        {
-            NSLog(@"关闭");
-        }
-
+      
         return messageCell;
     }else if (indexPath.section==2)
     {
@@ -308,8 +304,7 @@
             make.bottom.mas_equalTo(SexCell).with.offset(-5);
             make.width.equalTo(@100);
         }];
-        
-
+       
         return SexCell;
     
     
@@ -414,6 +409,9 @@
 
 }
 
+#pragma mark -------- TFPickerDelegate
+
+
 #pragma mark --开始编辑
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
@@ -441,6 +439,8 @@
 - (void)manageClick
 {
     NSLog(@"管理地址");
+    LFHAdddressController *addressCtrl=[[LFHAdddressController alloc] init];
+    [self.navigationController pushViewController:addressCtrl animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

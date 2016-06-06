@@ -315,7 +315,7 @@
         btn2.tag=2;
         [footer addSubview:btn2];
         
-        UIButton *btn3 = [UIButton createButtonWithImage:@"图标-24.png" Title:@"待收货" Target:self Selector:@selector(OnClick:)];
+        UIButton *btn3 = [UIButton createButtonWithImage:@"待收货" Title:@"待收货" Target:self Selector:@selector(OnClick:)];
         btn3.tag=3;
         [footer addSubview:btn3];
         
