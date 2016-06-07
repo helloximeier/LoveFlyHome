@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
-
+@property (assign,nonatomic) NSInteger goodsId;
 
 
 @end

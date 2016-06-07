@@ -9,6 +9,7 @@
 #import "DBHelper.h"
 #import <FMDB.h>
 #import "GoodsInfo.h"
+#import "UserInfoTable.h"
 #define DB @"MallDB.sqlite3"
 static FMDatabase *database=nil;
 
@@ -140,6 +141,75 @@ static FMDatabase *database=nil;
     return goods;
 
 }
+#pragma mark --查询用户表带数据
+- (NSArray *)getUserInfo:(NSString *)sql
+{
+    NSMutableArray *arrayUsers=nil;
+    /**打开数据库**/
+    if([database open])
+    {
+        FMResultSet *results=[database executeQuery:sql];
+        /**返回一行数据 自行进入下一行**/
+        while ([results next]) {
+            if(!arrayUsers)
+            {
+                arrayUsers=[[NSMutableArray alloc]initWithCapacity:0];
+                
+            }
+            UserInfoTable *user=[[UserInfoTable alloc] init];
+            user.UserID=[results intForColumn:@"UserID"];
+            user.UserName=[results stringForColumn:@"UserName"];
+            user.UserImage=[results stringForColumn:@"UserImage"];
+            user.UserGender=[results stringForColumn:@"UserGender"];
+            user.UserBirthday=[results stringForColumn:@"UserBirthday"];
+            user.UserShoppingAddress=[results stringForColumn:@"UserShoppingAddress"];
+            user.UserTelephone=[results stringForColumn:@"UserTelephone"];
+            user.UserPassword=[results stringForColumn:@"UserPassword"];
+            [arrayUsers addObject:user];
+        }
+        
+        /**关闭数据库**/
+        [database close];
+        
+    }else
+    {
+        NSLog(@"数据库打开失败");
+    }
+    return arrayUsers;
+    
+}
 
+#pragma mark --查询单条用户信息
+- (UserInfoTable *)getUserInfoById:(NSString *)sql
+{
+    UserInfoTable *users=nil;
+    if([database open])
+    {
+        FMResultSet *results=[database executeQuery:sql];
+        if([results next])
+        {
+            users=[[UserInfoTable alloc] init];
+            users.UserID=[results intForColumn:@"UserID"];
+            users.UserName=[results stringForColumn:@"UserName"];
+            users.UserImage=[results stringForColumn:@"UserImage"];
+            users.UserGender=[results stringForColumn:@"UserGender"];
+            users.UserBirthday=[results stringForColumn:@"UserBirthday"];
+            users.UserShoppingAddress=[results stringForColumn:@"UserShoppingAddress"];
+            users.UserTelephone=[results stringForColumn:@"UserTelephone"];
+            users.UserPassword=[results stringForColumn:@"UserPassword"];
+            
+        }
+        
+        [database close];
+        
+    }else
+    {
+        NSLog(@"数据库打开失败");
+        
+    }
+    
+    return users;
+    
+}
 
 @end

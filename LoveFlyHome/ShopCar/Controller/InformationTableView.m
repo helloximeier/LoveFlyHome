@@ -9,6 +9,7 @@
 #import "InformationTableView.h"
 #import "InformationCell.h"
 #import "StatusTableController.h"
+#import "Public.h"
 
 @interface InformationTableView ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -18,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
      [self.tableView registerNib:[UINib nibWithNibName:@"InformationCell" bundle:nil] forCellReuseIdentifier:@"InformationCell"];
     
     self.tabBarController.tabBar.hidden = YES;
@@ -30,6 +32,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
+    self.navigationController.navigationBar.backgroundColor=RGB(64, 186, 64);
 }
 
 

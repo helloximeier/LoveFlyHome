@@ -29,6 +29,6 @@
 /**是否登录**/
 @property(assign,nonatomic)BOOL isLogin;
 
-+ (LFHUserInfoMation *)unarchiver;
-- (void)archiver;
+//+ (LFHUserInfoMation *)unarchiver;
+//- (void)archiver;
 @end

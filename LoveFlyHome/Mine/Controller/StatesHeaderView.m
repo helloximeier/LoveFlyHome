@@ -14,6 +14,7 @@
     StatesHeaderView * headerView = [[StatesHeaderView alloc] init];
     headerView.frame = CGRectMake(0, 0, tableView.frame.size.width, 130);
     [headerView addControl];
+    
     return headerView;
 }
 

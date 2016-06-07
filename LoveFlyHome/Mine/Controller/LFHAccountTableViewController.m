@@ -11,14 +11,24 @@
 #import "Masonry.h"
 #import "CuiPickerView.h"
 #import "LFHAdddressController.h"
+#import "LFHSelectWorMViewController.h"
+#import "ImagePickerManager.h"
 
-@interface LFHAccountTableViewController ()<UITableViewDataSource,UITableViewDelegate,CuiPickViewDelegate,UITextFieldDelegate>
+@interface LFHAccountTableViewController ()<UITableViewDataSource,UITableViewDelegate,CuiPickViewDelegate,UITextFieldDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate>
+{
+    UIActionSheet *_myActionSheet;
+
+
+}
 @property(strong,nonatomic)CuiPickerView *lfhpickerView;
 @property(strong,nonatomic)NSString *dataString;
 
 @property(strong,nonatomic)UITableView *accountTabView;
 
 @property(strong,nonatomic)UITextField *textFiled;
+@property(strong,nonatomic)UIView *contentView;
+
+@property(strong,nonatomic)LFHSelectWorMViewController *selecterWandM;
 
 
 @end
@@ -38,6 +48,9 @@
     [self.accountTabView setSeparatorColor:RGB(230, 230, 230)];
     
     [self.view addSubview:self.accountTabView];
+    
+    self.contentView=[[UIView alloc] initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64-49)];
+    
     
    
 }
@@ -287,6 +300,9 @@
         return nameCell;
     }else if(indexPath.section==4)
     {
+        //性别填写
+//
+
         static NSString *Sexacell=@"sexell";
         UITableViewCell *SexCell=[tableView dequeueReusableCellWithIdentifier:Sexacell];
         if(!SexCell)
@@ -306,7 +322,6 @@
         }];
        
         return SexCell;
-    
     
     }else if (indexPath.section==5)
     {
@@ -409,6 +424,27 @@
 
 }
 
+
+#pragma mark --点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section==4)
+    {
+        LFHSelectWorMViewController *selectedSex = [[LFHSelectWorMViewController alloc]init];
+        ////        selectedSex.sex =;
+        //        selectedSex.selectedSexSuccess = ^(NSString *sex){
+        //            LFHAccountTableViewController *cell = (LFHAccountTableViewController *)[self.tableView cellForRowAtIndexPath:_tempIndePath];
+        //            cell.contentLabel.text = sex;
+        //            _sex = sex;
+        //        };
+                [self.navigationController pushViewController:selectedSex animated:YES];
+        
+    }
+
+
+}
+
+
 #pragma mark -------- TFPickerDelegate
 
 
@@ -431,7 +467,63 @@
 - (void)updateHeadImageClick
 {
     NSLog(@"修改头像");
+    _myActionSheet=[[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"拍照" otherButtonTitles:@"从相册选取", nil];
+    [_myActionSheet showInView:self.contentView];
+    
+    
+    
 }
+
+#pragma mark --<UIActionSheetDelegate>
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    /**
+     *相册
+     **/
+    if(buttonIndex==1)
+    {
+        [[ImagePickerManager shareImagePickerManager] takePictureWithType:ImagePickerManagerTypePhotoLibrary
+                                                               completion:^(BOOL success, id content) {
+                                                                   if (success) {
+//                                                                       [self updateheadImage:content];
+                                                                   }
+                                                               }];
+    
+    
+    
+    } // 拍照
+    else if (buttonIndex == 0) {
+        [[ImagePickerManager shareImagePickerManager] takePictureWithType:ImagePickerManagerTypeCamera
+                                                               completion:^(BOOL success, id content) {
+                                                                   if (success) {
+//                                                                       [self updateheadImage:content];
+                                                                   }
+                                                               }];
+    }
+
+
+
+
+
+}
+
+//-(void)updateheadImage:(UIImage  *)headimage{
+////    [self showProgress:@"修改中"];
+//    [URLMethod postImagesWithMothedName:XH_UPLOADIMG_URL parmeter:@{@"tid":[UserInformation shareUserInfo].userID} success:^(id responseObject) {
+//        NSLog(@"%@",responseObject);
+//        [_progressHud hide:YES];
+//        [PublicErrorAlterView loadErrorView:@"修改成功"];
+//        _headImageView.image = headimage;
+//        NSNotification *notification = [NSNotification notificationWithName:@"uploadHeadeImage"
+//                                                                     object:self userInfo:@{@"header":headimage}];
+//        [[NSNotificationCenter defaultCenter] postNotification:notification];
+//    } fail:^(id error) {
+//        [PublicErrorAlterView loadErrorView:@"修改失败"];
+//        
+//    } images:@[headimage] imageName:@"image" controller:nil option:0];
+//}
+
+
 - (void)exitBtnClick
 {
     NSLog(@"退出登录");

@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor=[UIColor whiteColor];
     [self addControl];
     [self.tableView registerNib:[UINib nibWithNibName:@"StatesTableCell" bundle:nil] forCellReuseIdentifier:@"StatesTableCell"];
 
@@ -38,6 +39,7 @@
 }
 - (void)viewWillDisappear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.navigationBar.backgroundColor=RGB(64, 186, 64);
 }
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

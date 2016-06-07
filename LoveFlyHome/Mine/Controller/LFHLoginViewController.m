@@ -116,12 +116,10 @@
     [_checkNumber setKeyboardType:UIKeyboardTypeNumberPad];
     [_checkNumber setDelegate:self];
     [topView addSubview:_checkNumber];
-    
-//    [_checkNumber align:UnderMatchingLeft relativeTo:_phoneNumber padding:0.5f width:inputBgView.width-130.0f height:44.0f];
-    
+ 
     
     _sendMsgBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _sendMsgBtn.frame=CGRectMake(screen_width-85, 55, screen_width/2-80, 30);
+    _sendMsgBtn.frame=CGRectMake(screen_width-85, 55, screen_width/2-110, 30);
     _sendMsgBtn.layer.borderWidth=1.0;
     _sendMsgBtn.layer.borderColor=RGB(154, 154, 154).CGColor;
     [_sendMsgBtn setTitle:@"获取验证码" forState:UIControlStateNormal];

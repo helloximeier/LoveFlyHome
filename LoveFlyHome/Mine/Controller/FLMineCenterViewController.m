@@ -16,17 +16,45 @@
 #import "LFHLoginViewController.h"
 #import "LFHOrderViewController.h"
 #import "LFHAccountTableViewController.h"
+#import "DBHelper.h"
+#import "UserInfoTable.h"
+#import "LFHUserInfoMation.h"
 #define CellFooterheight 80
 @interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
+{
+    DBHelper *_helper;
+    UserInfoTable *_userInfo;
+    NSInteger NowID;
+
+
+}
 @property(strong,nonatomic)UITableView *mineTabView;
 @property(strong,nonatomic)UIButton *registeredBtn;
 @property(strong,nonatomic)UIView *headView;
+
+/**头像**/
+@property(strong,nonatomic)UIButton *headerImgBtn;
+/**等级**/
+@property(strong,nonatomic) UILabel *creditlab;
+
+/**名字**/
+@property(strong,nonatomic)UILabel *nameLab;
+
 @end
 
 @implementation FLMineCenterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /**实例化数据库**/
+    _helper=[[DBHelper alloc] init];
+    
+    /**本地化**/
+    NSUserDefaults *userDF=[NSUserDefaults standardUserDefaults];
+    
+    NowID=[[userDF objectForKey:@"UserID"] integerValue];
+    
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.hidden=YES;
     
@@ -43,32 +71,36 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-//    [self setUpNOMineHead];
     [self addHeader];
-
+//    if(BASE_USERINFO.isLogin)
+//    {
+//        [self addHeader];
+// 
+//    }else
+//    {
+//       [self setUpNOMineHead];
+//    
+//    }
+//    
 }
 
 
 #pragma mark -个人没有登录时的状态中心头部
 - (void)setUpNOMineHead
 {
-    
     /**
      *登录
      **/
     UIButton *loginBtn=[[UIButton alloc] init];
     
     loginBtn.layer.cornerRadius=10;
-    loginBtn.layer.borderColor=[UIColor grayColor].CGColor;
-    loginBtn.layer.borderWidth=1.0;
-    loginBtn.backgroundColor=RGB(141, 201, 0);
-    [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+    [loginBtn setImage:[UIImage imageNamed:@"dl-01"] forState:UIControlStateNormal];
     [loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.headView addSubview:loginBtn];
     /**位置**/
 
     [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.headView).with.offset(screen_width/2-100);
+        make.left.mas_equalTo(self.headView).with.offset(screen_width/2-120);
         make.height.equalTo(@35);
         make.width.equalTo(@100);
         make.top.mas_equalTo(self.headView).with.offset(self.headView.frame.size.height/2);
@@ -87,7 +119,7 @@
     self.registeredBtn.layer.borderWidth=1.0;
     self.registeredBtn.layer.borderColor=[UIColor grayColor].CGColor;
     self.registeredBtn.layer.cornerRadius=10.0;
-    [self.registeredBtn setTitle:@"注册" forState:UIControlStateNormal];
+    [self.registeredBtn setImage:[UIImage imageNamed:@"dl-02"] forState:UIControlStateNormal];
     self.registeredBtn.backgroundColor=[UIColor whiteColor];
     [self.registeredBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.headView addSubview:self.registeredBtn];
@@ -96,7 +128,7 @@
 
     /**位置**/
     [self.registeredBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.headView).with.offset(-50);
+        make.right.mas_equalTo(self.headView).with.offset(-70);
         make.height.equalTo(@35);
         make.width.equalTo(@100);
         make.top.mas_equalTo(self.headView).with.offset(self.headView.frame.size.height/2);
@@ -109,37 +141,37 @@
 #pragma mark --登录后的状态
 - (void)addHeader
 {
-    UIButton *headerImgBtn=[UIButton new];
-    headerImgBtn.layer.cornerRadius=75.0;
-    [headerImgBtn setImage:[UIImage imageNamed:@"unlogin_head_h"] forState:UIControlStateNormal];
-    [self.headView addSubview:headerImgBtn];
+    self.headerImgBtn=[UIButton new];
+    self.headerImgBtn.layer.cornerRadius=75.0;
+    [self.headerImgBtn setImage:[UIImage imageNamed:@"unlogin_head_h"] forState:UIControlStateNormal];
+    [self.headView addSubview:self.headerImgBtn];
     /**点击事件**/
-    [headerImgBtn addTarget:self action:@selector(userDetailClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerImgBtn addTarget:self action:@selector(userDetailClick) forControlEvents:UIControlEventTouchUpInside];
     
-    [headerImgBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.headerImgBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.headView).with.offset(-120);
         make.height.equalTo(@150);
         make.width.equalTo(@150);
         make.top.mas_equalTo(self.headView).with.offset(self.headView.frame.size.height/2-50);
     }];
     
-    UILabel *creditlab=[UILabel new];
-    creditlab.text=@"😊";
-    [self.headView addSubview:creditlab];
+    self.creditlab=[UILabel new];
+    self.creditlab.text=@"😊";
+    [self.headView addSubview:self.creditlab];
     
-    [creditlab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(headerImgBtn).with.offset(10);
+    [self.creditlab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.headerImgBtn).with.offset(10);
         make.bottom.mas_equalTo(self.headView).with.offset(20);
         make.height.equalTo(@30);
         make.right.mas_equalTo(self.headView).with.offset(-120);
     }];
     
-    UILabel *nameLab=[UILabel new];
-    nameLab.text=@"小明";
-    nameLab.textColor=[UIColor whiteColor];
-    [self.headView addSubview:nameLab];
-    [nameLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(headerImgBtn).with.offset(90);
+    self.nameLab=[UILabel new];
+    self.nameLab.text=@"小明";
+    self.nameLab.textColor=[UIColor whiteColor];
+    [self.headView addSubview:self.nameLab];
+    [self.nameLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.headerImgBtn).with.offset(90);
         make.bottom.mas_equalTo(self.headView).with.offset(-10);
         make.height.equalTo(@30);
         make.left.mas_equalTo(self.headView).with.offset(screen_width/2-25);

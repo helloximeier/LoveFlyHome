@@ -55,6 +55,13 @@
     
 
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self setTabView];
+
+}
+
 #pragma mark -返回
 - (void)backClick
 {

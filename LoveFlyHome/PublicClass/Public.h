@@ -53,4 +53,6 @@
 //7.
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
+#define BASE_USERINFO [LFHUserInfoMation shareUserInfo]
+
 #endif

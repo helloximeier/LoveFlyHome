@@ -7,18 +7,32 @@
 //
 
 #import "ShopingCarCell.h"
+#import "DBHelper.h"
+#import "GoodsInfo.h"
+
+@interface ShopingCarCell()
+{
+    DBHelper *_helper;
+    GoodsInfo *_goodsInfo;
+
+}
+
+@end
 
 @implementation ShopingCarCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    /**实例化数据库**/
+    _helper=[[DBHelper alloc] init];
+    
+      
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+    
 }
 
 @end

@@ -9,7 +9,13 @@
 #import "LFHAdddressController.h"
 #import "Masonry.h"
 #import "Public.h"
+#import "LFHUpdateAddressViewCtrl.h"
 @interface LFHAdddressController ()<UITableViewDataSource,UITableViewDelegate>
+{
+    BOOL isSelect;
+    UIButton *checkBtn;
+
+}
 
 @property(strong,nonatomic)UITableView *addressTableview;
 @end
@@ -18,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isSelect=NO;
     self.view.backgroundColor=[UIColor whiteColor];
     /**设置导航栏**/
     [self setnavGation];
@@ -62,6 +69,23 @@
     
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
  
+
+}
+
+#pragma mark --添加收货地址
+- (void)addShippingaddress
+{
+    UIButton *bottomBtn=[UIButton new];
+    [bottomBtn setTitle:@"新增收货地址" forState:UIControlStateNormal];
+    [bottomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    bottomBtn.backgroundColor=RGB(64, 186, 64);
+    [self.view addSubview:bottomBtn];
+    [bottomBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).with.offset(0);
+        make.right.mas_equalTo(self).with.offset(-screen_width);
+        make.top.mas_equalTo(self).with.offset(0);
+        make.bottom.mas_equalTo(self).with.offset(0);    }];
+
 
 }
 
@@ -175,9 +199,10 @@
             editorCELL=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:editorCell];
             
         }
-        
-        UIButton *checkBtn=[UIButton new];
+        isSelect=NO;
+        checkBtn=[UIButton new];
         [checkBtn setImage:[UIImage imageNamed:@"dz-02"] forState:UIControlStateNormal];
+        
         [editorCELL addSubview:checkBtn];
         [checkBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(editorCELL).with.offset(10);
@@ -197,22 +222,107 @@
             make.width.mas_equalTo(100);
             make.height.mas_equalTo(30);
         }];
+        
+        UIButton *editionBtn=[UIButton new];
+        [editionBtn setImage:[UIImage imageNamed:@"dz-03"] forState:UIControlStateNormal];
+        [editorCELL addSubview:editionBtn];
+        [editionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(editorCELL).with.offset(-120);
+            make.bottom.mas_equalTo(editorCELL).with.offset(-15);
+            make.width.mas_equalTo(20);
+            make.height.mas_equalTo(20);
+        }];
+        [editionBtn addTarget:self action:@selector(EditionClick) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIButton *editionLab=[UIButton new];
+        [editionLab setTitle:@"编辑" forState:UIControlStateNormal];
+        [editionLab setTitleColor:RGB(116, 116, 116) forState:UIControlStateNormal];
+        [editionLab addTarget:self action:@selector(EditionClick) forControlEvents:UIControlEventTouchUpInside];
+
+        [editorCELL addSubview:editionLab];
+        [editionLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(editionBtn).with.offset(20);
+            make.bottom.mas_equalTo(editorCELL).with.offset(-10);
+            make.right.mas_equalTo(editorCELL).with.offset(-75);
+            make.height.mas_equalTo(30);
+        }];
+        
+        UIButton *deleteBtn=[UIButton new];
+        [deleteBtn setImage:[UIImage imageNamed:@"dz-04"] forState:UIControlStateNormal];
+        [editorCELL addSubview:deleteBtn];
+        [deleteBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(editorCELL).with.offset(-45);
+            make.bottom.mas_equalTo(editorCELL).with.offset(-15);
+            make.width.mas_equalTo(20);
+            make.height.mas_equalTo(20);
+            
+        }];
+        [deleteBtn addTarget:self action:@selector(deleteClick) forControlEvents:UIControlEventTouchUpInside];
+        UIButton *deleteLab=[UIButton new];
+        [deleteLab setTitle:@"删除" forState:UIControlStateNormal];
+        [deleteLab setTitleColor:RGB(116, 116, 116) forState:UIControlStateNormal];
+        [deleteLab addTarget:self action:@selector(deleteClick) forControlEvents:UIControlEventTouchUpInside];
+        [editorCELL addSubview:deleteLab];
+        [deleteLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(editorCELL).with.offset(-5);
+            make.bottom.mas_equalTo(editorCELL).with.offset(-10);
+            make.left.mas_equalTo(deleteBtn).with.offset(20);
+            make.height.mas_equalTo(30);
+        }];
         return editorCELL;
 
     }
     
-    
-    
 
 }
+#pragma mark --编辑
+- (void)EditionClick
+{
+    NSLog(@"编辑");
+    LFHUpdateAddressViewCtrl *update=[[LFHUpdateAddressViewCtrl alloc] init];
+    [self.navigationController pushViewController:update animated:YES];
 
+
+}
+#pragma mark --删除
+- (void)deleteClick
+{
+
+    NSLog(@"删除a");
+
+}
 #pragma mark --默认地址是否选中
 - (void)checkBtnBox
 {
     NSLog(@"==");
+    if(isSelect==YES)
+    {
+         isSelect=NO;
+     [checkBtn setImage:[UIImage imageNamed:@"dz-01"] forState:UIControlStateNormal];
+       
+    }
+    else if(isSelect==NO)
+    {
+        
+        [checkBtn setImage:[UIImage imageNamed:@"dz-02"] forState:UIControlStateNormal];
+        isSelect=YES;
+    }
 
 
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if(indexPath.row==1)
+//    {
+//        
+//      [checkBtn setImage:[UIImage imageNamed:@"dz-01"] forState:UIControlStateNormal];
+//        isSelect=YES;
+//    
+//    }
+//
+//
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
