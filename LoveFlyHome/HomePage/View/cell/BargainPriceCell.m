@@ -47,7 +47,12 @@
         }
         return self;
 }
+- (void)OntagGestureView:(UIButton *)sender;
+{
 
+
+
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

@@ -74,7 +74,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        return screen_height/2+30;
+        return screen_height/2+20;
     }
     return 30;
 }
@@ -131,9 +131,9 @@
 - (SDCycleScrollView *)addScrollView
 {
     _scrollImages = @[
-                      @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                      @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                      @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
+                      @"http://pic.58pic.com/58pic/15/38/31/72E58PICbpK_1024.jpg",
+                      @"http://image5.tuku.cn/pic/meishixinshang/VEGETABLES/141.jpg",
+                      @"http://img.juimg.com/tuku/yulantu/130513/240422-130513064P438.jpg"
                       ];
     
     SDCycleScrollView *cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width,screen_height/2+30 ) imageURLStringsGroup:_scrollImages]; // 模拟网络延时情景

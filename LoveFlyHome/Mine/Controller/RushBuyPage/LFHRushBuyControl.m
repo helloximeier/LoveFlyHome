@@ -92,9 +92,9 @@
 - (SDCycleScrollView *)addScrollView
 {
     _scrollImages = @[
-                      @"http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=蔬菜图片&pn=30&spn=0&di=40516748140&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1178011802%2C3612809870&os=372361978%2C2809174842&simid=3408425324%2C330291912&adpicid=0&ln=30&fr=ala&fm=&sme=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F38%2F96%2F53v58PICaN3_1024.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bcbrtv_z%26e3Bv54AzdH3Ff7vwtAzdH3F8cnblmcn_z%26e3Bip4s&gsm=1e",
-                      @"http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=蔬菜图片&pn=44&spn=0&di=172800234530&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=703637887%2C161511933&os=2572850363%2C2607655745&simid=77515985%2C954157620&adpicid=0&ln=30&fr=ala&fm=&sme=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fimg1.juimg.com%2F140918%2F330413-14091Q1394938.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B37t42_z%26e3Bv54AzdH3Fp7rtwgAzdH3Fda89alAzdH3Ffi7t275fi7vwt_cb9lln_z%26e3Bip4s&gsm=1e",
-                      @"http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=蔬菜图片&pn=46&spn=0&di=179505817810&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=2805004351%2C3636287726&os=778936464%2C3346093786&simid=3286139292%2C95086314&adpicid=0&ln=30&fr=ala&fm=&sme=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F38%2F32%2F96B58PICJhw_1024.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bcbrtv_z%26e3Bv54AzdH3Ff7vwtAzdH3F8cnbndlm_z%26e3Bip4s&gsm=1e"
+                      @"http://pic.58pic.com/58pic/15/38/31/72E58PICbpK_1024.jpg",
+                      @"http://image5.tuku.cn/pic/meishixinshang/VEGETABLES/141.jpg",
+                      @"http://img.juimg.com/tuku/yulantu/130513/240422-130513064P438.jpg"
                       ];
     /**模拟网络延时情景**/
     SDCycleScrollView *cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGwidth, screen_height/2+30) imageURLStringsGroup:_scrollImages];

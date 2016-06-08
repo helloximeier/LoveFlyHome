@@ -89,7 +89,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    GoodsListItem * cell =(GoodsListItem *)[collectionView cellForItemAtIndexPath:indexPath];
+//    GoodsListItem * cell =(GoodsListItem *)[collectionView cellForItemAtIndexPath:indexPath];
 //    cell.backgroundColor = [UIColor yellowColor];
     GoodDetailViewController * detailView = [[GoodDetailViewController alloc] init];
     [self.navigationController pushViewController:detailView animated:YES];

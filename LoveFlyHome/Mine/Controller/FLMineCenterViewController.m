@@ -19,7 +19,8 @@
 #import "DBHelper.h"
 #import "UserInfoTable.h"
 #import "LFHUserInfoMation.h"
-#define CellFooterheight 80
+#import "LFHTopupCenter.h"
+#define CellFooterheight 70
 @interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     DBHelper *_helper;
@@ -347,7 +348,7 @@
         btn2.tag=2;
         [footer addSubview:btn2];
         
-        UIButton *btn3 = [UIButton createButtonWithImage:@"待收货" Title:@"待收货" Target:self Selector:@selector(OnClick:)];
+        UIButton *btn3 = [UIButton createButtonWithImage:@"待发货" Title:@"待收货" Target:self Selector:@selector(OnClick:)];
         btn3.tag=3;
         [footer addSubview:btn3];
         
@@ -363,7 +364,7 @@
     }else if(section==1){
         LFHButton *btn11=[LFHButton new];
         [btn11 LFHButtonontentWithImage:@"图标-28.png" Title:@"会员中心" width: screen_width/4 height:CellFooterheight];
-        
+        [btn11 addTarget:self action:@selector(NumberCenterClick) forControlEvents:UIControlEventTouchUpInside];
         [footer addSubview:btn11];
         
         LFHButton *btn22=[LFHButton new];
@@ -375,6 +376,8 @@
         
         LFHButton *btn33=[LFHButton new];
         [btn33 LFHButtonontentWithImage:@"图标-30.png" Title:@"设置" width: screen_width/4 height:CellFooterheight];
+        /**设置事件***/
+        [btn33 addTarget:self action:@selector(Setuptheclick) forControlEvents:UIControlEventTouchUpInside];
         
         [footer addSubview:btn33];
         LFHButton *btn44=[LFHButton new];
@@ -384,7 +387,7 @@
         
 
         [MasonyUtil equalSpacingView:@[btn11,btn22,btn33,btn44]
-                           viewWidth:screen_width/4
+                           viewWidth:screen_width/4-10
                           viewHeight:CellFooterheight
                       superViewWidth:screen_width];
         return footer;
@@ -392,10 +395,28 @@
     return nil;
 }
 
+
+#pragma mark --会员中心
+- (void)NumberCenterClick
+{
+    NSLog(@"会员中心");
+
+}
+
+#pragma mark --设置界面
+- (void)Setuptheclick
+{
+
+    NSLog(@"进入设置界面");
+
+}
+
 #pragma mark -点击进入充值中心界面
 - (void)TopupcenterClick
 {
-
+    NSLog(@"进入充值界面");
+    LFHTopupCenter *topupCenter=[[LFHTopupCenter alloc] init];
+    [self.navigationController pushViewController:topupCenter animated:YES];
 
 
 }

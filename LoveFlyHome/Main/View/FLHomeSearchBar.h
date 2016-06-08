@@ -15,6 +15,6 @@
 @property (nonatomic, copy) void (^searchBarDidSearchBlock)();
 
 
-+ (FLHomeSearchBar *)searchBarWithPlaceHolder:(NSString *)placeholder;
+//+ (FLHomeSearchBar *)searchBarWithPlaceHolder:(NSString *)placeholder;
 
 @end

@@ -79,7 +79,7 @@
                             <constraint firstAttribute="height" constant="90" id="N6y-nq-8Ob"/>
                             <constraint firstAttribute="width" constant="90" id="zYF-bf-JOB"/>
                         </constraints>
-                        <state key="normal" backgroundImage="zhanshi"/>
+                        <state key="normal" backgroundImage="xihongshi.png"/>
                     </button>
                 </subviews>
                 <constraints>
@@ -115,6 +115,6 @@
         <image name="deleteImage" width="153" height="189"/>
         <image name="jianshaogoods" width="125" height="125"/>
         <image name="tianjiagoods" width="125" height="125"/>
-        <image name="zhanshi" width="357" height="372"/>
+        <image name="xihongshi.png" width="127" height="127"/>
     </resources>
 </document>
