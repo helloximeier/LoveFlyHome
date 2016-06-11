@@ -20,12 +20,15 @@
 #import "UserInfoTable.h"
 #import "LFHUserInfoMation.h"
 #import "LFHTopupCenter.h"
+#import "ImagePickerManager.h"
+#import "TheMemberCenterController.h"
 #define CellFooterheight 70
-@interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface FLMineCenterViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate>
 {
     DBHelper *_helper;
     UserInfoTable *_userInfo;
     NSInteger NowID;
+    UIActionSheet *_myActionSheet;
 
 
 }
@@ -205,10 +208,46 @@
 - (void)userDetailClick
 {
     NSLog(@"你点击了头像");
-    LFHAccountTableViewController *account=[[LFHAccountTableViewController alloc] init];
-    [self.navigationController pushViewController:account animated:YES];
+    _myActionSheet=[[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"拍照" otherButtonTitles:@"从相册选取", nil];
+    [_myActionSheet showInView:self.view];
+    
+    
 
 
+
+}
+
+#pragma mark --<UIActionSheetDelegate>
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    /**
+     *相册
+     **/
+    if(buttonIndex==1)
+    {
+        [[ImagePickerManager shareImagePickerManager] takePictureWithType:ImagePickerManagerTypePhotoLibrary
+                                                               completion:^(BOOL success, id content) {
+                                                                   if (success) {
+                                                                       //                                                                       [self updateheadImage:content];
+                                                                   }
+                                                               }];
+        
+        
+        
+    } // 拍照
+    else if (buttonIndex == 0) {
+        [[ImagePickerManager shareImagePickerManager] takePictureWithType:ImagePickerManagerTypeCamera
+                                                               completion:^(BOOL success, id content) {
+                                                                   if (success) {
+                                                                       //                                                                       [self updateheadImage:content];
+                                                                   }
+                                                               }];
+    }
+    
+    
+    
+    
+    
 }
 
 #pragma mark -创建表格
@@ -334,7 +373,7 @@
     [footer addSubview:bgView];
     
     [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width, 0.4));
+        make.size.mas_equalTo(CGSizeMake(self.view.frame.size.width-10, 0.4));
         make.bottom.mas_equalTo(footer.mas_top);
     }];
     
@@ -348,7 +387,7 @@
         btn2.tag=2;
         [footer addSubview:btn2];
         
-        UIButton *btn3 = [UIButton createButtonWithImage:@"待发货" Title:@"待收货" Target:self Selector:@selector(OnClick:)];
+        UIButton *btn3 = [UIButton createButtonWithImage:@"待收货" Title:@"待收货" Target:self Selector:@selector(OnClick:)];
         btn3.tag=3;
         [footer addSubview:btn3];
         
@@ -357,31 +396,31 @@
         [footer addSubview:btn4];
         
         [MasonyUtil equalSpacingView:@[btn1,btn2,btn3,btn4]
-                           viewWidth:screen_width/4
+                           viewWidth:screen_width/4-10
                           viewHeight:CellFooterheight
                       superViewWidth:screen_width];
         return footer;
     }else if(section==1){
         LFHButton *btn11=[LFHButton new];
-        [btn11 LFHButtonontentWithImage:@"图标-28.png" Title:@"会员中心" width: screen_width/4 height:CellFooterheight];
+        [btn11 LFHButtonontentWithImage:@"图标-28.png" Title:@"会员中心" width: screen_width/4-10 height:CellFooterheight];
         [btn11 addTarget:self action:@selector(NumberCenterClick) forControlEvents:UIControlEventTouchUpInside];
         [footer addSubview:btn11];
         
         LFHButton *btn22=[LFHButton new];
-        [btn22 LFHButtonontentWithImage:@"图标-29.png" Title:@"充值中心" width: screen_width/4 height:CellFooterheight];
+        [btn22 LFHButtonontentWithImage:@"图标-29.png" Title:@"充值中心" width: screen_width/4-10 height:CellFooterheight];
         /**充值中心事件**/
         [btn22 addTarget:self action:@selector(TopupcenterClick) forControlEvents:UIControlEventTouchUpInside];
         
         [footer addSubview:btn22];
         
         LFHButton *btn33=[LFHButton new];
-        [btn33 LFHButtonontentWithImage:@"图标-30.png" Title:@"设置" width: screen_width/4 height:CellFooterheight];
+        [btn33 LFHButtonontentWithImage:@"图标-30.png" Title:@"设置" width: screen_width/4-10 height:CellFooterheight];
         /**设置事件***/
         [btn33 addTarget:self action:@selector(Setuptheclick) forControlEvents:UIControlEventTouchUpInside];
         
         [footer addSubview:btn33];
         LFHButton *btn44=[LFHButton new];
-        [btn44 LFHButtonontentWithImage:@"" Title:@"" width: screen_width/4 height:CellFooterheight];
+        [btn44 LFHButtonontentWithImage:@"" Title:@"" width: screen_width/4-10 height:CellFooterheight];
         
         [footer addSubview:btn44];
         
@@ -400,6 +439,8 @@
 - (void)NumberCenterClick
 {
     NSLog(@"会员中心");
+    TheMemberCenterController *MemberView=[[TheMemberCenterController alloc] init];
+    [self.navigationController pushViewController:MemberView animated:YES];
 
 }
 
@@ -408,6 +449,8 @@
 {
 
     NSLog(@"进入设置界面");
+    LFHAccountTableViewController *account=[[LFHAccountTableViewController alloc] init];
+    [self.navigationController pushViewController:account animated:YES];
 
 }
 

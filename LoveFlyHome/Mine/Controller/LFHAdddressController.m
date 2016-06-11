@@ -63,8 +63,8 @@
     [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(navView).with.offset(10);
         make.bottom.mas_equalTo(navView).with.offset(-10);
-        make.width.mas_equalTo(25);
-        make.height.mas_equalTo(25);
+        make.width.mas_equalTo(13);
+        make.height.mas_equalTo(15);
     }];
     
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
@@ -201,7 +201,7 @@
         }
         isSelect=NO;
         checkBtn=[UIButton new];
-        [checkBtn setImage:[UIImage imageNamed:@"dz-02"] forState:UIControlStateNormal];
+        [checkBtn setImage:[UIImage imageNamed:@"dz-2"] forState:UIControlStateNormal];
         
         [editorCELL addSubview:checkBtn];
         [checkBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -224,7 +224,7 @@
         }];
         
         UIButton *editionBtn=[UIButton new];
-        [editionBtn setImage:[UIImage imageNamed:@"dz-03"] forState:UIControlStateNormal];
+        [editionBtn setImage:[UIImage imageNamed:@"dz-3"] forState:UIControlStateNormal];
         [editorCELL addSubview:editionBtn];
         [editionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(editorCELL).with.offset(-120);
@@ -248,7 +248,7 @@
         }];
         
         UIButton *deleteBtn=[UIButton new];
-        [deleteBtn setImage:[UIImage imageNamed:@"dz-04"] forState:UIControlStateNormal];
+        [deleteBtn setImage:[UIImage imageNamed:@"dz-4"] forState:UIControlStateNormal];
         [editorCELL addSubview:deleteBtn];
         [deleteBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(editorCELL).with.offset(-45);

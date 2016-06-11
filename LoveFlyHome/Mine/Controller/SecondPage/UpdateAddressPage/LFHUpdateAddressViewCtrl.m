@@ -48,8 +48,8 @@
     [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(navView).with.offset(10);
         make.bottom.mas_equalTo(navView).with.offset(-10);
-        make.width.mas_equalTo(25);
-        make.height.mas_equalTo(25);
+        make.width.mas_equalTo(13);
+        make.height.mas_equalTo(15);
     }];
     
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];

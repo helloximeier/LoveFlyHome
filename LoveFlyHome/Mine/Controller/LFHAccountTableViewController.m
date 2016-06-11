@@ -75,10 +75,10 @@
     [navView addSubview:backBtn];
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
     [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(navView).with.offset(5);
-        make.bottom.mas_equalTo(navView).with.offset(-8);
-        make.width.equalTo(@20);
-        make.height.equalTo(@20);
+        make.left.mas_equalTo(navView).with.offset(8);
+        make.bottom.mas_equalTo(navView).with.offset(-10);
+        make.width.equalTo(@13);
+        make.height.equalTo(@15);
     }];
     
     UILabel *accountLab=[UILabel new];

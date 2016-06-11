@@ -48,9 +48,11 @@
     [self.navView addSubview:backButton];
     [backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.navView).with.offset(10);
-        make.top.mas_equalTo(self.navView).with.offset(30);
+      
         make.bottom.mas_equalTo(self.navView).with.offset(-10);
-        make.width.equalTo(@20);
+        make.width.equalTo(@13);
+        make.height.mas_equalTo(15);
+        
     }];
     
     UIButton *DetailBtn=[UIButton new];
@@ -125,7 +127,7 @@
     
     
     UIButton * TopUpBtn=[UIButton new];
-    [TopUpBtn setImage:[UIImage imageNamed:@"cz-01"] forState:UIControlStateNormal];
+    [TopUpBtn setImage:[UIImage imageNamed:@"cz-1"] forState:UIControlStateNormal];
     [self.view addSubview:TopUpBtn];
     [TopUpBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view).with.offset(15);

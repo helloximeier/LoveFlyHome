@@ -52,7 +52,7 @@
         make.left.mas_equalTo(navView).with.offset(10);
         make.top.mas_equalTo(navView).with.offset(30);
         make.bottom.mas_equalTo(navView).with.offset(-10);
-        make.width.equalTo(@20);
+        make.width.equalTo(@13);
     }];
    
     

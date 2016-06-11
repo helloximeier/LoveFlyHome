@@ -55,7 +55,7 @@
     [self.view addSubview:navView];
     
     UIButton *backBtn=[[UIButton alloc] init];
-    backBtn.frame=CGRectMake(10, 30, 15, 20);
+    backBtn.frame=CGRectMake(10, 30, 13, 15);
     [backBtn setImage:[UIImage imageNamed:@"图标-20.png"] forState:UIControlStateNormal];
     [navView addSubview:backBtn];
     /**返回按钮事件**/
@@ -162,7 +162,7 @@
     /**扣扣**/
     UIButton *qqBtn=[[UIButton alloc] init];
     qqBtn.frame=CGRectMake(screen_width/2-80, screen_height-120, 35, 40);
-    [qqBtn setImage:[UIImage imageNamed:@"图标-26.png"] forState:UIControlStateNormal];
+    [qqBtn setImage:[UIImage imageNamed:@"qq"] forState:UIControlStateNormal];
     [self.view addSubview:qqBtn];
     
     UILabel *qqLable=[[UILabel alloc] init];
@@ -175,7 +175,7 @@
     /**微信**/
     UIButton *WeChatBtn=[[UIButton alloc] init];
     WeChatBtn.frame=CGRectMake(screen_width/2+20, screen_height-120, 40, 40);
-    [WeChatBtn setImage:[UIImage imageNamed:@"图标-27.png"] forState:UIControlStateNormal];
+    [WeChatBtn setImage:[UIImage imageNamed:@"weiChat"] forState:UIControlStateNormal];
     [self.view addSubview:WeChatBtn];
     
     UILabel *WeChatLab=[[UILabel alloc] init];
