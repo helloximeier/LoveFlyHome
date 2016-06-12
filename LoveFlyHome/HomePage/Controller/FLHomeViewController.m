@@ -7,7 +7,6 @@
 //
 
 #import "FLHomeViewController.h"
-#import "LFHRushFoodCell.h"
 #import "Public.h"
 #import "RushCell.h"
 #import "wheelCell.h"
@@ -131,9 +130,6 @@
         if ([kind isEqual:UICollectionElementKindSectionFooter])
         {
             UICollectionReusableView *footerView=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"FooterViewID" forIndexPath:indexPath];
-//            if (footerView == nil) {
-//                footerView = [[UICollectionReusableView alloc] init];
-//            }
             
             footerView.backgroundColor=RGB(235, 235, 235);
             
@@ -259,8 +255,7 @@
     {
         
          LFHSpecialCell *goodsItemCell=[LFHSpecialCell SpecialGoodsCollectionItem:collectionView withIndex:indexPath];
-//        self.specialViewCtrl.priceLabelText=self.special.specialLable.text;
-//        NSLog(@"-=-=-=-%@",self.special.specialLable.text);
+
         return goodsItemCell;
     
     }

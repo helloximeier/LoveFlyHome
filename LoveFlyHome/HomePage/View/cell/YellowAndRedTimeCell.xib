@@ -15,10 +15,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="550" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ms-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="lhP-H6-4Up">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ms-1" translatesAutoresizingMaskIntoConstraints="NO" id="lhP-H6-4Up">
                         <rect key="frame" x="1" y="0.0" width="150" height="60"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ms-02.png" translatesAutoresizingMaskIntoConstraints="NO" id="yS1-eE-Jus">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ms-2" translatesAutoresizingMaskIntoConstraints="NO" id="yS1-eE-Jus">
                         <rect key="frame" x="151" y="0.0" width="150" height="60"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¥1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sP-Py-tgy">
@@ -67,8 +67,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ms-01.png" width="1563" height="450"/>
-        <image name="ms-02.png" width="1562" height="450"/>
+        <image name="ms-1" width="1563" height="450"/>
+        <image name="ms-2" width="1562" height="450"/>
         <image name="图标-19" width="61" height="62"/>
     </resources>
 </document>

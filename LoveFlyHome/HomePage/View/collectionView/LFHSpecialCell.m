@@ -45,7 +45,7 @@
     
     /**btn**/
     self.imageBtn=[[UIButton alloc] initWithFrame:CGRectMake(5, self.frame.size.width+10+15, self.frame.size.width-8, 25)];
-    [self.imageBtn setImage:[UIImage imageNamed:@"tj-01"] forState:UIControlStateNormal];
+    [self.imageBtn setImage:[UIImage imageNamed:@"tj-1"] forState:UIControlStateNormal];
     [self addSubview:self.imageBtn];
     
     self.specialLable=[UILabel new];

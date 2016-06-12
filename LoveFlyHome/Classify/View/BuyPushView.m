@@ -10,7 +10,8 @@
 #import "Header.h"
 #import "Public.h"
 #import "DBHelper.h"
-@interface BuyPushView()
+#import "LFHSureOrderPage.h"
+@interface BuyPushView()<UINavigationControllerDelegate>
 {
     DBHelper *_dbHelper;
 
@@ -134,33 +135,37 @@
     _sureButton.backgroundColor = RGB(64, 186, 64);
     [self addSubview:_sureButton];
     
-    /**确定按钮事件*/
-    [_sureButton addTarget:self action:@selector(addSureButtonClick) forControlEvents:UIControlEventTouchUpInside];
+//    /**确定按钮事件*/
+//    [_sureButton addTarget:self action:@selector(addSureButtonClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark --确定按钮事件
 - (void)addSureButtonClick
 {
+    
     /**
      *实例化数据库帮助类
      **/
-    _dbHelper=[[DBHelper alloc] init];
-    
-    NSString *sql=[NSString stringWithFormat:@"insert into GoodsInfoTable(GoodsImage,GoodsPrice,GoodsWeight,GoodsNums) values('%@','%@','%@','%@')",_goodsImage,_priceLabel.text,_haveSelect.text,_buyNumField.text];
-    NSLog(@"-------------%@",sql);
-    if([_dbHelper exceSql:sql])
-    {
-        NSLog(@"添加到购物车成功");
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示" message:@"添加到购物车成功" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alert show];
 
-    }else
-    {
+   
+//    _dbHelper=[[DBHelper alloc] init];
+//    
+//    NSString *sql=[NSString stringWithFormat:@"insert into GoodsInfoTable(GoodsImage,GoodsPrice,GoodsWeight,GoodsNums) values('%@','%@','%@','%@')",_goodsImage,_priceLabel.text,_haveSelect.text,_buyNumField.text];
+//    NSLog(@"-------------%@",sql);
+//    if([_dbHelper exceSql:sql])
+//    {
+//        NSLog(@"添加到购物车成功");
+//        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示" message:@"添加到购物车成功" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//        [alert show];
+//
+//    }else
+//    {
+//    
+//        NSLog(@"失败");
+//    }
+//
     
-        NSLog(@"失败");
-    }
-    
-    NSLog(@"=====");
+//    NSLog(@"=====");
 
 }
 

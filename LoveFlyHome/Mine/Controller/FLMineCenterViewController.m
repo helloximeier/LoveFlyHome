@@ -256,7 +256,7 @@
     self.mineTabView=[[UITableView alloc] initWithFrame:CGRectMake(0, screen_height/3, screen_width, screen_height)];
     self.mineTabView.dataSource=self;
     self.mineTabView.delegate=self;
-    //    设置分割线颜色
+    /**设置分割线颜色**/
     [self.mineTabView setSeparatorColor:RGB(230, 230, 230)];
     [self.view addSubview:self.mineTabView];
 
@@ -391,7 +391,7 @@
         btn3.tag=3;
         [footer addSubview:btn3];
         
-        UIButton *btn4 = [UIButton createButtonWithImage:@"图标-25.png" Title:@"已完成" Target:self Selector:@selector(OnClick:)];
+        UIButton *btn4 = [UIButton createButtonWithImage:@"已送达" Title:@"已完成" Target:self Selector:@selector(OnClick:)];
         btn4.tag=4;
         [footer addSubview:btn4];
         
@@ -467,6 +467,8 @@
 - (void)OnClick:(UIButton *)sender
 {
     NSLog(@"====");
+    LFHOrderViewController *order=[[LFHOrderViewController alloc] init];
+    [self.navigationController pushViewController:order animated:YES];
 
 }
 - (void)didReceiveMemoryWarning {

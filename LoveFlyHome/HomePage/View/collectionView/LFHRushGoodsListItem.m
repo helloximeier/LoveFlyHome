@@ -73,7 +73,7 @@
     /**现在时间**/
     NSDate *nowDate=[NSDate date];
     /**设置一个字符串的时间**/
-    NSMutableString *dateString=[NSMutableString stringWithFormat:@"%ld",20160606211000];
+    NSMutableString *dateString=[NSMutableString stringWithFormat:@"%ld",20160620211000];
     [dateString insertString:@"-" atIndex:4];
     [dateString insertString:@"-" atIndex:7];
     [dateString insertString:@" " atIndex:10];

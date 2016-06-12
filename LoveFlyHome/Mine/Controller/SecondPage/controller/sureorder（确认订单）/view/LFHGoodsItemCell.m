@@ -1,14 +1,14 @@
 //
-//  LFHSendGoodsCell.m
+//  LFHGoodsItemCell.m
 //  LoveFlyHome
 //
-//  Created by Lefeng on 16/6/8.
+//  Created by Lefeng on 16/6/12.
 //  Copyright © 2016年 Lefeng. All rights reserved.
 //
 
-#import "LFHSendGoodsCell.h"
+#import "LFHGoodsItemCell.h"
 
-@implementation LFHSendGoodsCell
+@implementation LFHGoodsItemCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

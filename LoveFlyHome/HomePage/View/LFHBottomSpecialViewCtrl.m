@@ -28,7 +28,7 @@
         }];
         /**立即抢购**/
         self.btn_specialRush=[UIButton buttonWithType:UIButtonTypeCustom];
-        [self.btn_specialRush setBackgroundImage:[UIImage imageNamed:@"tjmsq-01"] forState:0];
+        [self.btn_specialRush setBackgroundImage:[UIImage imageNamed:@"tjmsq-1"] forState:0];
         [self addSubview:self.btn_specialRush];
         [self.btn_specialRush mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.mas_equalTo(self).with.offset(0);

@@ -10,10 +10,10 @@
 #import "LFHSegmentedControl.h"
 #import "Public.h"
 #import "Masonry.h"
-#import "LFHOrderCell.h"
-#import "LFHSendGoodsCell.h"
 #import "LFHPayMentView.h"
 #import "LFHDeliveryView.h"
+#import "LFHForTheGoodsView.h"
+#import "LFHHasbeencompletedView.h"
 @interface LFHOrderViewController ()<LFHSegmentedControlDelegate>
 
 @property(strong,nonatomic)LFHSegmentedControl * segment;
@@ -61,8 +61,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-//   [self ForThePayMent];
-//    [self TosendthegoodsHidden];
+   [self ForThePayMent];
 
 }
 
@@ -88,19 +87,22 @@
     if(selection==0)
     {
         NSLog(@"待付款");
-//        [self ForThePayMent];
+        [self ForThePayMent];
         
         
     }else  if(selection==1)
     {
-//        [self Tosendthegoods];
+        [self Tosendthegoods];
         NSLog(@"待发货");
     }else if(selection==2)
     {
         NSLog(@"待收货");
+        [self Forthegoods];
+        
     }else
     {
         NSLog(@"已完成");
+        [self Hasbeencompleted];
     }
 
 
@@ -110,46 +112,18 @@
 - (void)ForThePayMent
 {
     LFHPayMentView *payment=[[[NSBundle mainBundle]loadNibNamed:@"LFHPayMentView" owner:self options:nil]objectAtIndex:0];
-    payment.frame=CGRectMake(0.0, 0.0,screen_width, screen_height);
+    payment.frame=CGRectMake(0, 64+44,screen_width, 150);
     [self.view addSubview:payment];
 
-    
-    
-//    LFHPayMentView *payMent=[[[NSBundle mainBundle] loadNibNamed:@"LFHPayMentView" owner:self options:nil] objectAtIndex:0];
-//    payMent.frame=CGRectMake(0.0, 0.0,screen_width, screen_height);
-//    [self.view addSubview:payMent];
-
-
-
 }
 
-#pragma mark --hiddenView
-- (void)ForThePayMentHidden
-{
-
-    LFHPayMentView *payMent=[[[NSBundle mainBundle] loadNibNamed:@"LFHPayMentView" owner:self options:nil] objectAtIndex:0];
-    payMent.frame=CGRectMake(screen_width, 0.0,screen_width, screen_height);
-    [self.view addSubview:payMent];
-
-}
 
 #pragma mark --待发货
 - (void)Tosendthegoods
 {
     LFHDeliveryView *deliveryView=[[[NSBundle mainBundle] loadNibNamed:@"LFHDeliveryView" owner:self options:nil] objectAtIndex:0];
     
-    deliveryView.frame=CGRectMake(0, 0, screen_width, screen_height);
-    [self.view addSubview:deliveryView];
-
-
-}
-
-#pragma mark --隐藏待发货
-- (void)TosendthegoodsHidden
-{
-    LFHDeliveryView *deliveryView=[[[NSBundle mainBundle] loadNibNamed:@"LFHDeliveryView" owner:self options:nil] objectAtIndex:0];
-    
-    deliveryView.frame=CGRectMake(screen_width*2, 0, screen_width, screen_height);
+    deliveryView.frame=CGRectMake(0, 64+44, screen_width, 150);
     [self.view addSubview:deliveryView];
 
 
@@ -158,79 +132,20 @@
 #pragma mark --待收货
 - (void)Forthegoods
 {
-
-
-}
-
-#pragma mark --隐藏待收货
-- (void)ForthegoodsHidden
-{
-
+    LFHForTheGoodsView *forTheGoodsView=[[[NSBundle mainBundle] loadNibNamed:@"LFHForTheGoodsView" owner:self options:nil] objectAtIndex:0];
+    forTheGoodsView.frame=CGRectMake(0, 64+44, screen_width, 150);
+    [self.view addSubview:forTheGoodsView];
 
 }
 
 #pragma mark --已完成
 - (void)Hasbeencompleted
 {
-
-
-
-}
-
-#pragma mark --隐藏已完成
-- (void)HasbeencompletedHidden{
-
-
+    LFHHasbeencompletedView *hasheenCompleteView=[[[NSBundle mainBundle] loadNibNamed:@"LFHHasbeencompletedView" owner:self options:nil] objectAtIndex:0];
+    hasheenCompleteView.frame=CGRectMake(0, 64+44, screen_width, 150);
+    [self.view addSubview:hasheenCompleteView];
 
 }
-
-//#pragma mark -创建表格
-//- (void)setTabView
-//{
-//    self.orderTableView=[UITableView new];
-//    self.orderTableView.delegate=self;
-//    self.orderTableView.dataSource=self;
-//    [self.view addSubview:self.orderTableView];
-//    [self.orderTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(self.view).with.offset(0);
-//        make.top.mas_equalTo(self.segment).with.offset(44);
-//        make.right.mas_equalTo(self.view).with.offset(0);
-//        make.height.equalTo(self.view.mas_height);
-//    }];
-//
-//
-//}
-//#pragma mark --实现协议里面的方法
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    return 1;
-//
-//}
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return 1;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//
-//    return 146.0;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *orderCell=@"orderCell";
-//    LFHOrderCell *orderCELL=[tableView dequeueReusableCellWithIdentifier:orderCell];
-//    if(!orderCELL)
-//    {
-//        orderCELL=[[[NSBundle mainBundle] loadNibNamed:@"LFHOrderCell" owner:self options:nil] lastObject];
-//    
-//    }
-//
-//    return orderCELL;
-//
-//
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

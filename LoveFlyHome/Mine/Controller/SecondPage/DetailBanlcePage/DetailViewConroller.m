@@ -21,6 +21,7 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     [self setNavgationView];
+    [self setBalanceViewTable];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,7 +83,7 @@
 #pragma mark --datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 1;
 
 }
 
@@ -91,17 +92,21 @@
 
     return 1;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    return 80;
+
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *acell=@"acell";
     LFHDetailViewCell *detailCell=[tableView dequeueReusableCellWithIdentifier:acell];
     if(!detailCell)
     {
-        detailCell =[[LFHDetailViewCell alloc] init];
-    
+        detailCell =[[[NSBundle mainBundle] loadNibNamed:@"LFHDetailViewCell" owner:self options:nil] objectAtIndex:0];
     }
-    
+  
     return detailCell;
 
 

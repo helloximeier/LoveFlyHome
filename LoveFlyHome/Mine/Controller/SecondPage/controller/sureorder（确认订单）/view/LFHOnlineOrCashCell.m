@@ -1,14 +1,14 @@
 //
-//  LFHSpecialCell.m
+//  LFHOnlineOrCashCell.m
 //  LoveFlyHome
 //
-//  Created by Lefeng on 16/6/1.
+//  Created by Lefeng on 16/6/12.
 //  Copyright © 2016年 Lefeng. All rights reserved.
 //
 
-#import "LFHSpecialCell.h"
+#import "LFHOnlineOrCashCell.h"
 
-@implementation LFHSpecialCell
+@implementation LFHOnlineOrCashCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -83,7 +83,7 @@
     nameLab.textColor=[UIColor whiteColor];
     [self.bgImageView addSubview:nameLab];
     [nameLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.bgImageView).with.offset(screen_width/2-10);
+        make.left.mas_equalTo(self.bgImageView).with.offset(screen_width/2-5);
         make.top.mas_equalTo(headImg).with.offset(70);
         make.width.mas_equalTo(50);
         make.height.mas_equalTo(30);
@@ -95,10 +95,10 @@
     
     [self.bgImageView addSubview:levelImage];
     [levelImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(nameLab).with.offset(60);
-        make.top.mas_equalTo(headImg).with.offset(70);
-        make.height.mas_equalTo(20);
-        make.width.mas_equalTo(15);
+        make.left.mas_equalTo(nameLab).with.offset(55);
+        make.top.mas_equalTo(headImg).with.offset(75);
+        make.height.mas_equalTo(15);
+        make.width.mas_equalTo(10);
     }];
     
     /***进度条**/
@@ -126,14 +126,50 @@
     [progressImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.bgImageView).with.offset(10);
         make.right.mas_equalTo(self.bgImageView).with.offset(-10);
-        make.top.mas_equalTo(nameLab).with.offset(35);;
-        make.height.mas_equalTo(50);
+        make.top.mas_equalTo(nameLab).with.offset(20);;
+        make.height.mas_equalTo(55);
     }];
     
     
+    UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor=RGB(244, 195, 3);
+    button.layer.borderWidth=2.0;
+    button.layer.borderColor=[UIColor whiteColor].CGColor;
+    button.layer.cornerRadius=10;
+    [self.bgImageView addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.bgImageView).with.offset(screen_width/2-80);
+        make.bottom.mas_equalTo(self.bgImageView).with.offset(15);
+        make.width.mas_equalTo(160);
+        make.height.mas_equalTo(35);
+    }];
+    
+    UILabel *yuelab=[UILabel new];
+    yuelab.text=@"余额：";
+    yuelab.textColor=[UIColor whiteColor];
+    yuelab.font=[UIFont systemFontOfSize:20];
+    [button addSubview:yuelab];
+    [yuelab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(button).with.offset(5);
+        make.top.mas_equalTo(button).with.offset(0);
+        make.width.mas_equalTo(80);
+        make.height.mas_equalTo(35);
+        
+    }];
+    
+    UILabel *bananceLab=[UILabel new];
+    bananceLab.text=@"230.00";
+    bananceLab.textColor=[UIColor whiteColor];
+    bananceLab.font=[UIFont systemFontOfSize:20];
+    [button addSubview:bananceLab];
+    [bananceLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(button).with.offset(-10);
+        make.top.mas_equalTo(button).with.offset(0);
+        make.width.mas_equalTo(80);
+        make.height.mas_equalTo(35);
+    }];
     
     
-
 }
 
 - (void)setSomeLab
@@ -144,7 +180,7 @@
     [self.view addSubview:privilegeLab];
     [privilegeLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view).with.offset(10);
-        make.top.mas_equalTo(self.bgImageView).with.offset(screen_height/3+100);
+        make.top.mas_equalTo(self.bgImageView).with.offset(screen_height/3+80);
         make.width.mas_equalTo(100);
         make.height.mas_equalTo(30);
     }];
@@ -160,7 +196,7 @@
         make.left.mas_equalTo(self.view).with.offset(10);
         make.top.mas_equalTo(privilegeLab).with.offset(35);
         make.right.mas_equalTo(self.view).with.offset(-10);
-        make.height.mas_equalTo(200);
+        make.height.mas_equalTo(150);
     }];
 
 

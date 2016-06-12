@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LFHDetailViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *PayWay;
 
+@property (weak, nonatomic) IBOutlet UILabel *PayTimes;
+@property (weak, nonatomic) IBOutlet UILabel *AmountOf;
 @end

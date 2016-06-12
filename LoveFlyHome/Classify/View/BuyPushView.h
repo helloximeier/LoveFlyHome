@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ *代理跳转方法
+ **/
+//@protocol buyPushViewDelegate<NSObject>
+//@optional
+///**跳转**/
+//- (void)addSureButtonClick:(id)sender;
+//@end
 @interface BuyPushView : UIView <UITextFieldDelegate>
 @property (nonatomic, strong) UIButton * touchButton;
 @property (nonatomic, strong) UIImageView * goodsImage;

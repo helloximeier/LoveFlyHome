@@ -26,7 +26,7 @@
         [btn addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         btn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
-        btn.frame = CGRectMake(0, 0, 44, 40);
+        btn.frame = CGRectMake(10, 0, 6, 18);
         btn;
     });
 

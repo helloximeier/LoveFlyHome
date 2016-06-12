@@ -10,6 +10,7 @@
 #import "Masonry.h"
 #import "Public.h"
 #import "LFHPaytreasureOrWeChatpayViewControler.h"
+#import "DetailViewConroller.h"
 @interface LFHTopupCenter ()
 @property(strong,nonatomic) UIView *navView;
 @end
@@ -83,6 +84,8 @@
 - (void)DetailClick
 {
     NSLog(@"明细");
+    DetailViewConroller *detailView=[[DetailViewConroller alloc] init];
+    [self.navigationController pushViewController:detailView animated:YES];
 
 
 }

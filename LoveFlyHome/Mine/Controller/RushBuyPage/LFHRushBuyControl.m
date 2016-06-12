@@ -18,6 +18,7 @@
 #import "Header.h"
 #import "DetailFootView.h"
 #import "LFHRushGoodsListItem.h"
+#import "LFHSureOrderPage.h"
 @interface LFHRushBuyControl ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,ZImageBrowserDelegate,UITabBarDelegate,UINavigationControllerDelegate,SDCycleScrollViewDelegate>
 
 @property(strong,nonatomic)UITableView *baseTableView;
@@ -68,6 +69,7 @@
     /**设置item的背景颜色**/
     rightButton.tintColor = [UIColor backGroundColor];
     self.tabBarController.tabBar.hidden = YES;
+
 }
 
 #pragma mark --购买
@@ -181,6 +183,7 @@
     self.buyView.buyNumField.delegate=self;
     self.buyView.buyNumField.text=[NSString stringWithFormat:@"%d",self.goodsNum];
     [self.buyView.dismissButton addTarget:self action:@selector(disAppearBuyViewClick) forControlEvents:UIControlEventTouchUpInside];
+    /**跳转**/
     [self.buyView.sureButton addTarget:self action:@selector(sureButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.buyView.addButton addTarget:self action:@selector(addBtnViewClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.buyView.reduceButton addTarget:self action:@selector(reduceGoodsNumClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -245,21 +248,22 @@
     }
 }
 
+#pragma mark --点击确定跳转
 - (void)sureButtonClick
 {
     [self disAppearBuyViewClick];
     NSLog(@"+++++===%@", self.buyView.buyNumField.text);
     NSLog(@"加入购物车");
     
+    LFHSureOrderPage *sureOrderPageCtrl=[[LFHSureOrderPage alloc] init];
+    [self.navigationController pushViewController:sureOrderPageCtrl animated:YES];
+    
+    
 }
 
 #pragma mark --立即开抢
-- (void)RushClick
-{
 
-    NSLog(@"你点击了开抢");
 
-}
 
 #pragma mark --创建表格
 - (void)setTableView
@@ -336,7 +340,7 @@
         }
         
         UIImageView *redImage=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screen_width/2, 60)];
-        redImage.image=[UIImage imageNamed:@"ms-01.png"];
+        redImage.image=[UIImage imageNamed:@"ms-1"];
         [RandY addSubview:redImage];
         UILabel *whiteLable=[[UILabel alloc] initWithFrame:CGRectMake(10, 5, 50, 40)];
         whiteLable.text=@"¥1";
@@ -357,11 +361,11 @@
         }];
         
         UIImageView *yellowImage=[[UIImageView alloc] initWithFrame:CGRectMake(screen_width/2, 0, screen_width/2, 60)];
-        yellowImage.image=[UIImage imageNamed:@"ms-02.png"];
+        yellowImage.image=[UIImage imageNamed:@"ms-2"];
         [RandY addSubview:yellowImage];
         
         UIImageView *timeImages=[[UIImageView alloc] init];
-        timeImages.image=[UIImage imageNamed:@"图标-19.png"];
+        timeImages.image=[UIImage imageNamed:@"图标-19"];
         [yellowImage addSubview:timeImages];
         [timeImages mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(yellowImage).with.offset(0);

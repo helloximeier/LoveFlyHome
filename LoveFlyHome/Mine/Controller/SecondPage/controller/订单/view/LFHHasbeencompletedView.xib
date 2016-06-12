@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sey-6r-Shw">
+                    <rect key="frame" x="16" y="26" width="78" height="114"/>
+                    <state key="normal" image="xihongshi"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¥15.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paN-Ce-ugr">
+                    <rect key="frame" x="247" y="19" width="58" height="12"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.1333333333" green="0.62745098040000002" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="番茄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUj-zk-2Fp">
+                    <rect key="frame" x="104" y="26" width="125" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAW-ra-mPg">
+                    <rect key="frame" x="237" y="107" width="73" height="33"/>
+                    <color key="backgroundColor" red="0.1333333333" green="0.62745098040000002" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="确认收货">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-xG-JuK">
+                    <rect key="frame" x="192" y="107" width="37" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="8F4-TD-gOj"/>
+                    </constraints>
+                    <state key="normal" image="已送达"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sey-6r-Shw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="3vE-Fy-arv"/>
+                <constraint firstItem="eAW-ra-mPg" firstAttribute="leading" secondItem="uaN-xG-JuK" secondAttribute="trailing" constant="8" id="5em-tm-keH"/>
+                <constraint firstItem="paN-Ce-ugr" firstAttribute="top" secondItem="ZUj-zk-2Fp" secondAttribute="top" constant="-7" id="ApX-w7-gsl"/>
+                <constraint firstItem="eAW-ra-mPg" firstAttribute="bottom" secondItem="uaN-xG-JuK" secondAttribute="bottom" id="At8-Ox-fDc"/>
+                <constraint firstItem="eAW-ra-mPg" firstAttribute="top" secondItem="paN-Ce-ugr" secondAttribute="bottom" constant="76" id="Der-45-8YT"/>
+                <constraint firstAttribute="trailing" secondItem="paN-Ce-ugr" secondAttribute="trailing" constant="15" id="GEA-w1-bh8"/>
+                <constraint firstAttribute="bottom" secondItem="eAW-ra-mPg" secondAttribute="bottom" constant="10" id="PeK-kt-NdQ"/>
+                <constraint firstItem="uaN-xG-JuK" firstAttribute="leading" secondItem="ZUj-zk-2Fp" secondAttribute="trailing" constant="-37" id="Poi-0q-mbl"/>
+                <constraint firstItem="uaN-xG-JuK" firstAttribute="leading" secondItem="sey-6r-Shw" secondAttribute="trailing" constant="98" id="TWt-Gd-BAu"/>
+                <constraint firstItem="ZUj-zk-2Fp" firstAttribute="leading" secondItem="sey-6r-Shw" secondAttribute="trailing" constant="10" id="UgO-nT-UVv"/>
+                <constraint firstItem="ZUj-zk-2Fp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="WFK-Qg-4s7"/>
+                <constraint firstItem="sey-6r-Shw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="YVU-3L-eBj"/>
+                <constraint firstItem="eAW-ra-mPg" firstAttribute="top" secondItem="uaN-xG-JuK" secondAttribute="top" id="dJH-hW-bGX"/>
+                <constraint firstItem="paN-Ce-ugr" firstAttribute="leading" secondItem="ZUj-zk-2Fp" secondAttribute="trailing" constant="18" id="jDl-8i-zB2"/>
+                <constraint firstAttribute="trailing" secondItem="eAW-ra-mPg" secondAttribute="trailing" constant="10" id="lly-Wi-9pw"/>
+                <constraint firstAttribute="bottom" secondItem="sey-6r-Shw" secondAttribute="bottom" constant="10" id="qQk-2d-2mU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xihongshi" width="127" height="127"/>
+        <image name="已送达" width="97" height="85"/>
+    </resources>
+</document>

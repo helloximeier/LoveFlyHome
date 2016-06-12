@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="日福莱-02.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Us-16-nby">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="日福莱-2" translatesAutoresizingMaskIntoConstraints="NO" id="8Us-16-nby">
                                 <rect key="frame" x="34" y="82" width="307" height="488"/>
                             </imageView>
                         </subviews>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="日福莱-02.jpg" width="1176" height="2090"/>
+        <image name="日福莱-2" width="1176" height="2090"/>
     </resources>
 </document>

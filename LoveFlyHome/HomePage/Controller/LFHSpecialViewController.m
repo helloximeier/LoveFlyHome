@@ -19,6 +19,7 @@
 #import "DetailFootView.h"
 #import "LFHRushGoodsListItem.h"
 #import "LFHSpecialCell.h"
+#import "LFHSureOrderPage.h"
 
 @interface LFHSpecialViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,ZImageBrowserDelegate,UITabBarDelegate,UINavigationControllerDelegate,SDCycleScrollViewDelegate>
 
@@ -255,6 +256,9 @@
     [self disAppearBuyViewClick];
     NSLog(@"+++++===%@", self.buyView.buyNumField.text);
     NSLog(@"加入购物车");
+    LFHSureOrderPage *sureOrderPageCtrl=[[LFHSureOrderPage alloc] init];
+    [self.navigationController pushViewController:sureOrderPageCtrl animated:YES];
+    
     
 }
 
@@ -341,7 +345,7 @@
         }
         
         UIImageView *redImage=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 60)];
-        redImage.image=[UIImage imageNamed:@"ms-03"];
+        redImage.image=[UIImage imageNamed:@"ms-3"];
         [RandY addSubview:redImage];
         UILabel *whiteLable=[[UILabel alloc] initWithFrame:CGRectMake(10, 5, 100, 40)];
         /**首页传过来的特价**/
